@@ -38,10 +38,7 @@
   <div id="certList">Loading certifications...</div>
 
   <script>
-    // GitHub Pages absolute path to the JSON file
-    const dataUrl = 'https://lab8010.github.io/redhat-certifications-api/data/certifications.json';
-
-    fetch(dataUrl)
+    fetch('./data/certifications.json')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error ${response.status}`);
