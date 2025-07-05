@@ -1,23 +1,78 @@
 - id: rhcsa
-  title: Red Hat Certified System Administrator (RHCSA)
-  level: Associate
+  title: Red Hat Certified System Administrator
   exam: EX200
+  level: Associate
+  product: RHEL
   url: https://www.redhat.com/en/services/certification/rhcsa
-  description: >
-    Validates core system administration skills for Red Hat Enterprise Linux environments.
-
+  description: Validates core system administration skills for Red Hat Enterprise
+    Linux environments.
 - id: rhce
-  title: Red Hat Certified Engineer (RHCE)
-  level: Professional
+  title: Red Hat Certified Engineer
   exam: EX294
+  level: Professional
+  product: RHEL / Ansible
   url: https://www.redhat.com/en/services/certification/rhce
-  description: >
-    Builds upon RHCSA by focusing on automation with Ansible and advanced administration.
-
+  description: Focuses on automation with Ansible and advanced system administration
+    tasks.
+- id: rhca
+  title: Red Hat Certified Architect
+  exam: Multiple
+  level: Architect
+  product: Multi-domain
+  url: https://www.redhat.com/en/services/certification/rhca
+  description: Top-level certification achieved by earning multiple credentials in
+    specialized domains.
 - id: ex280
   title: Red Hat Certified Specialist in OpenShift Administration
-  level: Specialist
   exam: EX280
+  level: Specialist
+  product: OpenShift
   url: https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-administration-exam
-  description: >
-    Demonstrates skills in managing OpenShift clusters and containerized applications.
+  description: Demonstrates knowledge in managing OpenShift Container Platform clusters.
+- id: ex288
+  title: Red Hat Certified Specialist in OpenShift Application Development
+  exam: EX288
+  level: Specialist
+  product: OpenShift / App Dev
+  url: https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-application-development-exam
+  description: Covers designing, building, and deploying containerized applications
+    using OpenShift.
+- id: ex403
+  title: Red Hat Certified Specialist in Deployment and Systems Management
+  exam: EX403
+  level: Specialist
+  product: Satellite
+  url: https://www.redhat.com/en/services/certification/red-hat-certified-specialist-deployment-and-systems-management-exam
+  description: Tests skills in deploying and managing systems using Red Hat Satellite.
+- id: ex188
+  title: Red Hat Certified Specialist in Containers
+  exam: EX188
+  level: Specialist
+  product: Containers
+  url: https://www.redhat.com/en/services/training/ex188-red-hat-certified-specialist-containers-exam
+  description: Tests knowledge of container fundamentals including podman, customizing,
+    running, managing containerized services.
+- id: ex316
+  title: Red Hat Certified Specialist in OpenShift Virtualization
+  exam: EX316
+  level: Specialist
+  product: OpenShift Virtualization
+  url: https://www.redhat.com/en/services/training/red-hat-certified-specialist-openshift-virtualization-exam
+  description: Skills to plan, deploy and manage virtual machines using the OpenShift
+    Virtualization operator in OCP.
+- id: ex229
+  title: Red Hat Certified Specialist in ROSA
+  exam: EX229
+  level: Specialist
+  product: ROSA
+  url: https://www.redhat.com/en/services/training/red-hat-certified-specialist-rosa
+  description: Covers skills to deploy and manage Red Hat OpenShift Service on AWS
+    (ROSA).
+- id: ex267
+  title: Red Hat Certified Specialist in OpenShift AI
+  exam: EX267
+  level: Specialist
+  product: OpenShift AI
+  url: https://www.redhat.com/en/services/certification/ex267-red-hat-certified-specialist-openshift-ai
+  description: Deploy and manage AI workloads using OpenShift AI, including training,
+    serving, and managing machine learning models.
