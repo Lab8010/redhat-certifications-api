@@ -1,5 +1,26 @@
-const lang = 'en';
-const t = i18n[lang];
-
-document.querySelector("h1").textContent = t.title;
-document.getElementById("filterBtn").textContent = t.filter_rhca;
+{
+  "en": {
+    "title": "Red Hat Certifications",
+    "filter_rhca": "Filter RHCA Eligible",
+    "all": "All",
+    "rhce": "RHCE candidate",
+    "developer": "RHCEMD/RHCCD candidate",
+    "exam": "Exam",
+    "level": "Level",
+    "product": "Product",
+    "exam_page": "Exam Page",
+    "description": "Description"
+  },
+  "ja": {
+    "title": "Red Hat認定資格一覧",
+    "filter_rhca": "RHCA対象資格を絞り込む",
+    "all": "すべて表示",
+    "rhce": "RHCE保持者向け",
+    "developer": "RHCEMD/RHCCD保持者向け",
+    "exam": "試験番号",
+    "level": "レベル",
+    "product": "対象製品",
+    "exam_page": "試験ページ",
+    "description": "説明"
+  }
+}
