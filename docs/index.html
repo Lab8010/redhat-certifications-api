@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Red Hat Certifications Viewer</title>
+  <meta charset="UTF-8" />
+  <title>Red Hat Certifications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { font-family: sans-serif; margin: 2rem; }
-    h1 { color: #cc0000; }
-    ul { list-style-type: none; padding: 0; }
-    li { margin-bottom: 1rem; }
-    .cert { border-bottom: 1px solid #ddd; padding-bottom: 1rem; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #cc0000;
+    }
+    .cert {
+      background: #fff;
+      border-left: 5px solid #cc0000;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .cert h2 {
+      margin: 0;
+    }
+    .cert p {
+      margin: 0.5rem 0 0 0;
+    }
+    .cert a {
+      text-decoration: none;
+      color: #0066cc;
+    }
   </style>
 </head>
 <body>
   <h1>Red Hat Certifications</h1>
-  <ul id="certList"></ul>
+  <div id="certList">Loading certifications...</div>
 
   <script>
-    fetch('../data/certifications.json')
-      .then(response => response.json())
+    // GitHub Pages absolute path to the JSON file
+    const dataUrl = 'https://lab8010.github.io/redhat-certifications-api/data/certifications.json';
+
+    fetch(dataUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
-        const list = document.getElementById('certList');
+        const container = document.getElementById('certList');
+        container.innerHTML = ""; // clear loading text
+
         data.forEach(cert => {
-          const item = document.createElement('li');
+          const item = document.createElement('div');
           item.classList.add("cert");
           item.innerHTML = `
-            <strong>${cert.title}</strong> <br/>
-            <em>Exam: ${cert.exam}</em> | Level: ${cert.level} <br/>
-            <a href="${cert.url}" target="_blank">Details</a><br/>
+            <h2>${cert.title}</h2>
+            <p><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
+            <p><a href="${cert.url}" target="_blank">View official page</a></p>
             <p>${cert.description}</p>
           `;
-          list.appendChild(item);
+          container.appendChild(item);
         });
+      })
+      .catch(error => {
+        document.getElementById('certList').innerHTML = "Failed to load certifications: " + error;
       });
   </script>
 </body>
