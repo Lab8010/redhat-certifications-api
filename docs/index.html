@@ -5,66 +5,74 @@
   <title>Red Hat Certifications</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1 {
-      color: #cc0000;
-    }
-    .cert {
-      background: #fff;
-      border-left: 5px solid #cc0000;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    }
-    .cert h2 {
-      margin: 0;
-    }
-    .cert p {
-      margin: 0.5rem 0 0 0;
-    }
-    .cert a {
-      text-decoration: none;
-      color: #0066cc;
-    }
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; color: #333; }
+    h1 { color: #cc0000; }
+    .controls { margin-bottom: 1.5rem; }
+    .cert { background: #fff; border-left: 5px solid #cc0000; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 0 5px rgba(0,0,0,0.05); }
+    .cert h2 { margin: 0; }
+    .cert p { margin: 0.3rem 0; }
+    .cert a { color: #0066cc; text-decoration: none; }
   </style>
 </head>
 <body>
   <h1>Red Hat Certifications</h1>
+  <div class="controls">
+    <label>
+      <input type="radio" name="candidate" value="none" checked> All
+    </label>
+    <label>
+      <input type="radio" name="candidate" value="rhce"> RHCE candidate
+    </label>
+    <label>
+      <input type="radio" name="candidate" value="developer"> RHCEMD/RHCCD candidate
+    </label>
+    <button id="filterBtn">Filter RHCA Eligible</button>
+  </div>
   <div id="certList">Loading certifications...</div>
 
   <script>
-    fetch('./data/certifications.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        const container = document.getElementById('certList');
-        container.innerHTML = "";
+    const rhceList = ["EX188","EX229","EX240","EX248","EX260","EX267","EX280","EX288","EX316","EX328","EX342","EX358","EX362","EX374","EX403"];
+    const devList = ["EX188","EX240","EX248","EX280","EX288","EX328","EX374","EX378","EX380","EX480","EX482"];
 
-        data.forEach(cert => {
-          const item = document.createElement('div');
-          item.classList.add("cert");
-          item.innerHTML = `
-            <h2>${cert.title}</h2>
-            <p><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
-            <p><strong>Product:</strong> ${cert.product}</p>
-            <p><a href="${cert.url}" target="_blank">View official page</a></p>
-            <p>${cert.description}</p>
-          `;
-          container.appendChild(item);
-        });
+    let certifications = [];
+
+    fetch('./data/certifications.json')
+      .then(r => r.json())
+      .then(data => {
+        certifications = data;
+        renderList(certifications);
       })
-      .catch(error => {
-        document.getElementById('certList').innerHTML = "Failed to load certifications: " + error;
+      .catch(err => {
+        document.getElementById('certList').innerText = "Failed to load: "+err;
       });
+
+    function renderList(list) {
+      const cont = document.getElementById('certList');
+      cont.innerHTML = "";
+      list.forEach(cert => {
+        const div = document.createElement('div');
+        div.classList.add("cert");
+        div.innerHTML = `
+          <h2>${cert.title}</h2>
+          <p><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
+          <p><strong>Product:</strong> ${cert.product}</p>
+          <p><a href="${cert.exam_link || cert.url}" target="_blank">Exam Page</a></p>
+          <p>${cert.description}</p>
+        `;
+        cont.appendChild(div);
+      });
+    }
+
+    document.getElementById('filterBtn').addEventListener('click', () => {
+      const candidate = document.querySelector('input[name="candidate"]:checked').value;
+      if(candidate === "none") {
+        return renderList(certifications);
+      }
+      const required = candidate === "rhce" ? rhceList : devList;
+      // filter those in list
+      const eligibles = certifications.filter(cert => required.includes(cert.exam));
+      renderList(eligibles);
+    });
   </script>
 </body>
 </html>
