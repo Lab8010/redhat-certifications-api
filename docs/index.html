@@ -47,7 +47,7 @@
       })
       .then(data => {
         const container = document.getElementById('certList');
-        container.innerHTML = ""; // clear loading text
+        container.innerHTML = "";
 
         data.forEach(cert => {
           const item = document.createElement('div');
@@ -55,6 +55,7 @@
           item.innerHTML = `
             <h2>${cert.title}</h2>
             <p><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
+            <p><strong>Product:</strong> ${cert.product}</p>
             <p><a href="${cert.url}" target="_blank">View official page</a></p>
             <p>${cert.description}</p>
           `;
