@@ -12,41 +12,74 @@
     .cert h2 { margin: 0; }
     .cert p { margin: 0.3rem 0; }
     .cert a { color: #0066cc; text-decoration: none; }
+    .lang { margin-bottom: 1rem; }
   </style>
 </head>
 <body>
-  <h1>Red Hat Certifications</h1>
+  <div class="lang">
+    <label for="langSelect">🌐 Language:</label>
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="ja">日本語</option>
+    </select>
+  </div>
+
+  <h1 id="pageTitle">Loading...</h1>
+
   <div class="controls">
-    <label>
-      <input type="radio" name="candidate" value="none" checked> All
-    </label>
-    <label>
-      <input type="radio" name="candidate" value="rhce"> RHCE candidate
-    </label>
-    <label>
-      <input type="radio" name="candidate" value="developer"> RHCEMD/RHCCD candidate
-    </label>
+    <label><input type="radio" name="candidate" value="none" checked> <span id="labelAll">All</span></label>
+    <label><input type="radio" name="candidate" value="rhce"> <span id="labelRhce">RHCE</span></label>
+    <label><input type="radio" name="candidate" value="developer"> <span id="labelDev">RHCEMD/RHCCD</span></label>
     <button id="filterBtn">Filter RHCA Eligible</button>
   </div>
+
   <div id="certList">Loading certifications...</div>
 
   <script>
+    const i18nUrl = './data/i18n.json';
+    const dataUrl = './data/certifications.json';
+
+    let i18n = {};
+    let lang = 'en';
+    let certData = [];
+
     const rhceList = ["EX188","EX229","EX240","EX248","EX260","EX267","EX280","EX288","EX316","EX328","EX342","EX358","EX362","EX374","EX403"];
     const devList = ["EX188","EX240","EX248","EX280","EX288","EX328","EX374","EX378","EX380","EX480","EX482"];
 
-    let certifications = [];
+    function loadI18n() {
+      fetch(i18nUrl)
+        .then(r => r.json())
+        .then(data => {
+          i18n = data;
+          updateText();
+          loadCertifications();
+        })
+        .catch(e => document.getElementById("certList").textContent = "Failed to load i18n: " + e);
+    }
 
-    fetch('./data/certifications.json')
-      .then(r => r.json())
-      .then(data => {
-        certifications = data;
-        renderList(certifications);
-      })
-      .catch(err => {
-        document.getElementById('certList').innerText = "Failed to load: "+err;
-      });
+    function updateText() {
+      const t = i18n[lang];
+      document.getElementById("pageTitle").textContent = t.title;
+      document.getElementById("labelAll").textContent = t.all;
+      document.getElementById("labelRhce").textContent = t.rhce;
+      document.getElementById("labelDev").textContent = t.developer;
+      document.getElementById("filterBtn").textContent = t.filter_rhca;
+    }
+
+    function loadCertifications() {
+      fetch(dataUrl)
+        .then(r => r.json())
+        .then(data => {
+          certData = data;
+          renderList(certData);
+        })
+        .catch(err => {
+          document.getElementById('certList').innerText = "Failed to load: "+err;
+        });
+    }
 
     function renderList(list) {
+      const t = i18n[lang];
       const cont = document.getElementById('certList');
       cont.innerHTML = "";
       list.forEach(cert => {
@@ -54,9 +87,9 @@
         div.classList.add("cert");
         div.innerHTML = `
           <h2>${cert.title}</h2>
-          <p><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
-          <p><strong>Product:</strong> ${cert.product}</p>
-          <p><a href="${cert.exam_link || cert.url}" target="_blank">Exam Page</a></p>
+          <p><strong>${t.exam}:</strong> ${cert.exam} | <strong>${t.level}:</strong> ${cert.level}</p>
+          <p><strong>${t.product}:</strong> ${cert.product}</p>
+          <p><a href="${cert.exam_link || cert.url}" target="_blank">${t.exam_page}</a></p>
           <p>${cert.description}</p>
         `;
         cont.appendChild(div);
@@ -66,13 +99,20 @@
     document.getElementById('filterBtn').addEventListener('click', () => {
       const candidate = document.querySelector('input[name="candidate"]:checked').value;
       if(candidate === "none") {
-        return renderList(certifications);
+        return renderList(certData);
       }
       const required = candidate === "rhce" ? rhceList : devList;
-      // filter those in list
-      const eligibles = certifications.filter(cert => required.includes(cert.exam));
-      renderList(eligibles);
+      const filtered = certData.filter(cert => required.includes(cert.exam));
+      renderList(filtered);
     });
+
+    document.getElementById('langSelect').addEventListener('change', (e) => {
+      lang = e.target.value;
+      updateText();
+      renderList(certData);
+    });
+
+    loadI18n();
   </script>
 </body>
 </html>

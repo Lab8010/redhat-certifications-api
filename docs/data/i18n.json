@@ -1,0 +1,5 @@
+const lang = 'en';
+const t = i18n[lang];
+
+document.querySelector("h1").textContent = t.title;
+document.getElementById("filterBtn").textContent = t.filter_rhca;
