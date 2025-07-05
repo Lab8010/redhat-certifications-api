@@ -12,22 +12,36 @@
     .cert h2 { margin: 0; }
     .cert p { margin: 0.3rem 0; }
     .cert a { color: #0066cc; text-decoration: none; }
+    .filters { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
   </style>
 </head>
 <body>
   <h1>Red Hat Certifications</h1>
-  <div class="controls">
+
+  <div class="filters">
     <label>
-      <input type="radio" name="candidate" value="none" checked> All
+      RHCA Path:
+      <select id="pathFilter">
+        <option value="none">All</option>
+        <option value="rhce">RHCE</option>
+        <option value="developer">RHCEMD/RHCCD</option>
+      </select>
     </label>
+
     <label>
-      <input type="radio" name="candidate" value="rhce"> RHCE candidate
+      Difficulty Level:
+      <select id="levelFilter">
+        <option value="all">All</option>
+        <option value="100">Level 100</option>
+        <option value="200">Level 200</option>
+        <option value="300">Level 300</option>
+        <option value="400">Level 400</option>
+      </select>
     </label>
-    <label>
-      <input type="radio" name="candidate" value="developer"> RHCEMD/RHCCD candidate
-    </label>
-    <button id="filterBtn">Filter RHCA Eligible</button>
+
+    <button id="filterBtn">Apply Filters</button>
   </div>
+
   <div id="certList">Loading certifications...</div>
 
   <script>
@@ -36,26 +50,42 @@
 
     let certifications = [];
 
-    fetch('./data/certifications.json')
-      .then(r => r.json())
-      .then(data => {
-        certifications = data;
-        renderList(certifications);
-      })
-      .catch(err => {
-        document.getElementById('certList').innerText = "Failed to load: "+err;
-      });
+    function getLevelFromExam(examCode) {
+      const match = examCode.match(/^EX(\d{3})/);
+      if (!match) return null;
+      const level = parseInt(match[1], 10);
+      return Math.floor(level / 100) * 100;
+    }
+
+    function loadCertifications() {
+      fetch('./data/certifications.json')
+        .then(r => r.json())
+        .then(data => {
+          certifications = data.map(cert => ({
+            ...cert,
+            levelNum: getLevelFromExam(cert.exam)
+          }));
+          renderList(certifications);
+        })
+        .catch(err => {
+          document.getElementById('certList').innerText = "Failed to load: " + err;
+        });
+    }
 
     function renderList(list) {
       const cont = document.getElementById('certList');
       cont.innerHTML = "";
+      if (list.length === 0) {
+        cont.innerHTML = "<p>No certifications match the filter criteria.</p>";
+        return;
+      }
       list.forEach(cert => {
         const div = document.createElement('div');
         div.classList.add("cert");
         div.innerHTML = `
           <h2>${cert.title}</h2>
           <p><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
-          <p><strong>Product:</strong> ${cert.product}</p>
+          <p><strong>Product:</strong> ${cert.product} | <strong>Difficulty:</strong> Level ${cert.levelNum || "?"}</p>
           <p><a href="${cert.exam_link || cert.url}" target="_blank">Exam Page</a></p>
           <p>${cert.description}</p>
         `;
@@ -64,15 +94,26 @@
     }
 
     document.getElementById('filterBtn').addEventListener('click', () => {
-      const candidate = document.querySelector('input[name="candidate"]:checked').value;
-      if(candidate === "none") {
-        return renderList(certifications);
+      const path = document.getElementById('pathFilter').value;
+      const level = document.getElementById('levelFilter').value;
+
+      let filtered = [...certifications];
+
+      if (path === "rhce") {
+        filtered = filtered.filter(cert => rhceList.includes(cert.exam));
+      } else if (path === "developer") {
+        filtered = filtered.filter(cert => devList.includes(cert.exam));
       }
-      const required = candidate === "rhce" ? rhceList : devList;
-      // filter those in list
-      const eligibles = certifications.filter(cert => required.includes(cert.exam));
-      renderList(eligibles);
+
+      if (level !== "all") {
+        const levelNum = parseInt(level, 10);
+        filtered = filtered.filter(cert => cert.levelNum === levelNum);
+      }
+
+      renderList(filtered);
     });
+
+    loadCertifications();
   </script>
 </body>
 </html>
