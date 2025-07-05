@@ -27,7 +27,7 @@ You can access these directly via GitHub Raw or use them in your own apps.
 
 A simple browser interface is available at:
 
-https://github.com/Lab8010/redhat-certifications-api
+https://lab8010.github.io/redhat-certifications-api/
 
 
 ブラウザで閲覧できる簡易インターフェースも上記URLで提供されています（GitHub Pagesを有効化してください）。
