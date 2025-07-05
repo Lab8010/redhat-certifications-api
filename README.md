@@ -58,4 +58,4 @@ This repository is provided under the [MIT License](LICENSE).
 
 ---
 
-Maintained by [@yamato-redhat](https://github.com/yamato-redhat)
+Maintained by [@Lab8010](https://github.com/Lab8010)
