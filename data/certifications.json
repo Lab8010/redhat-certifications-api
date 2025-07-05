@@ -1,0 +1,26 @@
+[
+  {
+    "id": "rhcsa",
+    "title": "Red Hat Certified System Administrator (RHCSA)",
+    "level": "Associate",
+    "exam": "EX200",
+    "url": "https://www.redhat.com/en/services/certification/rhcsa",
+    "description": "Validates core system administration skills for Red Hat Enterprise Linux environments."
+  },
+  {
+    "id": "rhce",
+    "title": "Red Hat Certified Engineer (RHCE)",
+    "level": "Professional",
+    "exam": "EX294",
+    "url": "https://www.redhat.com/en/services/certification/rhce",
+    "description": "Builds upon RHCSA by focusing on automation with Ansible and advanced administration."
+  },
+  {
+    "id": "ex280",
+    "title": "Red Hat Certified Specialist in OpenShift Administration",
+    "level": "Specialist",
+    "exam": "EX280",
+    "url": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-administration-exam",
+    "description": "Demonstrates skills in managing OpenShift clusters and containerized applications."
+  }
+]
