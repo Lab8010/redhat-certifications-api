@@ -7,7 +7,9 @@
     "product": "RHEL",
     "description": "Validates core system administration skills for Red Hat Enterprise Linux environments.",
     "url_en": "https://www.redhat.com/en/services/certification/rhcsa",
-    "url_ja": ""
+    "url_ja": "",
+    "duration": "3h",
+    "status": "Active"
   },
   {
     "id": "rhce",
@@ -17,7 +19,9 @@
     "product": "RHEL / Ansible",
     "description": "Focuses on automation with Ansible and advanced system administration tasks.",
     "url_en": "https://www.redhat.com/en/services/certification/rhce",
-    "url_ja": ""
+    "url_ja": "",
+    "duration": "4h",
+    "status": "Active"
   },
   {
     "id": "rhca",
@@ -27,7 +31,9 @@
     "product": "Multi-domain",
     "description": "Top-level certification achieved by earning multiple credentials in specialized domains.",
     "url_en": "https://www.redhat.com/en/services/certification/rhca",
-    "url_ja": ""
+    "url_ja": "",
+    "duration": "",
+    "status": "Active"
   },
   {
     "id": "ex280",
@@ -37,7 +43,9 @@
     "product": "OpenShift",
     "description": "Demonstrates knowledge in managing OpenShift Container Platform clusters.",
     "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-administration-exam",
-    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-openshift-administrator-exam"
+    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-openshift-administrator-exam",
+    "duration": "3h",
+    "status": "Active"
   },
   {
     "id": "ex288",
@@ -47,7 +55,9 @@
     "product": "OpenShift / App Dev",
     "description": "Covers designing, building, and deploying containerized applications using OpenShift.",
     "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-application-development-exam",
-    "url_ja": "https://www.redhat.com/ja/services/training/ex288-red-hat-certified-openshift-application-developer-exam"
+    "url_ja": "https://www.redhat.com/ja/services/training/ex288-red-hat-certified-openshift-application-developer-exam",
+    "duration": "3h",
+    "status": "Active"
   },
   {
     "id": "ex403",
@@ -57,7 +67,9 @@
     "product": "Satellite",
     "description": "Tests skills in deploying and managing systems using Red Hat Satellite.",
     "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-deployment-and-systems-management-exam",
-    "url_ja": "https://www.redhat.com/ja/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam"
+    "url_ja": "https://www.redhat.com/ja/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam",
+    "duration": "4h",
+    "status": "Active"
   },
   {
     "id": "ex188",
@@ -67,7 +79,9 @@
     "product": "Containers",
     "description": "Tests knowledge of container fundamentals including podman, customizing, running, managing containerized services.",
     "url_en": "https://www.redhat.com/en/services/training/ex188-red-hat-certified-specialist-containers-exam",
-    "url_ja": "https://www.redhat.com/ja/services/training/ex188-red-hat-certified-specialist-containers-exam"
+    "url_ja": "https://www.redhat.com/ja/services/training/ex188-red-hat-certified-specialist-containers-exam",
+    "duration": "2.5h",
+    "status": "Active"
   },
   {
     "id": "ex316",
@@ -77,7 +91,9 @@
     "product": "OpenShift Virtualization",
     "description": "Skills to plan, deploy and manage virtual machines using the OpenShift Virtualization operator in OCP.",
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-openshift-virtualization-ex316",
-    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-openshift-virtualization-ex316"
+    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-openshift-virtualization-ex316",
+    "duration": "4h",
+    "status": "Active"
   },
   {
     "id": "ex229",
@@ -87,7 +103,9 @@
     "product": "ROSA",
     "description": "Covers skills to deploy and manage Red Hat OpenShift Service on AWS (ROSA).",
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-rosa",
-    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-rosa"
+    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-rosa",
+    "duration": "4h",
+    "status": "Active"
   },
   {
     "id": "ex267",
@@ -97,6 +115,8 @@
     "product": "OpenShift AI",
     "description": "Deploy and manage AI workloads using OpenShift AI, including training, serving, and managing machine learning models.",
     "url_en": "https://www.redhat.com/en/services/certification/ex267-red-hat-certified-specialist-openshift-ai",
-    "url_ja": "https://www.redhat.com/ja/services/training/ex267-red-hat-certified-specialist-openshift-ai"
+    "url_ja": "https://www.redhat.com/ja/services/training/ex267-red-hat-certified-specialist-openshift-ai",
+    "duration": "3h",
+    "status": "Active"
   }
 ]
