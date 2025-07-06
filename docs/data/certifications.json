@@ -5,9 +5,9 @@
     "exam": "EX200",
     "level": "Associate",
     "product": "RHEL",
-    "url": "https://www.redhat.com/en/services/certification/rhcsa",
     "description": "Validates core system administration skills for Red Hat Enterprise Linux environments.",
-    "exam_link": ""
+    "url_en": "https://www.redhat.com/en/services/certification/rhcsa",
+    "url_ja": ""
   },
   {
     "id": "rhce",
@@ -15,9 +15,9 @@
     "exam": "EX294",
     "level": "Professional",
     "product": "RHEL / Ansible",
-    "url": "https://www.redhat.com/en/services/certification/rhce",
     "description": "Focuses on automation with Ansible and advanced system administration tasks.",
-    "exam_link": ""
+    "url_en": "https://www.redhat.com/en/services/certification/rhce",
+    "url_ja": ""
   },
   {
     "id": "rhca",
@@ -25,9 +25,9 @@
     "exam": "Multiple",
     "level": "Architect",
     "product": "Multi-domain",
-    "url": "https://www.redhat.com/en/services/certification/rhca",
     "description": "Top-level certification achieved by earning multiple credentials in specialized domains.",
-    "exam_link": ""
+    "url_en": "https://www.redhat.com/en/services/certification/rhca",
+    "url_ja": ""
   },
   {
     "id": "ex280",
@@ -35,9 +35,9 @@
     "exam": "EX280",
     "level": "Specialist",
     "product": "OpenShift",
-    "url": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-administration-exam",
     "description": "Demonstrates knowledge in managing OpenShift Container Platform clusters.",
-    "exam_link": "https://www.redhat.com/ja/services/training/red-hat-certified-openshift-administrator-exam"
+    "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-administration-exam",
+    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-openshift-administrator-exam"
   },
   {
     "id": "ex288",
@@ -45,9 +45,9 @@
     "exam": "EX288",
     "level": "Specialist",
     "product": "OpenShift / App Dev",
-    "url": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-application-development-exam",
     "description": "Covers designing, building, and deploying containerized applications using OpenShift.",
-    "exam_link": "https://www.redhat.com/ja/services/training/ex288-red-hat-certified-openshift-application-developer-exam"
+    "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-application-development-exam",
+    "url_ja": "https://www.redhat.com/ja/services/training/ex288-red-hat-certified-openshift-application-developer-exam"
   },
   {
     "id": "ex403",
@@ -55,9 +55,9 @@
     "exam": "EX403",
     "level": "Specialist",
     "product": "Satellite",
-    "url": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-deployment-and-systems-management-exam",
     "description": "Tests skills in deploying and managing systems using Red Hat Satellite.",
-    "exam_link": "https://www.redhat.com/ja/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam"
+    "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-deployment-and-systems-management-exam",
+    "url_ja": "https://www.redhat.com/ja/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam"
   },
   {
     "id": "ex188",
@@ -65,9 +65,9 @@
     "exam": "EX188",
     "level": "Specialist",
     "product": "Containers",
-    "url": "https://www.redhat.com/en/services/training/ex188-red-hat-certified-specialist-containers-exam",
     "description": "Tests knowledge of container fundamentals including podman, customizing, running, managing containerized services.",
-    "exam_link": "https://www.redhat.com/ja/services/training/ex188-red-hat-certified-specialist-containers-exam"
+    "url_en": "https://www.redhat.com/en/services/training/ex188-red-hat-certified-specialist-containers-exam",
+    "url_ja": "https://www.redhat.com/ja/services/training/ex188-red-hat-certified-specialist-containers-exam"
   },
   {
     "id": "ex316",
@@ -75,9 +75,9 @@
     "exam": "EX316",
     "level": "Specialist",
     "product": "OpenShift Virtualization",
-    "url": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-openshift-virtualization-ex316",
     "description": "Skills to plan, deploy and manage virtual machines using the OpenShift Virtualization operator in OCP.",
-    "exam_link": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-openshift-virtualization-ex316"
+    "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-openshift-virtualization-ex316",
+    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-openshift-virtualization-ex316"
   },
   {
     "id": "ex229",
@@ -85,9 +85,9 @@
     "exam": "EX229",
     "level": "Specialist",
     "product": "ROSA",
-    "url": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-rosa",
     "description": "Covers skills to deploy and manage Red Hat OpenShift Service on AWS (ROSA).",
-    "exam_link": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-rosa"
+    "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-rosa",
+    "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-rosa"
   },
   {
     "id": "ex267",
@@ -95,8 +95,8 @@
     "exam": "EX267",
     "level": "Specialist",
     "product": "OpenShift AI",
-    "url": "https://www.redhat.com/en/services/certification/ex267-red-hat-certified-specialist-openshift-ai",
     "description": "Deploy and manage AI workloads using OpenShift AI, including training, serving, and managing machine learning models.",
-    "exam_link": "https://www.redhat.com/ja/services/training/ex267-red-hat-certified-specialist-openshift-ai"
+    "url_en": "https://www.redhat.com/en/services/certification/ex267-red-hat-certified-specialist-openshift-ai",
+    "url_ja": "https://www.redhat.com/ja/services/training/ex267-red-hat-certified-specialist-openshift-ai"
   }
 ]
