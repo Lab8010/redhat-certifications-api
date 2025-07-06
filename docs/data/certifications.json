@@ -12,7 +12,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "rhce",
@@ -27,7 +28,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex280",
@@ -42,7 +44,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": false
   },
   {
     "id": "ex288",
@@ -57,7 +60,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": false
   },
   {
     "id": "ex403",
@@ -72,7 +76,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex188",
@@ -87,7 +92,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": false
   },
   {
     "id": "ex316",
@@ -102,7 +108,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": true
   },
   {
     "id": "ex229",
@@ -117,7 +124,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": true
   },
   {
     "id": "ex267",
@@ -132,7 +140,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": true
   },
   {
     "id": "ex183",
@@ -147,7 +156,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": false,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex210",
@@ -162,7 +172,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex221",
@@ -177,7 +188,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": false,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": true
   },
   {
     "id": "ex240",
@@ -192,7 +204,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": true
   },
   {
     "id": "ex248",
@@ -207,7 +220,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": false
   },
   {
     "id": "ex260",
@@ -222,7 +236,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex328",
@@ -237,7 +252,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": true
   },
   {
     "id": "ex336",
@@ -252,7 +268,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": false,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": true
   },
   {
     "id": "ex342",
@@ -267,7 +284,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex358",
@@ -282,7 +300,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex362",
@@ -297,7 +316,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex370",
@@ -312,7 +332,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": true
   },
   {
     "id": "ex374",
@@ -327,7 +348,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": false
   },
   {
     "id": "ex378",
@@ -342,7 +364,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": false,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": true
   },
   {
     "id": "ex380",
@@ -357,7 +380,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": true
   },
   {
     "id": "ex415",
@@ -372,7 +396,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex417",
@@ -387,7 +412,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex430",
@@ -402,7 +428,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": false,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex436",
@@ -417,7 +444,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex442",
@@ -432,7 +460,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex457",
@@ -447,7 +476,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex467",
@@ -462,7 +492,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
+    "rhca_candidate_for_rhccd": false,
+    "rhcoa": false
   },
   {
     "id": "ex480",
@@ -477,7 +508,8 @@
     "status": "Active",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": true
   },
   {
     "id": "ex482",
@@ -492,6 +524,7 @@
     "status": "Active",
     "rhca_candidate_for_rhce": false,
     "rhca_candidate_for_rhcemd": true,
-    "rhca_candidate_for_rhccd": true
+    "rhca_candidate_for_rhccd": true,
+    "rhcoa": false
   }
 ]
