@@ -9,7 +9,10 @@
     "url_en": "https://www.redhat.com/en/services/certification/rhcsa",
     "url_ja": "",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "rhce",
@@ -21,7 +24,10 @@
     "url_en": "https://www.redhat.com/en/services/certification/rhce",
     "url_ja": "",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "rhca",
@@ -33,7 +39,10 @@
     "url_en": "https://www.redhat.com/en/services/certification/rhca",
     "url_ja": "",
     "duration": "",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex280",
@@ -45,7 +54,10 @@
     "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-administration-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-openshift-administrator-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex288",
@@ -57,7 +69,10 @@
     "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-application-development-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex288-red-hat-certified-openshift-application-developer-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex403",
@@ -69,7 +84,10 @@
     "url_en": "https://www.redhat.com/en/services/certification/red-hat-certified-specialist-deployment-and-systems-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex188",
@@ -81,7 +99,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex188-red-hat-certified-specialist-containers-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex188-red-hat-certified-specialist-containers-exam",
     "duration": "2.5h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex316",
@@ -93,7 +114,10 @@
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-openshift-virtualization-ex316",
     "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-openshift-virtualization-ex316",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex229",
@@ -105,7 +129,10 @@
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-rosa",
     "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-rosa",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex267",
@@ -117,7 +144,10 @@
     "url_en": "https://www.redhat.com/en/services/certification/ex267-red-hat-certified-specialist-openshift-ai",
     "url_ja": "https://www.redhat.com/ja/services/training/ex267-red-hat-certified-specialist-openshift-ai",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex183",
@@ -129,7 +159,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex183-red-hat-certified-enterprise-application-developer-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex183-red-hat-certified-enterprise-application-developer-exam",
     "duration": 2.5,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex210",
@@ -141,7 +174,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex210-red-hat-certified-system-administrator-red-hat-openstack-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex210-red-hat-certified-system-administrator-red-hat-openstack-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex221",
@@ -153,7 +189,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex221-red-hat-certified-specialist-cloud-native-integration-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex221-red-hat-certified-specialist-cloud-native-integration-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex240",
@@ -165,7 +204,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex240-red-hat-certified-specialist-api-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex240-red-hat-certified-specialist-api-management-exam",
     "duration": 3.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex248",
@@ -177,7 +219,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex248-red-hat-certified-jboss-administration-rhcja-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex248-red-hat-certified-jboss-administration-rhcja-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex260",
@@ -189,7 +234,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex260-red-hat-certified-specialist-in-ceph-cloud-storage-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex260-red-hat-certified-specialist-in-ceph-cloud-storage-exam",
     "duration": 3.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex328",
@@ -201,7 +249,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex328-red-hat-certified-specialist-in-building-resilient-microservices-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex328-red-hat-certified-specialist-in-building-resilient-microservices-exam",
     "duration": 3.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex336",
@@ -213,7 +264,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex336-red-hat-certified-specialist-automating-openshift-virtual-machine-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex336-red-hat-certified-specialist-automating-openshift-virtual-machine-management-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex342",
@@ -225,7 +279,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex342-red-hat-certified-specialist-linux-diagnostics-and-troubleshooting",
     "url_ja": "https://www.redhat.com/ja/services/training/ex342-red-hat-%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%91%E3%83%BC%E3%83%88%E8%A9%A6%E9%A8%93-red-hat-enterprise-linux-diagnostics-and-troubleshooting",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex358",
@@ -237,7 +294,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex362",
@@ -249,7 +309,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex362-red-hat-certified-specialist-identity-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex362-red-hat-certified-specialist-identity-management-exam",
     "duration": 3.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex370",
@@ -261,7 +324,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex370-red-hat-certified-specialist-in-openshift-data-foundation-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex370-red-hat-certified-specialist-in-openshift-data-foundation-exam",
     "duration": 3.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex374",
@@ -273,7 +339,10 @@
     "url_en": "Coming soon",
     "url_ja": "Coming soon",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex378",
@@ -285,7 +354,10 @@
     "url_en": "Coming soon",
     "url_ja": "Coming soon",
     "duration": 3.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex380",
@@ -297,7 +369,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex380-certified-specialist-openshift-automation-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex380-certified-specialist-openshift-automation-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex415",
@@ -309,7 +384,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex415-red-hat-certified-specialist-security-linux-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex415-red-hat-certified-specialist-security-linux-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex417",
@@ -321,7 +399,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex417-red-hat-certified-specialist-microsoft-windows-automation-ansible-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex417-red-hat-certified-specialist-microsoft-windows-automation-ansible-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex430",
@@ -333,7 +414,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex430-red-hat-certified-specialist-openshift-advanced-cluster-security-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex430-red-hat-certified-specialist-openshift-advanced-cluster-security-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex436",
@@ -345,7 +429,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex436-red-hat-certificate-expertise-clustering-and-storage-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex436-red-hat-certificate-expertise-clustering-and-storage-management-exam",
     "duration": 3.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex442",
@@ -357,7 +444,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex442-red-hat-certificate-expertise-performance-tuning-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex442-red-hat-certificate-expertise-performance-tuning-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex457",
@@ -369,7 +459,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex457-red-hat-certified-specialist-in-ansible-network-automation-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex457-red-hat-certified-specialist-in-ansible-network-automation-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex467",
@@ -381,7 +474,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex467-red-hat-certified-specialist-managing-automation-ansible-automation-platform-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex467-red-hat-certified-specialist-managing-automation-ansible-automation-platform-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": false,
+    "rhca_candidate_for_rhccd": false
   },
   {
     "id": "ex480",
@@ -393,7 +489,10 @@
     "url_en": "https://www.redhat.com/en/services/training/ex480-red-hat-certified-specialist-multicluster-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex480-red-hat-certified-specialist-multicluster-management-exam",
     "duration": 4.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": true,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   },
   {
     "id": "ex482",
@@ -405,6 +504,9 @@
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-event-driven-application-development-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-event-driven-application-development-exam",
     "duration": 3.0,
-    "status": "Active"
+    "status": "Active",
+    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhcemd": true,
+    "rhca_candidate_for_rhccd": true
   }
 ]

@@ -50,6 +50,13 @@
                 <p class="card-text"><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level} | <strong>Product:</strong> ${cert.product}</p>
                 <p class="card-text"><strong>Status:</strong> <span class="status-icon ${isRetired ? "text-danger" : "text-success"}">${isRetired ? "❌" : "✅"}</span></p>
                 <p class="card-text"><strong>Duration:</strong> ${cert.duration || "N/A"}</p>
+<p class="card-text">
+  <strong>RHCA対象:</strong>
+  ${cert.rhca_candidate_for_rhce ? '<span class="badge bg-success me-1">RHCE向け</span>' : ''}
+  ${cert.rhca_candidate_for_rhcemd ? '<span class="badge bg-info text-dark me-1">RHCEMD向け</span>' : ''}
+  ${cert.rhca_candidate_for_rhccd ? '<span class="badge bg-warning text-dark">RHCCD向け</span>' : ''}
+</p>
+
                 <p class="card-text">${cert.description || ""}</p>
                 <a href="${cert.url_en}" class="btn btn-sm btn-primary me-2" target="_blank">Exam Page (en)</a>
                 <a href="${cert.url_ja}" class="btn btn-sm btn-secondary" target="_blank">Exam Page (ja)</a>
