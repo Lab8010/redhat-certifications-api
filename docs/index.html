@@ -51,10 +51,12 @@
                 <p class="card-text"><strong>Status:</strong> <span class="status-icon ${isRetired ? "text-danger" : "text-success"}">${isRetired ? "❌" : "✅"}</span></p>
                 <p class="card-text"><strong>Duration:</strong> ${cert.duration || "N/A"}</p>
 <p class="card-text">
-  <strong>RHCA対象:</strong>
-  ${cert.rhca_candidate_for_rhce ? '<span class="badge bg-success me-1">RHCE向け</span>' : ''}
-  ${cert.rhca_candidate_for_rhcemd ? '<span class="badge bg-info text-dark me-1">RHCEMD向け</span>' : ''}
-  ${cert.rhca_candidate_for_rhccd ? '<span class="badge bg-warning text-dark">RHCCD向け</span>' : ''}
+  <strong>RHCA for Active RHCE Holder:</strong>
+  ${cert.rhca_candidate_for_rhce ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
+  <strong>RHCA for Active RHCEMD Holder:</strong>
+  ${cert.rhca_candidate_for_rhcemd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
+  <strong>RHCA for Active RHCCD Holder:</strong>
+  ${cert.rhca_candidate_for_rhccd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}
 </p>
 
                 <p class="card-text">${cert.description || ""}</p>
