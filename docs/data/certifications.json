@@ -10,7 +10,7 @@
     "url_ja": "",
     "duration": "3h",
     "status": "Active",
-    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
     "rhca_candidate_for_rhccd": false
   },
@@ -25,22 +25,7 @@
     "url_ja": "",
     "duration": "4h",
     "status": "Active",
-    "rhca_candidate_for_rhce": false,
-    "rhca_candidate_for_rhcemd": false,
-    "rhca_candidate_for_rhccd": false
-  },
-  {
-    "id": "rhca",
-    "title": "Red Hat Certified Architect",
-    "exam": "Multiple",
-    "level": "Architect",
-    "product": "Multi-domain",
-    "description": "Top-level certification achieved by earning multiple credentials in specialized domains.",
-    "url_en": "https://www.redhat.com/en/services/certification/rhca",
-    "url_ja": "",
-    "duration": "",
-    "status": "Active",
-    "rhca_candidate_for_rhce": false,
+    "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": false,
     "rhca_candidate_for_rhccd": false
   },
