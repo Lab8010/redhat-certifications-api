@@ -58,6 +58,10 @@
   <strong>RHCA for Active RHCCD Holder:</strong>
   ${cert.rhca_candidate_for_rhccd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}
 </p>
+<p class="card-text">
+  <strong>RHCOA (Red Hat Certified OpenShift Architect):</strong>
+  ${cert.rhcoa ? \'<span class="text-success">✅</span>\' : \'<span class="text-danger">❌</span>\'}
+</p>
 
                 <p class="card-text">${cert.description || ""}</p>
                 <a href="${cert.url_en}" class="btn btn-sm btn-primary me-2" target="_blank">Exam Page (en)</a>
