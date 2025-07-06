@@ -66,6 +66,14 @@
       return Math.floor(level / 100) * 100;
     }
 
+    function getExamLinks(url) {
+      if (!url) return { en: "#", ja: "#" };
+      return {
+        ja: url,
+        en: url.replace("/ja/", "/en/")
+      };
+    }
+
     function loadCertifications() {
       fetch('./data/certifications.json')
         .then(r => r.json())
@@ -92,6 +100,7 @@
       list.forEach(cert => {
         const col = document.createElement('div');
         col.className = "col-md-6 col-lg-4";
+        const links = getExamLinks(cert.exam_link || cert.url);
         col.innerHTML = `
           <div class="card h-100 shadow-sm">
             <div class="card-body">
@@ -99,7 +108,10 @@
               <p class="card-text"><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
               <p class="card-text"><strong>Product:</strong> ${cert.product}<br><strong>Difficulty:</strong> Level ${cert.levelNum || "?"}</p>
               <p class="card-text">${cert.description}</p>
-              <a href="${cert.exam_link || cert.url}" target="_blank" class="btn btn-outline-primary">Exam Page</a>
+              <p>
+                <a href="${links.en}" target="_blank" class="btn btn-sm btn-outline-secondary me-2">Exam Page (en)</a>
+                <a href="${links.ja}" target="_blank" class="btn btn-sm btn-outline-secondary">Exam Page (ja)</a>
+              </p>
             </div>
           </div>
         `;
