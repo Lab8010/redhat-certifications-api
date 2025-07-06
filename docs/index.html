@@ -1,48 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Red Hat Certifications</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; color: #333; }
-    h1 { color: #cc0000; }
-    .controls { margin-bottom: 1.5rem; }
-    .cert { background: #fff; border-left: 5px solid #cc0000; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 0 5px rgba(0,0,0,0.05); }
-    .cert h2 { margin: 0; }
-    .cert p { margin: 0.3rem 0; }
-    .cert a { color: #0066cc; text-decoration: none; }
-    .filters { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body>
-  <h1>Red Hat Certifications</h1>
+<body class="bg-light">
 
-  <div class="filters">
-    <label>
-      RHCA Path:
-      <select id="pathFilter">
-        <option value="none">All</option>
-        <option value="rhce">RHCE</option>
-        <option value="developer">RHCEMD/RHCCD</option>
-      </select>
-    </label>
+  <div class="container py-4">
+    <h1 class="mb-4 text-danger">Red Hat Certifications</h1>
 
-    <label>
-      Difficulty Level:
-      <select id="levelFilter">
-        <option value="all">All</option>
-        <option value="100">Level 100</option>
-        <option value="200">Level 200</option>
-        <option value="300">Level 300</option>
-        <option value="400">Level 400</option>
-      </select>
-    </label>
+    <div class="row g-3 mb-3">
+      <div class="col-md-4">
+        <label class="form-label">RHCA Path</label>
+        <select id="pathFilter" class="form-select">
+          <option value="none">All</option>
+          <option value="rhce">Active RHCE Holder</option>
+          <option value="developer">Active RHCEMD/RHCCD Holder</option>
+        </select>
+      </div>
 
-    <button id="filterBtn">Apply Filters</button>
+      <div class="col-md-4">
+        <label class="form-label">Difficulty Level</label>
+        <select id="levelFilter" class="form-select">
+          <option value="all">All</option>
+          <option value="100">Level 100</option>
+          <option value="200">Level 200</option>
+          <option value="300">Level 300</option>
+          <option value="400">Level 400</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Sort By</label>
+        <select id="sortSelect" class="form-select">
+          <option value="examAsc">Exam Code (A-Z)</option>
+          <option value="examDesc">Exam Code (Z-A)</option>
+          <option value="productAsc">Product (A-Z)</option>
+          <option value="productDesc">Product (Z-A)</option>
+          <option value="levelAsc">Level (Low-High)</option>
+          <option value="levelDesc">Level (High-Low)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <button id="filterBtn" class="btn btn-primary">Apply Filters</button>
+    </div>
+
+    <div id="certList" class="row g-3">Loading certifications...</div>
   </div>
-
-  <div id="certList">Loading certifications...</div>
 
   <script>
     const rhceList = ["EX188","EX229","EX240","EX248","EX260","EX267","EX280","EX288","EX316","EX328","EX342","EX358","EX362","EX374","EX403"];
@@ -79,23 +88,29 @@
         cont.innerHTML = "<p>No certifications match the filter criteria.</p>";
         return;
       }
+
       list.forEach(cert => {
-        const div = document.createElement('div');
-        div.classList.add("cert");
-        div.innerHTML = `
-          <h2>${cert.title}</h2>
-          <p><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
-          <p><strong>Product:</strong> ${cert.product} | <strong>Difficulty:</strong> Level ${cert.levelNum || "?"}</p>
-          <p><a href="${cert.exam_link || cert.url}" target="_blank">Exam Page</a></p>
-          <p>${cert.description}</p>
+        const col = document.createElement('div');
+        col.className = "col-md-6 col-lg-4";
+        col.innerHTML = `
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">${cert.title}</h5>
+              <p class="card-text"><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level}</p>
+              <p class="card-text"><strong>Product:</strong> ${cert.product}<br><strong>Difficulty:</strong> Level ${cert.levelNum || "?"}</p>
+              <p class="card-text">${cert.description}</p>
+              <a href="${cert.exam_link || cert.url}" target="_blank" class="btn btn-outline-primary">Exam Page</a>
+            </div>
+          </div>
         `;
-        cont.appendChild(div);
+        cont.appendChild(col);
       });
     }
 
-    document.getElementById('filterBtn').addEventListener('click', () => {
+    function applyFiltersAndSort() {
       const path = document.getElementById('pathFilter').value;
       const level = document.getElementById('levelFilter').value;
+      const sort = document.getElementById('sortSelect').value;
 
       let filtered = [...certifications];
 
@@ -110,9 +125,22 @@
         filtered = filtered.filter(cert => cert.levelNum === levelNum);
       }
 
-      renderList(filtered);
-    });
+      filtered.sort((a, b) => {
+        switch (sort) {
+          case "examAsc": return a.exam.localeCompare(b.exam);
+          case "examDesc": return b.exam.localeCompare(a.exam);
+          case "productAsc": return a.product.localeCompare(b.product);
+          case "productDesc": return b.product.localeCompare(a.product);
+          case "levelAsc": return (a.levelNum || 0) - (b.levelNum || 0);
+          case "levelDesc": return (b.levelNum || 0) - (a.levelNum || 0);
+          default: return 0;
+        }
+      });
 
+      renderList(filtered);
+    }
+
+    document.getElementById('filterBtn').addEventListener('click', applyFiltersAndSort);
     loadCertifications();
   </script>
 </body>
