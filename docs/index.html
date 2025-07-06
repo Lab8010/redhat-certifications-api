@@ -14,6 +14,12 @@
 <body class="bg-light">
   <div class="container py-4">
     <h1 class="mb-3">Red Hat Certifications</h1>
+<p>
+  If you want to learn more about Red Hat’s certification programs, we recommend asking questions in the community:<br>
+  <a href="https://learn.redhat.com/" target="_blank">https://learn.redhat.com/</a><br><br>
+  This page is maintained voluntarily by <a href="https://github.com/Lab8010" target="_blank">Lab8010</a>.
+</p>
+
     <p><strong>This page was last updated on:</strong> <span id="lastUpdated">2025-07-06 12:40:56 JST</span></p>
     <p>
       <span class="status-icon text-success">✅</span> Active
@@ -35,7 +41,7 @@
         data.forEach(cert => {
           const isRetired = cert.status === "Retired";
           const card = document.createElement("div");
-          card.className = "col-md-6 cert-card " + (isRetired ? "retired" : "");
+          card.className = "col-12 cert-card " + (isRetired ? "retired" : "");
 
           card.innerHTML = `
             <div class="card h-100">
