@@ -1,38 +1,37 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Red Hat Certifications</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Red Hat Certifications</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
     .retired { display: none; }
     .cert-card { margin-bottom: 1rem; }
     .status-icon { font-weight: bold; font-size: 1.2rem; }
   </style>
 </head>
 <body class="bg-light">
-  <div class="container py-4">
-    <h1 class="mb-3">Red Hat Certifications</h1>
+<div class="container py-4">
+<h1 class="mb-3">Red Hat Certifications</h1>
 <p>
-  If you want to learn more about Red Hat’s certification programs, we recommend asking questions in the community:<br>
-  <a href="https://learn.redhat.com/" target="_blank">https://learn.redhat.com/</a><br><br>
+  If you want to learn more about Red Hat’s certification programs, we recommend asking questions in the community:<br/>
+<a href="https://learn.redhat.com/" target="_blank">https://learn.redhat.com/</a><br/><br/>
   This page is maintained voluntarily by <a href="https://github.com/Lab8010/redhat-certifications-api" target="_blank">Lab8010</a>.
 </p>
-
-    <p><strong>This page was last updated on:</strong> <span id="lastUpdated">2025-07-06 12:40:56 JST</span></p>
-    <p>
-      <span class="status-icon text-success">✅</span> Active
+<p><strong>This page was last updated on:</strong> <span id="lastUpdated">2025-07-06 12:40:56 JST</span></p>
+<p>
+<span class="status-icon text-success">✅</span> Active
       <span class="status-icon text-danger ms-3">❌</span> Retired
     </p>
-    <div class="form-check form-switch mb-4">
-      <input class="form-check-input" type="checkbox" role="switch" id="showRetired">
-      <label class="form-check-label" for="showRetired">Show Retired Certifications</label>
-    </div>
-    <div id="certifications" class="row"></div>
-  </div>
-
-  <script>
+<div class="form-check form-switch mb-4">
+<input class="form-check-input" id="showRetired" role="switch" type="checkbox"/>
+<label class="form-check-label" for="showRetired">Show Retired Certifications</label>
+</div>
+<div class="row" id="certifications"></div>
+</div>
+<script>
     fetch("./data/certifications.json")
       .then(response => response.json())
       .then(data => {
@@ -70,5 +69,14 @@
         document.getElementById("certifications").innerHTML = `<div class='text-danger'>Failed to load certifications: ${err}</div>`;
       });
   </script>
-</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const updatedElement = document.getElementById('lastUpdated');
+        const utcDate = new Date("2025-07-06T05:24:17Z");
+        const localDateStr = utcDate.toLocaleString(undefined, {
+            timeZoneName: 'short'
+        });
+        updatedElement.textContent = "This page was last updated on: " + localDateStr;
+    });
+    </script></body>
 </html>
