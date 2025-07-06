@@ -56,11 +56,9 @@
   <strong>RHCA for Active RHCEMD Holder:</strong>
   ${cert.rhca_candidate_for_rhcemd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
   <strong>RHCA for Active RHCCD Holder:</strong>
-  ${cert.rhca_candidate_for_rhccd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}
-</p>
-<p class="card-text">
+  ${cert.rhca_candidate_for_rhccd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
   <strong>RHCOA (Red Hat Certified OpenShift Architect):</strong>
-  ${cert.rhcoa ? \'<span class="text-success">✅</span>\' : \'<span class="text-danger">❌</span>\'}
+  ${cert.rhcoa ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}
 </p>
 
                 <p class="card-text">${cert.description || ""}</p>
