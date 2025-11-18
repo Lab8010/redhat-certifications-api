@@ -9,6 +9,107 @@
     .retired { display: none; }
     .cert-card { margin-bottom: 1rem; }
     .status-icon { font-weight: bold; font-size: 1.2rem; }
+    
+    /* Drag and Drop Styles */
+    .draggable-cert {
+      cursor: move;
+      margin-bottom: 0.5rem;
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      border: 2px solid #ddd;
+      transition: all 0.2s;
+    }
+    .draggable-cert:hover {
+      border-color: #999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .draggable-cert.dragging {
+      opacity: 0.5;
+    }
+    
+    /* Level-based colors */
+    .level-100 { background-color: #fce3e3; }
+    .level-200 { background-color: #fbc5c5; }
+    .level-300 { background-color: #f9a8a8; }
+    .level-400 { background-color: #f56e6e; }
+    
+    .learning-path-container {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .learning-path-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .learning-path-canvas {
+      min-height: 600px;
+      border: 3px dashed #ccc;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .learning-path-slot {
+      min-height: 80px;
+      border: 2px dashed #bbb;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .learning-path-slot.fixed {
+      background-color: #e8f4f8;
+      border-color: #0066cc;
+    }
+    .learning-path-slot.filled {
+      border-style: solid;
+      border-color: #999;
+    }
+    .learning-path-slot.drag-over {
+      background-color: #fff3cd;
+      border-color: #ffc107;
+    }
+    .slot-label {
+      position: absolute;
+      top: 0.25rem;
+      left: 0.5rem;
+      font-size: 0.75rem;
+      color: #666;
+      font-weight: bold;
+    }
+    .dropped-cert {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid #999;
+      font-size: 0.9rem;
+    }
+    .remove-btn {
+      position: absolute;
+      top: 0.25rem;
+      right: 0.5rem;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .remove-btn:hover {
+      background: #c82333;
+    }
   </style>
 </head>
 <body class="bg-light">
@@ -57,6 +158,34 @@
     </div>
     
     <div id="certifications" class="row"></div>
+    
+    <!-- Learning Path to RHCA Section -->
+    <div class="learning-path-container">
+      <h2 class="learning-path-title">Learning Path to RHCA</h2>
+      <div class="learning-path-canvas" id="learningPathCanvas">
+        <div class="learning-path-slot fixed" data-slot="0" data-required="EX200">
+          <span class="slot-label">1. Required: EX200</span>
+        </div>
+        <div class="learning-path-slot fixed" data-slot="1" data-required="EX294">
+          <span class="slot-label">2. Required: EX294</span>
+        </div>
+        <div class="learning-path-slot" data-slot="2">
+          <span class="slot-label">3. Optional</span>
+        </div>
+        <div class="learning-path-slot" data-slot="3">
+          <span class="slot-label">4. Optional</span>
+        </div>
+        <div class="learning-path-slot" data-slot="4">
+          <span class="slot-label">5. Optional</span>
+        </div>
+        <div class="learning-path-slot" data-slot="5">
+          <span class="slot-label">6. Optional</span>
+        </div>
+        <div class="learning-path-slot" data-slot="6">
+          <span class="slot-label">7. Optional</span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -68,6 +197,15 @@
       const match = level.match(/Level (\d+)/);
       return match ? parseInt(match[1]) : 0;
     }
+    
+    // Get level class for styling
+    function getLevelClass(level) {
+      const levelNum = getLevelNumber(level);
+      return `level-${levelNum}`;
+    }
+    
+    // Learning path state
+    let learningPath = [null, null, null, null, null, null, null]; // 7 slots
 
     // Render certifications
     function renderCertifications(certs) {
@@ -81,6 +219,7 @@
         card.dataset.level = cert.level;
         card.dataset.product = cert.product || "";
 
+        const levelClass = getLevelClass(cert.level);
         card.innerHTML = `
           <div class="card h-100">
             <div class="card-body">
@@ -103,8 +242,20 @@
               <a href="${cert.url_ja}" class="btn btn-sm btn-secondary" target="_blank">Exam Page (ja)</a>
             </div>
           </div>
+          ${!isRetired ? `<div class="draggable-cert ${levelClass}" draggable="true" data-exam="${cert.exam}" data-cert-id="${cert.id}">
+            <strong>${cert.exam}</strong>: ${cert.title}
+          </div>` : ''}
         `;
         container.appendChild(card);
+        
+        // Add drag event listeners to draggable items
+        if (!isRetired) {
+          const draggable = card.querySelector('.draggable-cert');
+          if (draggable) {
+            draggable.addEventListener('dragstart', handleDragStart);
+            draggable.addEventListener('dragend', handleDragEnd);
+          }
+        }
       });
 
       // Apply retired filter
@@ -162,6 +313,127 @@
       });
     }
 
+    // Drag and Drop handlers
+    let draggedElement = null;
+    
+    function handleDragStart(e) {
+      draggedElement = e.target;
+      e.target.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/html', e.target.outerHTML);
+    }
+    
+    function handleDragEnd(e) {
+      e.target.classList.remove('dragging');
+    }
+    
+    function initializeLearningPath() {
+      const canvas = document.getElementById('learningPathCanvas');
+      const slots = canvas.querySelectorAll('.learning-path-slot');
+      
+      // Initialize required slots with EX200 and EX294
+      const ex200 = allCertifications.find(c => c.exam === 'EX200');
+      const ex294 = allCertifications.find(c => c.exam === 'EX294');
+      
+      if (ex200) {
+        learningPath[0] = ex200;
+        renderSlot(0, ex200);
+      }
+      if (ex294) {
+        learningPath[1] = ex294;
+        renderSlot(1, ex294);
+      }
+      
+      slots.forEach((slot, index) => {
+        slot.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = 'move';
+          slot.classList.add('drag-over');
+        });
+        
+        slot.addEventListener('dragleave', () => {
+          slot.classList.remove('drag-over');
+        });
+        
+        slot.addEventListener('drop', (e) => {
+          e.preventDefault();
+          slot.classList.remove('drag-over');
+          
+          if (draggedElement) {
+            const exam = draggedElement.dataset.exam;
+            const certId = draggedElement.dataset.certId;
+            const cert = allCertifications.find(c => c.id === certId || c.exam === exam);
+            
+            if (cert) {
+              const slotIndex = parseInt(slot.dataset.slot);
+              const requiredExam = slot.dataset.required;
+              
+              // Check if slot has a required exam
+              if (requiredExam && cert.exam !== requiredExam) {
+                alert(`This slot requires ${requiredExam}`);
+                return;
+              }
+              
+              // Check if exam is already in another slot
+              const existingIndex = learningPath.findIndex((c, idx) => c && c.exam === cert.exam && idx !== slotIndex);
+              if (existingIndex !== -1) {
+                learningPath[existingIndex] = null;
+                renderSlot(existingIndex, null);
+              }
+              
+              learningPath[slotIndex] = cert;
+              renderSlot(slotIndex, cert);
+            }
+          }
+        });
+      });
+    }
+    
+    function renderSlot(slotIndex, cert) {
+      const slot = document.querySelector(`[data-slot="${slotIndex}"]`);
+      if (!slot) return;
+      
+      // Get label text before clearing
+      const labelText = slotIndex === 0 ? '1. Required: EX200' :
+                       slotIndex === 1 ? '2. Required: EX294' :
+                       `${slotIndex + 1}. Optional`;
+      
+      // Clear existing content
+      slot.innerHTML = '';
+      
+      // Recreate label
+      const label = document.createElement('span');
+      label.className = 'slot-label';
+      label.textContent = labelText;
+      slot.appendChild(label);
+      
+      if (cert) {
+        slot.classList.add('filled');
+        const levelClass = getLevelClass(cert.level);
+        const certDiv = document.createElement('div');
+        certDiv.className = `dropped-cert ${levelClass}`;
+        certDiv.innerHTML = `
+          <strong>${cert.exam}</strong>: ${cert.title}
+          ${slotIndex >= 2 ? `<button class="remove-btn" onclick="removeFromSlot(${slotIndex})">×</button>` : ''}
+        `;
+        slot.appendChild(certDiv);
+      } else {
+        slot.classList.remove('filled');
+      }
+    }
+    
+    function removeFromSlot(slotIndex) {
+      if (slotIndex < 2) {
+        alert('Cannot remove required exams (EX200 and EX294)');
+        return;
+      }
+      learningPath[slotIndex] = null;
+      renderSlot(slotIndex, null);
+    }
+    
+    // Make removeFromSlot available globally
+    window.removeFromSlot = removeFromSlot;
+
     // Load and initialize
     fetch("./data/certifications.json")
       .then(response => response.json())
@@ -169,6 +441,7 @@
         allCertifications = data;
         populateProductFilter();
         applyFiltersAndSort();
+        initializeLearningPath();
 
         // Event listeners
         document.getElementById("showRetired").addEventListener("change", applyRetiredFilter);
