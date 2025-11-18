@@ -29,53 +29,152 @@
       <input class="form-check-input" type="checkbox" role="switch" id="showRetired">
       <label class="form-check-label" for="showRetired">Show Retired Certifications</label>
     </div>
+    
+    <div class="row mb-4">
+      <div class="col-md-4 mb-3">
+        <label for="filterLevel" class="form-label">Filter by Level:</label>
+        <select class="form-select" id="filterLevel">
+          <option value="">All Levels</option>
+          <option value="Level 100">Level 100</option>
+          <option value="Level 200">Level 200</option>
+          <option value="Level 300">Level 300</option>
+          <option value="Level 400">Level 400</option>
+        </select>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="filterProduct" class="form-label">Filter by Product:</label>
+        <select class="form-select" id="filterProduct">
+          <option value="">All Products</option>
+        </select>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="sortOrder" class="form-label">Sort by Level:</label>
+        <select class="form-select" id="sortOrder">
+          <option value="asc">Ascending (100 → 400)</option>
+          <option value="desc">Descending (400 → 100)</option>
+        </select>
+      </div>
+    </div>
+    
     <div id="certifications" class="row"></div>
   </div>
 
   <script>
+    let allCertifications = [];
+    let filteredCertifications = [];
+
+    // Extract level number from "Level 200" format
+    function getLevelNumber(level) {
+      const match = level.match(/Level (\d+)/);
+      return match ? parseInt(match[1]) : 0;
+    }
+
+    // Render certifications
+    function renderCertifications(certs) {
+      const container = document.getElementById("certifications");
+      container.innerHTML = "";
+
+      certs.forEach(cert => {
+        const isRetired = cert.status === "Retired";
+        const card = document.createElement("div");
+        card.className = "col-12 cert-card " + (isRetired ? "retired" : "");
+        card.dataset.level = cert.level;
+        card.dataset.product = cert.product || "";
+
+        card.innerHTML = `
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">${cert.title}</h5>
+              <p class="card-text"><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level} | <strong>Product:</strong> ${cert.product || "N/A"}</p>
+              <p class="card-text"><strong>Status:</strong> <span class="status-icon ${isRetired ? "text-danger" : "text-success"}">${isRetired ? "❌" : "✅"}</span></p>
+              <p class="card-text"><strong>Duration:</strong> ${cert.duration || "N/A"}</p>
+              <p class="card-text">
+                <strong>RHCA for Active RHCE Holder:</strong>
+                ${cert.rhca_candidate_for_rhce ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
+                <strong>RHCA for Active RHCEMD Holder:</strong>
+                ${cert.rhca_candidate_for_rhcemd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
+                <strong>RHCA for Active RHCCD Holder:</strong>
+                ${cert.rhca_candidate_for_rhccd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
+                <strong>RHCOA (Red Hat Certified OpenShift Architect):</strong>
+                ${cert.rhcoa ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}
+              </p>
+              <p class="card-text">${cert.description || ""}</p>
+              <a href="${cert.url_en}" class="btn btn-sm btn-primary me-2" target="_blank">Exam Page (en)</a>
+              <a href="${cert.url_ja}" class="btn btn-sm btn-secondary" target="_blank">Exam Page (ja)</a>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      // Apply retired filter
+      applyRetiredFilter();
+    }
+
+    // Apply filters and sort
+    function applyFiltersAndSort() {
+      const levelFilter = document.getElementById("filterLevel").value;
+      const productFilter = document.getElementById("filterProduct").value;
+      const sortOrder = document.getElementById("sortOrder").value;
+
+      filteredCertifications = allCertifications.filter(cert => {
+        const levelMatch = !levelFilter || cert.level === levelFilter;
+        const productMatch = !productFilter || (cert.product || "") === productFilter;
+        return levelMatch && productMatch;
+      });
+
+      // Sort by level
+      filteredCertifications.sort((a, b) => {
+        const levelA = getLevelNumber(a.level);
+        const levelB = getLevelNumber(b.level);
+        return sortOrder === "asc" ? levelA - levelB : levelB - levelA;
+      });
+
+      renderCertifications(filteredCertifications);
+    }
+
+    // Apply retired filter
+    function applyRetiredFilter() {
+      const showRetired = document.getElementById("showRetired").checked;
+      const retiredCards = document.querySelectorAll(".retired");
+      retiredCards.forEach(card => {
+        card.style.display = showRetired ? "block" : "none";
+      });
+    }
+
+    // Populate product filter
+    function populateProductFilter() {
+      const productSelect = document.getElementById("filterProduct");
+      const products = new Set();
+      
+      allCertifications.forEach(cert => {
+        if (cert.product && cert.product.trim() !== "") {
+          products.add(cert.product);
+        }
+      });
+
+      const sortedProducts = Array.from(products).sort();
+      sortedProducts.forEach(product => {
+        const option = document.createElement("option");
+        option.value = product;
+        option.textContent = product;
+        productSelect.appendChild(option);
+      });
+    }
+
+    // Load and initialize
     fetch("./data/certifications.json")
       .then(response => response.json())
       .then(data => {
-        const container = document.getElementById("certifications");
+        allCertifications = data;
+        populateProductFilter();
+        applyFiltersAndSort();
 
-        data.forEach(cert => {
-          const isRetired = cert.status === "Retired";
-          const card = document.createElement("div");
-          card.className = "col-12 cert-card " + (isRetired ? "retired" : "");
-
-          card.innerHTML = `
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">${cert.title}</h5>
-                <p class="card-text"><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level} | <strong>Product:</strong> ${cert.product}</p>
-                <p class="card-text"><strong>Status:</strong> <span class="status-icon ${isRetired ? "text-danger" : "text-success"}">${isRetired ? "❌" : "✅"}</span></p>
-                <p class="card-text"><strong>Duration:</strong> ${cert.duration || "N/A"}</p>
-<p class="card-text">
-  <strong>RHCA for Active RHCE Holder:</strong>
-  ${cert.rhca_candidate_for_rhce ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
-  <strong>RHCA for Active RHCEMD Holder:</strong>
-  ${cert.rhca_candidate_for_rhcemd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
-  <strong>RHCA for Active RHCCD Holder:</strong>
-  ${cert.rhca_candidate_for_rhccd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
-  <strong>RHCOA (Red Hat Certified OpenShift Architect):</strong>
-  ${cert.rhcoa ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}
-</p>
-
-                <p class="card-text">${cert.description || ""}</p>
-                <a href="${cert.url_en}" class="btn btn-sm btn-primary me-2" target="_blank">Exam Page (en)</a>
-                <a href="${cert.url_ja}" class="btn btn-sm btn-secondary" target="_blank">Exam Page (ja)</a>
-              </div>
-            </div>
-          `;
-          container.appendChild(card);
-        });
-
-        document.getElementById("showRetired").addEventListener("change", function () {
-          const retiredCards = document.querySelectorAll(".retired");
-          retiredCards.forEach(card => {
-            card.style.display = this.checked ? "block" : "none";
-          });
-        });
+        // Event listeners
+        document.getElementById("showRetired").addEventListener("change", applyRetiredFilter);
+        document.getElementById("filterLevel").addEventListener("change", applyFiltersAndSort);
+        document.getElementById("filterProduct").addEventListener("change", applyFiltersAndSort);
+        document.getElementById("sortOrder").addEventListener("change", applyFiltersAndSort);
       })
       .catch(err => {
         document.getElementById("certifications").innerHTML = `<div class='text-danger'>Failed to load certifications: ${err}</div>`;

@@ -32,6 +32,30 @@ https://lab8010.github.io/redhat-certifications-api/
 
 ブラウザで閲覧できる簡易インターフェースも上記URLで提供されています（GitHub Pagesを有効化してください）。
 
+### 🖥️ Local Development | ローカル開発
+
+To run the HTML interface locally, start a local HTTP server:
+
+ローカルでHTMLインターフェースを実行するには、ローカルHTTPサーバーを起動してください：
+
+```bash
+# Python 3の場合
+cd docs
+python3 -m http.server 8000
+
+# Node.jsの場合（http-serverが必要）
+cd docs
+npx http-server -p 8000
+```
+
+Then open `http://localhost:8000/index.html` in your browser.
+
+その後、ブラウザで `http://localhost:8000/index.html` を開いてください。
+
+**Note:** The HTML file uses `fetch()` to load JSON data, which requires an HTTP server. Opening the file directly (`file://`) will result in CORS errors.
+
+**注意:** HTMLファイルは`fetch()`を使用してJSONデータを読み込むため、HTTPサーバーが必要です。ファイルを直接開く（`file://`）とCORSエラーが発生します。
+
 ---
 
 ## 📦 Use Cases | 活用例
