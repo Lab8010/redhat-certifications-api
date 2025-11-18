@@ -505,7 +505,7 @@
     "url_en": "https://www.redhat.com/en/services/training/ex480-red-hat-certified-specialist-multicluster-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex480-red-hat-certified-specialist-multicluster-management-exam",
     "duration": 4.0,
-    "status": "Active",
+    "status": "Retired",
     "rhca_candidate_for_rhce": true,
     "rhca_candidate_for_rhcemd": true,
     "rhca_candidate_for_rhccd": true,
