@@ -8,206 +8,245 @@
   <style>
     .retired { display: none; }
     .cert-card { margin-bottom: 1rem; }
-    .status-icon { font-weight: bold; font-size: 1.2rem; }
-    .badge-category { font-size: 0.75rem; }
+    .exam-badge { font-family: monospace; letter-spacing: 0.5px; }
+    .filter-section { background: #fff; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+    .filter-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: #6c757d; letter-spacing: 0.5px; display: block; margin-bottom: 0.4rem; }
   </style>
 </head>
 <body class="bg-light">
   <div class="container py-4">
-    <h1 class="mb-3">Red Hat Certifications</h1>
-<p>
-  If you want to learn more about Red Hat's certification programs, we recommend asking questions in the community:<br>
-  <a href="https://learn.redhat.com/" target="_blank">https://learn.redhat.com/</a><br><br>
-  This page is maintained voluntarily by <a href="https://github.com/Lab8010" target="_blank">Lab8010</a>.
-</p>
 
-    <p><strong>This page was last updated on:</strong> <span id="lastUpdated">2026-04-16 JST</span></p>
-    <p>
-      <span class="status-icon text-success">✅</span> Active
-      <span class="status-icon text-danger ms-3">❌</span> Retired
+    <!-- Header -->
+    <h1 class="mb-1">Red Hat Certifications</h1>
+    <p class="text-muted small mb-3">
+      Questions? Visit <a href="https://learn.redhat.com/" target="_blank">learn.redhat.com</a>
+      &nbsp;|&nbsp; Maintained by <a href="https://github.com/Lab8010" target="_blank">Lab8010</a>
+      &nbsp;|&nbsp; Last updated: <span id="lastUpdated">2026-04-16 JST</span>
     </p>
-    <div class="form-check form-switch mb-4">
-      <input class="form-check-input" type="checkbox" role="switch" id="showRetired">
-      <label class="form-check-label" for="showRetired">Show Retired Certifications</label>
+
+    <!-- Filter section -->
+    <div class="filter-section">
+
+      <!-- Category -->
+      <div class="mb-3">
+        <span class="filter-label">Category</span>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-sm category-btn btn-secondary"       data-value="" data-color="secondary">All</button>
+          <button class="btn btn-sm category-btn btn-outline-danger"  data-value="RHEL"         data-color="danger">RHEL</button>
+          <button class="btn btn-sm category-btn btn-outline-warning" data-value="Ansible"      data-color="warning">Ansible</button>
+          <button class="btn btn-sm category-btn btn-outline-primary" data-value="OpenShift"    data-color="primary">OpenShift</button>
+          <button class="btn btn-sm category-btn btn-outline-success" data-value="Cloud-Native" data-color="success">Cloud-Native</button>
+        </div>
+      </div>
+
+      <!-- Level -->
+      <div class="mb-3">
+        <span class="filter-label">Level</span>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-sm level-btn rounded-pill btn-secondary"      data-value="">All</button>
+          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 100">100</button>
+          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 200">200</button>
+          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 300">300</button>
+          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 400">400</button>
+        </div>
+      </div>
+
+      <!-- Bottom row: Product / Sort / Show Retired / Count -->
+      <div class="row g-2 align-items-end">
+        <div class="col-auto">
+          <span class="filter-label">Product</span>
+          <select class="form-select form-select-sm" id="filterProduct" style="min-width:160px">
+            <option value="">All Products</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <span class="filter-label">Sort by Level</span>
+          <select class="form-select form-select-sm" id="sortOrder">
+            <option value="asc">100 → 400</option>
+            <option value="desc">400 → 100</option>
+          </select>
+        </div>
+        <div class="col-auto d-flex align-items-end pb-1">
+          <div class="form-check form-switch mb-0">
+            <input class="form-check-input" type="checkbox" role="switch" id="showRetired">
+            <label class="form-check-label small" for="showRetired">Show Retired</label>
+          </div>
+        </div>
+        <div class="col-auto ms-auto d-flex align-items-end pb-1">
+          <span class="text-muted small" id="resultCount"></span>
+        </div>
+      </div>
     </div>
 
-    <div class="row mb-4">
-      <div class="col-md-3 mb-3">
-        <label for="filterCategory" class="form-label">Filter by Category:</label>
-        <select class="form-select" id="filterCategory">
-          <option value="">All Categories</option>
-          <option value="RHEL">RHEL</option>
-          <option value="Ansible">Ansible</option>
-          <option value="OpenShift">OpenShift</option>
-          <option value="Cloud-Native">Cloud-Native</option>
-        </select>
-      </div>
-      <div class="col-md-3 mb-3">
-        <label for="filterLevel" class="form-label">Filter by Level:</label>
-        <select class="form-select" id="filterLevel">
-          <option value="">All Levels</option>
-          <option value="Level 100">Level 100</option>
-          <option value="Level 200">Level 200</option>
-          <option value="Level 300">Level 300</option>
-          <option value="Level 400">Level 400</option>
-        </select>
-      </div>
-      <div class="col-md-3 mb-3">
-        <label for="filterProduct" class="form-label">Filter by Product:</label>
-        <select class="form-select" id="filterProduct">
-          <option value="">All Products</option>
-        </select>
-      </div>
-      <div class="col-md-3 mb-3">
-        <label for="sortOrder" class="form-label">Sort by Level:</label>
-        <select class="form-select" id="sortOrder">
-          <option value="asc">Ascending (100 → 400)</option>
-          <option value="desc">Descending (400 → 100)</option>
-        </select>
-      </div>
-    </div>
-
+    <!-- Cards -->
     <div id="certifications" class="row"></div>
   </div>
 
   <script>
     let allCertifications = [];
     let filteredCertifications = [];
+    let selectedCategory = "";
+    let selectedLevel = "";
 
     const categoryColors = {
-      "RHEL": "danger",
-      "Ansible": "warning",
-      "OpenShift": "primary",
+      "RHEL":         "danger",
+      "Ansible":      "warning",
+      "OpenShift":    "primary",
       "Cloud-Native": "success"
     };
 
-    // Extract level number from "Level 200" format
     function getLevelNumber(level) {
-      const match = level.match(/Level (\d+)/);
+      const match = (level || "").match(/Level (\d+)/);
       return match ? parseInt(match[1]) : 0;
     }
 
-    // Render certifications
+    function updateResultCount() {
+      const showRetired = document.getElementById("showRetired").checked;
+      const visible = filteredCertifications.filter(c => showRetired || c.status !== "Retired").length;
+      const total   = allCertifications.filter(c => showRetired || c.status !== "Retired").length;
+      document.getElementById("resultCount").textContent = `Showing ${visible} of ${total}`;
+    }
+
     function renderCertifications(certs) {
       const container = document.getElementById("certifications");
       container.innerHTML = "";
 
       certs.forEach(cert => {
-        const isRetired = cert.status === "Retired";
-        const card = document.createElement("div");
-        card.className = "col-12 cert-card " + (isRetired ? "retired" : "");
-        card.dataset.level = cert.level;
-        card.dataset.product = cert.product || "";
-        card.dataset.category = cert.category || "";
+        const isRetired     = cert.status === "Retired";
+        const categoryColor = categoryColors[cert.category] || "secondary";
 
-        const categoryBadgeColor = categoryColors[cert.category] || "secondary";
-        const examPageButtons = (cert.url_en || cert.url_ja) ? `
-          ${cert.url_en ? `<a href="${cert.url_en}" class="btn btn-sm btn-primary me-2" target="_blank">Exam Page (en)</a>` : ""}
-          ${cert.url_ja ? `<a href="${cert.url_ja}" class="btn btn-sm btn-secondary" target="_blank">Exam Page (ja)</a>` : ""}
-        ` : `<span class="text-muted small">No exam page available</span>`;
+        const card = document.createElement("div");
+        card.className = "col-12 col-md-6 cert-card" + (isRetired ? " retired" : "");
+
+        const examButtons = (cert.url_en || cert.url_ja) ? `
+          <div class="d-flex align-items-center gap-1 flex-wrap">
+            <span class="small text-muted">Exam Page:</span>
+            ${cert.url_en ? `<a href="${cert.url_en}" class="btn btn-sm btn-primary" target="_blank">EN</a>` : ""}
+            ${cert.url_ja ? `<a href="${cert.url_ja}" class="btn btn-sm btn-outline-secondary" target="_blank">JA</a>` : ""}
+          </div>` : "";
+
+        const trainingButtons = cert.training_course ? `
+          <div class="d-flex align-items-center gap-1 flex-wrap">
+            <span class="small text-muted">Training (${cert.training_course}):</span>
+            ${cert.training_url_en ? `<a href="${cert.training_url_en}" class="btn btn-sm btn-success" target="_blank">EN</a>` : ""}
+            ${cert.training_url_ja ? `<a href="${cert.training_url_ja}" class="btn btn-sm btn-outline-secondary" target="_blank">JA</a>` : ""}
+          </div>` : "";
 
         card.innerHTML = `
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-2 gap-2">
-                <h5 class="card-title mb-0">${cert.title}</h5>
-                ${cert.category ? `<span class="badge bg-${categoryBadgeColor} badge-category">${cert.category}</span>` : ""}
+          <div class="card h-100 ${isRetired ? "border-danger border-opacity-25" : ""}">
+            <div class="card-body d-flex flex-column">
+              <!-- Badge row -->
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-dark exam-badge">${cert.exam}</span>
+                  ${cert.level ? `<span class="badge bg-light text-dark border">${cert.level}</span>` : ""}
+                  <span class="badge bg-${categoryColor}">${cert.category}</span>
+                </div>
+                <span class="badge ${isRetired ? "bg-danger" : "bg-success"} flex-shrink-0 ms-1">
+                  ${isRetired ? "Retired" : "Active"}
+                </span>
               </div>
-              <p class="card-text">
-                <strong>Exam:</strong> ${cert.exam}
-                ${cert.level ? ` | <strong>Level:</strong> ${cert.level}` : ""}
-                ${cert.product ? ` | <strong>Product:</strong> ${cert.product}` : ""}
-              </p>
-              <p class="card-text"><strong>Status:</strong> <span class="status-icon ${isRetired ? "text-danger" : "text-success"}">${isRetired ? "❌" : "✅"}</span></p>
-              <p class="card-text"><strong>Duration:</strong> ${cert.duration || "N/A"}</p>
-              ${cert.description ? `<p class="card-text text-muted">${cert.description}</p>` : ""}
-              ${cert.training_course ? `
-              <p class="card-text mt-2">
-                <strong>Recommended Training: ${cert.training_course}</strong><br>
-                ${cert.training_url_en ? `<a href="${cert.training_url_en}" class="btn btn-sm btn-outline-success me-2 mt-1" target="_blank">Course Page (en)</a>` : ""}
-                ${cert.training_url_ja ? `<a href="${cert.training_url_ja}" class="btn btn-sm btn-outline-secondary mt-1" target="_blank">Course Page (ja)</a>` : ""}
-              </p>` : ""}
-              ${examPageButtons}
+              <!-- Title -->
+              <h6 class="card-title mb-2">${cert.title}</h6>
+              <!-- Meta badges -->
+              <div class="mb-2 d-flex flex-wrap gap-1">
+                ${cert.product  ? `<span class="badge bg-light text-dark border"><small>📦 ${cert.product}</small></span>` : ""}
+                ${cert.duration ? `<span class="badge bg-light text-dark border"><small>⏱ ${cert.duration}</small></span>` : ""}
+              </div>
+              <!-- Description -->
+              ${cert.description ? `<p class="card-text text-muted small mb-2">${cert.description}</p>` : ""}
+              <!-- Buttons pushed to bottom -->
+              <div class="mt-auto pt-2 d-flex flex-column gap-2">
+                ${examButtons}
+                ${trainingButtons}
+              </div>
             </div>
-          </div>
-        `;
+          </div>`;
         container.appendChild(card);
       });
 
-      // Apply retired filter
       applyRetiredFilter();
+      updateResultCount();
     }
 
-    // Apply filters and sort
     function applyFiltersAndSort() {
-      const categoryFilter = document.getElementById("filterCategory").value;
-      const levelFilter = document.getElementById("filterLevel").value;
       const productFilter = document.getElementById("filterProduct").value;
-      const sortOrder = document.getElementById("sortOrder").value;
+      const sortOrder     = document.getElementById("sortOrder").value;
 
       filteredCertifications = allCertifications.filter(cert => {
-        const categoryMatch = !categoryFilter || cert.category === categoryFilter;
-        const levelMatch = !levelFilter || cert.level === levelFilter;
-        const productMatch = !productFilter || (cert.product || "") === productFilter;
+        const categoryMatch = !selectedCategory || cert.category === selectedCategory;
+        const levelMatch    = !selectedLevel    || cert.level    === selectedLevel;
+        const productMatch  = !productFilter    || (cert.product || "") === productFilter;
         return categoryMatch && levelMatch && productMatch;
       });
 
-      // Sort by level
       filteredCertifications.sort((a, b) => {
-        const levelA = getLevelNumber(a.level);
-        const levelB = getLevelNumber(b.level);
-        return sortOrder === "asc" ? levelA - levelB : levelB - levelA;
+        const la = getLevelNumber(a.level);
+        const lb = getLevelNumber(b.level);
+        return sortOrder === "asc" ? la - lb : lb - la;
       });
 
       renderCertifications(filteredCertifications);
     }
 
-    // Apply retired filter
     function applyRetiredFilter() {
       const showRetired = document.getElementById("showRetired").checked;
-      const retiredCards = document.querySelectorAll(".retired");
-      retiredCards.forEach(card => {
-        card.style.display = showRetired ? "block" : "none";
+      document.querySelectorAll(".retired").forEach(card => {
+        card.style.display = showRetired ? "" : "none";
       });
+      updateResultCount();
     }
 
-    // Populate product filter
+    function setCategoryFilter(value) {
+      selectedCategory = value;
+      document.querySelectorAll(".category-btn").forEach(btn => {
+        const color    = btn.dataset.color;
+        const isActive = btn.dataset.value === value;
+        btn.className  = `btn btn-sm category-btn ${isActive ? `btn-${color}` : `btn-outline-${color}`}`;
+      });
+      applyFiltersAndSort();
+    }
+
+    function setLevelFilter(value) {
+      selectedLevel = value;
+      document.querySelectorAll(".level-btn").forEach(btn => {
+        const isActive = btn.dataset.value === value;
+        btn.className  = `btn btn-sm level-btn rounded-pill ${isActive ? "btn-secondary" : "btn-outline-secondary"}`;
+      });
+      applyFiltersAndSort();
+    }
+
     function populateProductFilter() {
-      const productSelect = document.getElementById("filterProduct");
+      const select   = document.getElementById("filterProduct");
       const products = new Set();
-
       allCertifications.forEach(cert => {
-        if (cert.product && cert.product.trim() !== "") {
-          products.add(cert.product);
-        }
+        if (cert.product && cert.product.trim()) products.add(cert.product);
       });
-
-      const sortedProducts = Array.from(products).sort();
-      sortedProducts.forEach(product => {
-        const option = document.createElement("option");
-        option.value = product;
-        option.textContent = product;
-        productSelect.appendChild(option);
+      Array.from(products).sort().forEach(p => {
+        const opt = document.createElement("option");
+        opt.value = opt.textContent = p;
+        select.appendChild(opt);
       });
     }
 
-    // Load and initialize
     fetch("./data/certifications.json")
-      .then(response => response.json())
+      .then(r => r.json())
       .then(data => {
         allCertifications = data;
         populateProductFilter();
         applyFiltersAndSort();
 
-        // Event listeners
+        document.querySelectorAll(".category-btn").forEach(btn =>
+          btn.addEventListener("click", () => setCategoryFilter(btn.dataset.value)));
+        document.querySelectorAll(".level-btn").forEach(btn =>
+          btn.addEventListener("click", () => setLevelFilter(btn.dataset.value)));
         document.getElementById("showRetired").addEventListener("change", applyRetiredFilter);
-        document.getElementById("filterCategory").addEventListener("change", applyFiltersAndSort);
-        document.getElementById("filterLevel").addEventListener("change", applyFiltersAndSort);
         document.getElementById("filterProduct").addEventListener("change", applyFiltersAndSort);
         document.getElementById("sortOrder").addEventListener("change", applyFiltersAndSort);
       })
       .catch(err => {
-        document.getElementById("certifications").innerHTML = `<div class='text-danger'>Failed to load certifications: ${err}</div>`;
+        document.getElementById("certifications").innerHTML =
+          `<div class="text-danger">Failed to load certifications: ${err}</div>`;
       });
   </script>
 </body>
