@@ -9,18 +9,19 @@
     .retired { display: none; }
     .cert-card { margin-bottom: 1rem; }
     .status-icon { font-weight: bold; font-size: 1.2rem; }
+    .badge-category { font-size: 0.75rem; }
   </style>
 </head>
 <body class="bg-light">
   <div class="container py-4">
     <h1 class="mb-3">Red Hat Certifications</h1>
 <p>
-  If you want to learn more about Red Hat’s certification programs, we recommend asking questions in the community:<br>
+  If you want to learn more about Red Hat's certification programs, we recommend asking questions in the community:<br>
   <a href="https://learn.redhat.com/" target="_blank">https://learn.redhat.com/</a><br><br>
   This page is maintained voluntarily by <a href="https://github.com/Lab8010" target="_blank">Lab8010</a>.
 </p>
 
-    <p><strong>This page was last updated on:</strong> <span id="lastUpdated">2025-07-06 12:40:56 JST</span></p>
+    <p><strong>This page was last updated on:</strong> <span id="lastUpdated">2026-04-16 JST</span></p>
     <p>
       <span class="status-icon text-success">✅</span> Active
       <span class="status-icon text-danger ms-3">❌</span> Retired
@@ -29,9 +30,19 @@
       <input class="form-check-input" type="checkbox" role="switch" id="showRetired">
       <label class="form-check-label" for="showRetired">Show Retired Certifications</label>
     </div>
-    
+
     <div class="row mb-4">
-      <div class="col-md-4 mb-3">
+      <div class="col-md-3 mb-3">
+        <label for="filterCategory" class="form-label">Filter by Category:</label>
+        <select class="form-select" id="filterCategory">
+          <option value="">All Categories</option>
+          <option value="RHEL">RHEL</option>
+          <option value="Ansible">Ansible</option>
+          <option value="OpenShift">OpenShift</option>
+          <option value="Cloud-Native">Cloud-Native</option>
+        </select>
+      </div>
+      <div class="col-md-3 mb-3">
         <label for="filterLevel" class="form-label">Filter by Level:</label>
         <select class="form-select" id="filterLevel">
           <option value="">All Levels</option>
@@ -41,13 +52,13 @@
           <option value="Level 400">Level 400</option>
         </select>
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-md-3 mb-3">
         <label for="filterProduct" class="form-label">Filter by Product:</label>
         <select class="form-select" id="filterProduct">
           <option value="">All Products</option>
         </select>
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-md-3 mb-3">
         <label for="sortOrder" class="form-label">Sort by Level:</label>
         <select class="form-select" id="sortOrder">
           <option value="asc">Ascending (100 → 400)</option>
@@ -55,13 +66,20 @@
         </select>
       </div>
     </div>
-    
+
     <div id="certifications" class="row"></div>
   </div>
 
   <script>
     let allCertifications = [];
     let filteredCertifications = [];
+
+    const categoryColors = {
+      "RHEL": "danger",
+      "Ansible": "warning",
+      "OpenShift": "primary",
+      "Cloud-Native": "success"
+    };
 
     // Extract level number from "Level 200" format
     function getLevelNumber(level) {
@@ -80,27 +98,30 @@
         card.className = "col-12 cert-card " + (isRetired ? "retired" : "");
         card.dataset.level = cert.level;
         card.dataset.product = cert.product || "";
+        card.dataset.category = cert.category || "";
+
+        const categoryBadgeColor = categoryColors[cert.category] || "secondary";
+        const examPageButtons = (cert.url_en || cert.url_ja) ? `
+          ${cert.url_en ? `<a href="${cert.url_en}" class="btn btn-sm btn-primary me-2" target="_blank">Exam Page (en)</a>` : ""}
+          ${cert.url_ja ? `<a href="${cert.url_ja}" class="btn btn-sm btn-secondary" target="_blank">Exam Page (ja)</a>` : ""}
+        ` : `<span class="text-muted small">No exam page available</span>`;
 
         card.innerHTML = `
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">${cert.title}</h5>
-              <p class="card-text"><strong>Exam:</strong> ${cert.exam} | <strong>Level:</strong> ${cert.level} | <strong>Product:</strong> ${cert.product || "N/A"}</p>
+              <div class="d-flex align-items-center mb-2 gap-2">
+                <h5 class="card-title mb-0">${cert.title}</h5>
+                ${cert.category ? `<span class="badge bg-${categoryBadgeColor} badge-category">${cert.category}</span>` : ""}
+              </div>
+              <p class="card-text">
+                <strong>Exam:</strong> ${cert.exam}
+                ${cert.level ? ` | <strong>Level:</strong> ${cert.level}` : ""}
+                ${cert.product ? ` | <strong>Product:</strong> ${cert.product}` : ""}
+              </p>
               <p class="card-text"><strong>Status:</strong> <span class="status-icon ${isRetired ? "text-danger" : "text-success"}">${isRetired ? "❌" : "✅"}</span></p>
               <p class="card-text"><strong>Duration:</strong> ${cert.duration || "N/A"}</p>
-              <p class="card-text">
-                <strong>RHCA for Active RHCE Holder:</strong>
-                ${cert.rhca_candidate_for_rhce ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
-                <strong>RHCA for Active RHCEMD Holder:</strong>
-                ${cert.rhca_candidate_for_rhcemd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
-                <strong>RHCA for Active RHCCD Holder:</strong>
-                ${cert.rhca_candidate_for_rhccd ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}<br>
-                <strong>RHCOA (Red Hat Certified OpenShift Architect):</strong>
-                ${cert.rhcoa ? '<span class="text-success">✅</span>' : '<span class="text-danger">❌</span>'}
-              </p>
-              <p class="card-text">${cert.description || ""}</p>
-              <a href="${cert.url_en}" class="btn btn-sm btn-primary me-2" target="_blank">Exam Page (en)</a>
-              <a href="${cert.url_ja}" class="btn btn-sm btn-secondary" target="_blank">Exam Page (ja)</a>
+              ${cert.description ? `<p class="card-text text-muted">${cert.description}</p>` : ""}
+              ${examPageButtons}
             </div>
           </div>
         `;
@@ -113,14 +134,16 @@
 
     // Apply filters and sort
     function applyFiltersAndSort() {
+      const categoryFilter = document.getElementById("filterCategory").value;
       const levelFilter = document.getElementById("filterLevel").value;
       const productFilter = document.getElementById("filterProduct").value;
       const sortOrder = document.getElementById("sortOrder").value;
 
       filteredCertifications = allCertifications.filter(cert => {
+        const categoryMatch = !categoryFilter || cert.category === categoryFilter;
         const levelMatch = !levelFilter || cert.level === levelFilter;
         const productMatch = !productFilter || (cert.product || "") === productFilter;
-        return levelMatch && productMatch;
+        return categoryMatch && levelMatch && productMatch;
       });
 
       // Sort by level
@@ -146,7 +169,7 @@
     function populateProductFilter() {
       const productSelect = document.getElementById("filterProduct");
       const products = new Set();
-      
+
       allCertifications.forEach(cert => {
         if (cert.product && cert.product.trim() !== "") {
           products.add(cert.product);
@@ -172,6 +195,7 @@
 
         // Event listeners
         document.getElementById("showRetired").addEventListener("change", applyRetiredFilter);
+        document.getElementById("filterCategory").addEventListener("change", applyFiltersAndSort);
         document.getElementById("filterLevel").addEventListener("change", applyFiltersAndSort);
         document.getElementById("filterProduct").addEventListener("change", applyFiltersAndSort);
         document.getElementById("sortOrder").addEventListener("change", applyFiltersAndSort);
