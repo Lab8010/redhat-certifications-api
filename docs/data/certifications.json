@@ -215,8 +215,8 @@
     "product": "OpenShift",
     "category": "OpenShift",
     "description": "",
-    "url_en": "",
-    "url_ja": "",
+    "url_en": "https://www.redhat.com/en/services/training/ex180-red-hat-certified-technologist-in-openshift-exam",
+    "url_ja": "https://www.redhat.com/ja/services/training/ex180-red-hat-certified-technologist-in-openshift-exam",
     "duration": "",
     "status": "Active"
   },
@@ -228,8 +228,8 @@
     "product": "OpenShift Virtualization",
     "category": "OpenShift",
     "description": "",
-    "url_en": "",
-    "url_ja": "",
+    "url_en": "https://www.redhat.com/en/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization",
+    "url_ja": "https://www.redhat.com/ja/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization",
     "duration": "",
     "status": "Active"
   },
@@ -322,7 +322,7 @@
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-rosa",
     "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-rosa",
     "duration": "4h",
-    "status": "Active"
+    "status": "Retired"
   },
   {
     "id": "ex480",
