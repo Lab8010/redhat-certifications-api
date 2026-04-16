@@ -19,8 +19,21 @@
     }
     .rh-site-name {
       color: #d2d2d2;
-      font-size: 0.95rem;
+      font-size: 1.15rem;
       font-weight: 400;
+    }
+    .rh-meta {
+      color: #9a9a9a;
+      font-size: 0.78rem;
+      margin-top: 0.3rem;
+    }
+    .rh-meta a {
+      color: #bbb;
+      text-decoration: none;
+    }
+    .rh-meta a:hover {
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -28,25 +41,21 @@
 
   <!-- Red Hat global header -->
   <header class="rh-header">
-    <div class="container">
-      <div class="d-flex align-items-center py-3">
-        <span class="rh-site-name">
-          <span style="color:#EE0000; font-weight:700;">Red Hat</span>
-          <span style="color:#fff; font-weight:700;"> Certification Lists</span>
-        </span>
+    <div class="container py-3">
+      <span class="rh-site-name">
+        <span style="color:#EE0000; font-weight:700;">Red Hat</span>
+        <span style="color:#fff; font-weight:700;"> Certification Lists</span>
+      </span>
+      <div class="rh-meta">
+        Questions? Visit <a href="https://access.redhat.com/community/learn" target="_blank">Red Hat Training &amp; Certification space</a>
+        &nbsp;|&nbsp; Maintained by <a href="https://github.com/Lab8010" target="_blank">Lab8010</a>
+        &nbsp;|&nbsp; <a href="https://x.com/lab8010" target="_blank">@lab8010 on X</a>
+        &nbsp;|&nbsp; Last updated: <span id="lastUpdated">2026-04-16 JST</span>
       </div>
     </div>
   </header>
 
   <div class="container py-4">
-
-    <!-- Page title -->
-    <h1 class="mb-1">Red Hat Certifications</h1>
-    <p class="text-muted small mb-3">
-      Questions? Visit <a href="https://access.redhat.com/community/learn" target="_blank">Red Hat Training &amp; Certification space</a>
-      &nbsp;|&nbsp; Maintained by <a href="https://github.com/Lab8010" target="_blank">Lab8010</a>
-      &nbsp;|&nbsp; Last updated: <span id="lastUpdated">2026-04-16 JST</span>
-    </p>
 
     <!-- Filter section -->
     <div class="filter-section">
