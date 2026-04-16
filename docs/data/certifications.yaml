@@ -177,7 +177,7 @@
 - id: ex180
   title: Red Hat Certified Technologist in OpenShift
   exam: EX180
-  level: ''
+  level: Level 100
   product: OpenShift
   category: OpenShift
   description: ''
@@ -188,7 +188,7 @@
 - id: ex156
   title: Red Hat Certified Technologist in OpenShift Virtualization
   exam: EX156
-  level: ''
+  level: Level 100
   product: OpenShift Virtualization
   category: OpenShift
   description: ''
@@ -254,7 +254,7 @@
 - id: ex432
   title: Red Hat Certified Specialist in MultiCluster Management with Advanced Cluster Management
   exam: EX432
-  level: ''
+  level: Level 400
   product: ''
   category: OpenShift
   description: ''
