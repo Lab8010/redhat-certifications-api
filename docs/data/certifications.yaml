@@ -183,7 +183,7 @@
   description: ''
   url_en: https://www.redhat.com/en/services/training/ex180-red-hat-certified-technologist-in-openshift-exam
   url_ja: https://www.redhat.com/ja/services/training/ex180-red-hat-certified-technologist-in-openshift-exam
-  duration: ''
+  duration: 2h
   status: Active
 - id: ex156
   title: Red Hat Certified Technologist in OpenShift Virtualization
@@ -194,7 +194,7 @@
   description: ''
   url_en: https://www.redhat.com/en/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization
   url_ja: https://www.redhat.com/ja/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization
-  duration: ''
+  duration: 2h
   status: Active
 - id: ex280
   title: Red Hat Certified Specialist in OpenShift Administration

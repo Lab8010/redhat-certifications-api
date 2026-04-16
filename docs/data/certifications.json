@@ -223,7 +223,7 @@
     "description": "",
     "url_en": "https://www.redhat.com/en/services/training/ex180-red-hat-certified-technologist-in-openshift-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex180-red-hat-certified-technologist-in-openshift-exam",
-    "duration": "",
+    "duration": "2h",
     "status": "Active"
   },
   {
@@ -236,7 +236,7 @@
     "description": "",
     "url_en": "https://www.redhat.com/en/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization",
     "url_ja": "https://www.redhat.com/ja/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization",
-    "duration": "",
+    "duration": "2h",
     "status": "Active"
   },
   {
