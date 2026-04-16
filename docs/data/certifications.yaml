@@ -1,108 +1,396 @@
-- description: Validates core system administration skills for Red Hat Enterprise
-    Linux environments.
-  duration: 3h
-  exam: EX200
-  id: rhcsa
-  level: Associate
-  product: RHEL
-  status: Active
+- id: rhcsa
   title: Red Hat Certified System Administrator
-  url_en: https://www.redhat.com/en/services/certification/rhcsa
-  url_ja: ''
-- description: Focuses on automation with Ansible and advanced system administration
-    tasks.
-  duration: 4h
-  exam: EX294
-  id: rhce
-  level: Professional
-  product: RHEL / Ansible
-  status: Active
-  title: Red Hat Certified Engineer
-  url_en: https://www.redhat.com/en/services/certification/rhce
-  url_ja: ''
-- description: Top-level certification achieved by earning multiple credentials in
-    specialized domains.
-  duration: ''
-  exam: Multiple
-  id: rhca
-  level: Architect
-  product: Multi-domain
-  status: Active
-  title: Red Hat Certified Architect
-  url_en: https://www.redhat.com/en/services/certification/rhca
-  url_ja: ''
-- description: Demonstrates knowledge in managing OpenShift Container Platform clusters.
+  exam: EX200
+  level: Level 200
+  product: RHEL
+  category: RHEL
+  description: Validates core system administration skills for Red Hat Enterprise Linux environments.
+  url_en: https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam
   duration: 3h
-  exam: EX280
-  id: ex280
-  level: Specialist
-  product: OpenShift
   status: Active
-  title: Red Hat Certified Specialist in OpenShift Administration
-  url_en: https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-administration-exam
-  url_ja: https://www.redhat.com/ja/services/training/red-hat-certified-openshift-administrator-exam
-- description: Covers designing, building, and deploying containerized applications
-    using OpenShift.
-  duration: 3h
-  exam: EX288
-  id: ex288
-  level: Specialist
-  product: OpenShift / App Dev
-  status: Active
-  title: Red Hat Certified Specialist in OpenShift Application Development
-  url_en: https://www.redhat.com/en/services/certification/red-hat-certified-specialist-openshift-application-development-exam
-  url_ja: https://www.redhat.com/ja/services/training/ex288-red-hat-certified-openshift-application-developer-exam
-- description: Tests skills in deploying and managing systems using Red Hat Satellite.
+- id: ex342
+  title: Red Hat Certified Specialist in Enterprise Linux Diagnostics and Troubleshooting
+  exam: EX342
+  level: Level 300
+  product: ''
+  category: RHEL
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex342-red-hat-certified-specialist-linux-diagnostics-and-troubleshooting
+  url_ja: https://www.redhat.com/ja/services/training/ex342-red-hat-%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%91%E3%83%BC%E3%83%88%E8%A9%A6%E9%A8%93-red-hat-enterprise-linux-diagnostics-and-troubleshooting
   duration: 4h
-  exam: EX403
-  id: ex403
-  level: Specialist
-  product: Satellite
   status: Active
+- id: ex210
+  title: Red Hat Certified Specialist in Cloud Infrastructure
+  exam: EX210
+  level: Level 200
+  product: ''
+  category: RHEL
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex210-red-hat-certified-system-administrator-red-hat-openstack-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex210-red-hat-certified-system-administrator-red-hat-openstack-exam
+  duration: 4h
+  status: Active
+- id: ex260
+  title: Red Hat Certified Specialist in Ceph Cloud Storage
+  exam: EX260
+  level: Level 200
+  product: ''
+  category: RHEL
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex260-red-hat-certified-specialist-in-ceph-cloud-storage-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex260-red-hat-certified-specialist-in-ceph-cloud-storage-exam
+  duration: 3h
+  status: Active
+- id: ex358
+  title: Red Hat Certified Specialist in Services Management and Automation
+  exam: EX358
+  level: Level 300
+  product: ''
+  category: RHEL
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam
+  duration: 4h
+  status: Active
+- id: ex362
+  title: Red Hat Certified Specialist in Identity Management
+  exam: EX362
+  level: Level 300
+  product: ''
+  category: RHEL
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex362-red-hat-certified-specialist-identity-management-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex362-red-hat-certified-specialist-identity-management-exam
+  duration: 3h
+  status: Active
+- id: ex403
   title: Red Hat Certified Specialist in Deployment and Systems Management
-  url_en: https://www.redhat.com/en/services/certification/red-hat-certified-specialist-deployment-and-systems-management-exam
+  exam: EX403
+  level: Level 400
+  product: Satellite
+  category: RHEL
+  description: Tests skills in deploying and managing systems using Red Hat Satellite.
+  url_en: https://www.redhat.com/en/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam
   url_ja: https://www.redhat.com/ja/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam
-- description: Tests knowledge of container fundamentals including podman, customizing,
-    running, managing containerized services.
-  duration: 2.5h
-  exam: EX188
-  id: ex188
-  level: Specialist
-  product: Containers
-  status: Active
-  title: Red Hat Certified Specialist in Containers
-  url_en: https://www.redhat.com/en/services/training/ex188-red-hat-certified-specialist-containers-exam
-  url_ja: https://www.redhat.com/ja/services/training/ex188-red-hat-certified-specialist-containers-exam
-- description: Skills to plan, deploy and manage virtual machines using the OpenShift
-    Virtualization operator in OCP.
   duration: 4h
-  exam: EX316
-  id: ex316
-  level: Specialist
-  product: OpenShift Virtualization
   status: Active
+- id: ex415
+  title: 'Red Hat Certified Specialist in Security: Linux'
+  exam: EX415
+  level: Level 400
+  product: ''
+  category: RHEL
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex415-red-hat-certified-specialist-security-linux-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex415-red-hat-certified-specialist-security-linux-exam
+  duration: 4h
+  status: Active
+- id: ex436
+  title: Red Hat Certified Specialist in High Availability Clustering
+  exam: EX436
+  level: Level 400
+  product: ''
+  category: RHEL
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex436-red-hat-certificate-expertise-clustering-and-storage-management-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex436-red-hat-certificate-expertise-clustering-and-storage-management-exam
+  duration: 3h
+  status: Active
+- id: ex442
+  title: Red Hat Certified Specialist in Performance Tuning
+  exam: EX442
+  level: Level 400
+  product: ''
+  category: RHEL
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex442-red-hat-certificate-expertise-performance-tuning-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex442-red-hat-certificate-expertise-performance-tuning-exam
+  duration: 4h
+  status: Active
+- id: rhce
+  title: Red Hat Certified Engineer
+  exam: EX294
+  level: Level 200
+  product: RHEL / Ansible
+  category: Ansible
+  description: Focuses on automation with Ansible and advanced system administration tasks.
+  url_en: https://www.redhat.com/en/services/training/ex294-red-hat-certified-engineer-rhce-exam-red-hat-enterprise-linux-9
+  url_ja: https://www.redhat.com/ja/services/training/ex294-red-hat-certified-engineer-rhce-exam-red-hat-enterprise-linux-9
+  duration: 4h
+  status: Active
+- id: ex336
+  title: Red Hat Certified Specialist in Automating OpenShift Virtual Machine Migration Exam
+  exam: EX336
+  level: Level 300
+  product: ''
+  category: Ansible
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex336-red-hat-certified-specialist-automating-openshift-virtual-machine-management-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex336-red-hat-certified-specialist-automating-openshift-virtual-machine-management-exam
+  duration: 4h
+  status: Active
+- id: ex374
+  title: Red Hat Certified Specialist in Developing Automation with Ansible Automation Platform
+  exam: EX374
+  level: Level 300
+  product: ''
+  category: Ansible
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex374-red-hat-certified-specialist-developing-automation-ansible-automation-platform-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex374-red-hat-certified-specialist-developing-automation-ansible-automation-platform-exam
+  duration: 4h
+  status: Active
+- id: ex417
+  title: Red Hat Certified Specialist in Microsoft Windows Automation with Ansible Exam
+  exam: EX417
+  level: Level 400
+  product: ''
+  category: Ansible
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex417-red-hat-certified-specialist-microsoft-windows-automation-ansible-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex417-red-hat-certified-specialist-microsoft-windows-automation-ansible-exam
+  duration: 4h
+  status: Active
+- id: ex457
+  title: Red Hat Certified Specialist in Ansible Network Automation
+  exam: EX457
+  level: Level 400
+  product: ''
+  category: Ansible
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex457-red-hat-certified-specialist-in-ansible-network-automation-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex457-red-hat-certified-specialist-in-ansible-network-automation-exam
+  duration: 4h
+  status: Active
+- id: ex467
+  title: Red Hat Certified Specialist in Managing Automation with Ansible Automation Platform Exam
+  exam: EX467
+  level: Level 400
+  product: ''
+  category: Ansible
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex467-red-hat-certified-specialist-managing-automation-ansible-automation-platform-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex467-red-hat-certified-specialist-managing-automation-ansible-automation-platform-exam
+  duration: 4h
+  status: Active
+- id: ex180
+  title: Red Hat Certified Technologist in OpenShift
+  exam: EX180
+  level: ''
+  product: OpenShift
+  category: OpenShift
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex180-red-hat-certified-technologist-in-openshift-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex180-red-hat-certified-technologist-in-openshift-exam
+  duration: ''
+  status: Active
+- id: ex156
+  title: Red Hat Certified Technologist in OpenShift Virtualization
+  exam: EX156
+  level: ''
+  product: OpenShift Virtualization
+  category: OpenShift
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization
+  url_ja: https://www.redhat.com/ja/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization
+  duration: ''
+  status: Active
+- id: ex280
+  title: Red Hat Certified Specialist in OpenShift Administration
+  exam: EX280
+  level: Level 200
+  product: OpenShift
+  category: OpenShift
+  description: Demonstrates knowledge in managing OpenShift Container Platform clusters.
+  url_en: https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam
+  url_ja: https://www.redhat.com/ja/services/training/red-hat-certified-openshift-administrator-exam
+  duration: 3h
+  status: Active
+- id: ex380
+  title: Red Hat Certified Specialist in OpenShift Automation and Integration
+  exam: EX380
+  level: Level 300
+  product: ''
+  category: OpenShift
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex380-certified-specialist-openshift-automation-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex380-certified-specialist-openshift-automation-exam
+  duration: 4h
+  status: Active
+- id: ex316
   title: Red Hat Certified Specialist in OpenShift Virtualization
+  exam: EX316
+  level: Level 300
+  product: OpenShift Virtualization
+  category: OpenShift
+  description: Skills to plan, deploy and manage virtual machines using the OpenShift Virtualization operator in OCP.
   url_en: https://www.redhat.com/en/services/training/red-hat-certified-specialist-openshift-virtualization-ex316
   url_ja: https://www.redhat.com/ja/services/training/red-hat-certified-specialist-openshift-virtualization-ex316
-- description: Covers skills to deploy and manage Red Hat OpenShift Service on AWS
-    (ROSA).
   duration: 4h
-  exam: EX229
-  id: ex229
-  level: Specialist
-  product: ROSA
   status: Active
+- id: ex370
+  title: Red Hat Certified Specialist in OpenShift Data Foundation
+  exam: EX370
+  level: Level 300
+  product: ''
+  category: OpenShift
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex370-red-hat-certified-specialist-in-openshift-data-foundation-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex370-red-hat-certified-specialist-in-openshift-data-foundation-exam
+  duration: 3h
+  status: Active
+- id: ex430
+  title: Red Hat Certified Specialist in OpenShift Advanced Cluster Security Exam
+  exam: EX430
+  level: Level 400
+  product: ''
+  category: OpenShift
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex430-red-hat-certified-specialist-openshift-advanced-cluster-security-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex430-red-hat-certified-specialist-openshift-advanced-cluster-security-exam
+  duration: 4h
+  status: Active
+- id: ex432
+  title: Red Hat Certified Specialist in MultiCluster Management with Advanced Cluster Management
+  exam: EX432
+  level: ''
+  product: ''
+  category: OpenShift
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex432-red-hat-certified-specialist-openshift-advanced-cluster-management-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex432-red-hat-certified-specialist-openshift-advanced-cluster-management-exam
+  duration: ''
+  status: Active
+- id: ex229
   title: Red Hat Certified Specialist in ROSA
+  exam: EX229
+  level: Level 200
+  product: ROSA
+  category: OpenShift
+  description: Covers skills to deploy and manage Red Hat OpenShift Service on AWS (ROSA).
   url_en: https://www.redhat.com/en/services/training/red-hat-certified-specialist-rosa
   url_ja: https://www.redhat.com/ja/services/training/red-hat-certified-specialist-rosa
-- description: Deploy and manage AI workloads using OpenShift AI, including training,
-    serving, and managing machine learning models.
-  duration: 3h
-  exam: EX267
-  id: ex267
-  level: Specialist
-  product: OpenShift AI
-  status: Active
+  duration: 4h
+  status: Retired
+- id: ex480
+  title: Red Hat Certified Specialist in MultiCluster Management
+  exam: EX480
+  level: Level 400
+  product: ''
+  category: OpenShift
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex480-red-hat-certified-specialist-multicluster-management-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex480-red-hat-certified-specialist-multicluster-management-exam
+  duration: 4h
+  status: Retired
+- id: ex267
   title: Red Hat Certified Specialist in OpenShift AI
-  url_en: https://www.redhat.com/en/services/certification/ex267-red-hat-certified-specialist-openshift-ai
+  exam: EX267
+  level: Level 200
+  product: OpenShift AI
+  category: OpenShift
+  description: 'Deploy and manage AI workloads using OpenShift AI, including training, serving, and managing machine learning models.'
+  url_en: https://www.redhat.com/en/services/training/ex267-red-hat-certified-specialist-openshift-ai
   url_ja: https://www.redhat.com/ja/services/training/ex267-red-hat-certified-specialist-openshift-ai
+  duration: 3h
+  status: Active
+- id: ex188
+  title: Red Hat Certified Specialist in Containers
+  exam: EX188
+  level: Level 100
+  product: Containers
+  category: Cloud-Native
+  description: 'Tests knowledge of container fundamentals including podman, customizing, running, managing containerized services.'
+  url_en: https://www.redhat.com/en/services/training/ex188-red-hat-certified-specialist-containers-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex188-red-hat-certified-specialist-containers-exam
+  duration: 2.5h
+  status: Active
+- id: ex288
+  title: Red Hat Certified Specialist in OpenShift Application Development
+  exam: EX288
+  level: Level 200
+  product: OpenShift / App Dev
+  category: Cloud-Native
+  description: 'Covers designing, building, and deploying containerized applications using OpenShift.'
+  url_en: https://www.redhat.com/en/services/training/ex288-red-hat-certified-openshift-application-developer-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex288-red-hat-certified-openshift-application-developer-exam
+  duration: 3h
+  status: Active
+- id: ex183
+  title: Red Hat Certified Enterprise Application Developer
+  exam: EX183
+  level: Level 100
+  product: ''
+  category: Cloud-Native
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex183-red-hat-certified-enterprise-application-developer-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex183-red-hat-certified-enterprise-application-developer-exam
+  duration: 2.5h
+  status: Active
+- id: ex221
+  title: Red Hat Certified Specialist in Cloud-native Integration
+  exam: EX221
+  level: Level 200
+  product: ''
+  category: Cloud-Native
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex221-red-hat-certified-specialist-cloud-native-integration-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex221-red-hat-certified-specialist-cloud-native-integration-exam
+  duration: 4h
+  status: Active
+- id: ex240
+  title: Red Hat Certified Specialist in API Management
+  exam: EX240
+  level: Level 200
+  product: ''
+  category: Cloud-Native
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex240-red-hat-certified-specialist-api-management-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex240-red-hat-certified-specialist-api-management-exam
+  duration: 3h
+  status: Active
+- id: ex248
+  title: Red Hat Certified Specialist in Enterprise Application Server Administration
+  exam: EX248
+  level: Level 200
+  product: ''
+  category: Cloud-Native
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex248-red-hat-certified-jboss-administration-rhcja-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex248-red-hat-certified-jboss-administration-rhcja-exam
+  duration: 4h
+  status: Active
+- id: ex328
+  title: Red Hat Certified Specialist in Building Resilient Microservices
+  exam: EX328
+  level: Level 300
+  product: ''
+  category: Cloud-Native
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex328-red-hat-certified-specialist-in-building-resilient-microservices-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex328-red-hat-certified-specialist-in-building-resilient-microservices-exam
+  duration: 3h
+  status: Active
+- id: ex378
+  title: Red Hat Certified Cloud-native Developer
+  exam: EX378
+  level: Level 300
+  product: ''
+  category: Cloud-Native
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/ex378-red-hat-certified-cloud-native-developer-exam
+  url_ja: https://www.redhat.com/ja/services/training/ex378-red-hat-certified-cloud-native-developer-exam
+  duration: 3h
+  status: Active
+- id: ex482
+  title: Red Hat Certified Specialist in Event-Driven Development with Kafka
+  exam: EX482
+  level: Level 400
+  product: ''
+  category: Cloud-Native
+  description: ''
+  url_en: https://www.redhat.com/en/services/training/red-hat-certified-specialist-event-driven-application-development-exam
+  url_ja: https://www.redhat.com/ja/services/training/red-hat-certified-specialist-event-driven-application-development-exam
+  duration: 3h
+  status: Active
