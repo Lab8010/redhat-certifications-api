@@ -18,7 +18,7 @@
     "tags": [
       "管理",
       "運用",
-      "基礎知識"
+      "Lv200/中級"
     ]
   },
   {
@@ -39,7 +39,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/rh342-red-hat-enterprise-linux-diagnostics-and-troubleshooting",
     "tags": [
       "運用",
-      "トラブルシュート"
+      "トラブルシュート",
+      "Lv300/上級"
     ]
   },
   {
@@ -60,7 +61,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/cl210-red-hat-openstack-administration-ii",
     "tags": [
       "管理",
-      "クラウド"
+      "クラウド",
+      "Lv200/中級"
     ]
   },
   {
@@ -81,7 +83,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/cloud-storage-red-hat-ceph-storage-cl260",
     "tags": [
       "管理",
-      "ストレージ"
+      "ストレージ",
+      "Lv200/中級"
     ]
   },
   {
@@ -102,7 +105,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/rh358-red-hat-services-management-automation",
     "tags": [
       "管理",
-      "自動化"
+      "自動化",
+      "Lv300/上級"
     ]
   },
   {
@@ -123,7 +127,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/rh362-red-hat-security-identity-management-and-authentication",
     "tags": [
       "管理",
-      "セキュリティ"
+      "セキュリティ",
+      "Lv300/上級"
     ]
   },
   {
@@ -144,7 +149,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/rh403-red-hat-satellite-6-administration",
     "tags": [
       "管理",
-      "自動化"
+      "自動化",
+      "Lv400超上級"
     ]
   },
   {
@@ -165,7 +171,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/rh415-red-hat-security-linux-physical-virtual-and-cloud",
     "tags": [
       "管理",
-      "セキュリティ"
+      "セキュリティ",
+      "Lv400超上級"
     ]
   },
   {
@@ -187,7 +194,8 @@
     "tags": [
       "管理",
       "運用",
-      "高可用性"
+      "高可用性",
+      "Lv400超上級"
     ]
   },
   {
@@ -208,7 +216,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/rh442-red-hat-enterprise-linux-performance-tuning",
     "tags": [
       "運用",
-      "パフォーマンス"
+      "パフォーマンス",
+      "Lv400超上級"
     ]
   },
   {
@@ -229,7 +238,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/au294-red-hat-linux-automation-with-ansible",
     "tags": [
       "自動化",
-      "管理"
+      "管理",
+      "Lv200/中級"
     ]
   },
   {
@@ -250,7 +260,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do336-automate-manage-red-hat-openshift-virtualization-with-ansible",
     "tags": [
       "自動化",
-      "仮想化"
+      "仮想化",
+      "Lv300/上級"
     ]
   },
   {
@@ -271,7 +282,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/au374-developing-advanced-automation-red-hat-ansible-automation-platform",
     "tags": [
       "自動化",
-      "アプリ開発"
+      "アプリ開発",
+      "Lv300/上級"
     ]
   },
   {
@@ -292,7 +304,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do417-microsoft-windows-automation-red-hat-ansible-automation-platform",
     "tags": [
       "自動化",
-      "管理"
+      "管理",
+      "Lv400超上級"
     ]
   },
   {
@@ -313,7 +326,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do457-ansible-network-automation",
     "tags": [
       "自動化",
-      "ネットワーク"
+      "ネットワーク",
+      "Lv400超上級"
     ]
   },
   {
@@ -334,7 +348,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do467-managing-enterprise-automation-red-hat-ansible-automation-platform",
     "tags": [
       "自動化",
-      "管理"
+      "管理",
+      "Lv400超上級"
     ]
   },
   {
@@ -354,8 +369,8 @@
     "training_url_en": "https://www.redhat.com/en/services/training/red-hat-openshift-administration-i-operating-a-production-cluster",
     "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-i-operating-a-production-cluster",
     "tags": [
-      "基礎知識",
-      "管理"
+      "管理",
+      "Lv100/初級"
     ]
   },
   {
@@ -375,8 +390,8 @@
     "training_url_en": "https://www.redhat.com/en/services/training/do156-red-hat-openshift-virtualization-administration-i-operating-virtual-machines",
     "training_url_ja": "https://www.redhat.com/ja/services/training/do156-red-hat-openshift-virtualization-administration-i-operating-virtual-machines",
     "tags": [
-      "基礎知識",
-      "仮想化"
+      "仮想化",
+      "Lv100/初級"
     ]
   },
   {
@@ -397,7 +412,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster",
     "tags": [
       "管理",
-      "運用"
+      "運用",
+      "Lv200/中級"
     ]
   },
   {
@@ -418,7 +434,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do380-red-hat-openshift-administration-iii-scaling-deployments-in-the-enterprise",
     "tags": [
       "自動化",
-      "管理"
+      "管理",
+      "Lv300/上級"
     ]
   },
   {
@@ -439,7 +456,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do256-red-hat-openshift-virtualization-administration-ii-configuring-production-virtual-machines",
     "tags": [
       "管理",
-      "仮想化"
+      "仮想化",
+      "Lv300/上級"
     ]
   },
   {
@@ -460,7 +478,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do370-enterprise-kubernetes-storage-with-red-hat-openshift-data-foundation",
     "tags": [
       "管理",
-      "ストレージ"
+      "ストレージ",
+      "Lv300/上級"
     ]
   },
   {
@@ -481,7 +500,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do430-securing-kubernetes-clusters-red-hat-advanced-cluster-security",
     "tags": [
       "管理",
-      "セキュリティ"
+      "セキュリティ",
+      "Lv400超上級"
     ]
   },
   {
@@ -502,7 +522,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do432-multicluster-management-red-hat-advanced-cluster-management-kubernetes",
     "tags": [
       "管理",
-      "運用"
+      "運用",
+      "Lv400超上級"
     ]
   },
   {
@@ -519,7 +540,8 @@
     "status": "Retired",
     "tags": [
       "管理",
-      "クラウド"
+      "クラウド",
+      "Lv200/中級"
     ]
   },
   {
@@ -536,7 +558,8 @@
     "status": "Retired",
     "tags": [
       "管理",
-      "運用"
+      "運用",
+      "Lv400超上級"
     ]
   },
   {
@@ -557,7 +580,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/developing-and-deploying-aiml-applications-red-hat-openshift-ai-ai267",
     "tags": [
       "管理",
-      "AI/ML"
+      "AI/ML",
+      "Lv200/中級"
     ]
   },
   {
@@ -577,8 +601,8 @@
     "training_url_en": "https://www.redhat.com/en/services/training/do188-red-hat-open-shift-development-introduction-containers-with-podman",
     "training_url_ja": "https://www.redhat.com/ja/services/training/do188-red-hat-open-shift-development-introduction-containers-with-podman",
     "tags": [
-      "基礎知識",
-      "コンテナ"
+      "コンテナ",
+      "Lv100/初級"
     ]
   },
   {
@@ -599,7 +623,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications",
     "tags": [
       "アプリ開発",
-      "コンテナ"
+      "コンテナ",
+      "Lv200/中級"
     ]
   },
   {
@@ -620,7 +645,7 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/ad183-red-hat-application-development-i-programming-java-ee",
     "tags": [
       "アプリ開発",
-      "基礎知識"
+      "Lv100/初級"
     ]
   },
   {
@@ -641,7 +666,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/ad221-cloud-native-integration-with-red-hat-fuse",
     "tags": [
       "アプリ開発",
-      "インテグレーション"
+      "インテグレーション",
+      "Lv200/中級"
     ]
   },
   {
@@ -662,7 +688,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do240-cloud-native-api-admin-red-hat-3scale-api-management",
     "tags": [
       "管理",
-      "アプリ開発"
+      "アプリ開発",
+      "Lv200/中級"
     ]
   },
   {
@@ -683,7 +710,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/ad248-red-hat-jboss-application-administration-i",
     "tags": [
       "管理",
-      "運用"
+      "運用",
+      "Lv200/中級"
     ]
   },
   {
@@ -704,7 +732,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/do328-building-resilient-microservices-with-istio-and-red-hat-openshift-service-mesh",
     "tags": [
       "アプリ開発",
-      "マイクロサービス"
+      "マイクロサービス",
+      "Lv300/上級"
     ]
   },
   {
@@ -725,7 +754,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-cloud-native-microservices-development-quarkus-do378",
     "tags": [
       "アプリ開発",
-      "マイクロサービス"
+      "マイクロサービス",
+      "Lv300/上級"
     ]
   },
   {
@@ -746,7 +776,8 @@
     "training_url_ja": "https://www.redhat.com/ja/services/training/ad482-developing-event-driven-applications-apache-kafka-and-red-hat-amq-streams",
     "tags": [
       "アプリ開発",
-      "インテグレーション"
+      "インテグレーション",
+      "Lv400超上級"
     ]
   }
 ]
