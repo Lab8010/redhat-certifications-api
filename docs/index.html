@@ -172,7 +172,7 @@
               <!-- Title -->
               <h6 class="card-title mb-1">${cert.title}</h6>
               <!-- Description -->
-              ${cert.description ? `<p class="card-text text-muted small mb-1">${cert.description}</p>` : ""}
+              ${(cert.description_ja || cert.description) ? `<p class="card-text text-muted small mb-1">${cert.description_ja || cert.description}</p>` : ""}
               <!-- Tags -->
               ${cert.tags && cert.tags.length ? `<div class="mb-2">${cert.tags.map(t => `<span class="tag-hash me-1">#${t}</span>`).join("")}</div>` : ""}
               <!-- Two-column: Exam | Training -->
