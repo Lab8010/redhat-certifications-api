@@ -44,7 +44,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex210-red-hat-certified-system-administrator-red-hat-openstack-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex210-red-hat-certified-system-administrator-red-hat-openstack-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "CL210",
+    "training_course_name": "Red Hat OpenStack Administration II: Day 2 Operations for Cloud Operators",
+    "training_url_en": "https://www.redhat.com/en/services/training/cl210-red-hat-openstack-administration-ii",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/cl210-red-hat-openstack-administration-ii"
   },
   {
     "id": "ex260",
@@ -57,7 +61,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex260-red-hat-certified-specialist-in-ceph-cloud-storage-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex260-red-hat-certified-specialist-in-ceph-cloud-storage-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "CL260",
+    "training_course_name": "Cloud Storage with Red Hat Ceph Storage",
+    "training_url_en": "https://www.redhat.com/en/services/training/cloud-storage-red-hat-ceph-storage-cl260",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/cloud-storage-red-hat-ceph-storage-cl260"
   },
   {
     "id": "ex358",
@@ -274,7 +282,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex180-red-hat-certified-technologist-in-openshift-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex180-red-hat-certified-technologist-in-openshift-exam",
     "duration": "2h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO180",
+    "training_course_name": "Red Hat OpenShift Administration I: Operating a Production Cluster",
+    "training_url_en": "https://www.redhat.com/en/services/training/red-hat-openshift-administration-i-operating-a-production-cluster",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-i-operating-a-production-cluster"
   },
   {
     "id": "ex156",
@@ -287,7 +299,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization",
     "url_ja": "https://www.redhat.com/ja/services/training/ex156-red-hat-certified-technologist-in-openshift-virtualization",
     "duration": "2h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO156",
+    "training_course_name": "Red Hat OpenShift Virtualization Administration I: Operating Virtual Machines",
+    "training_url_en": "https://www.redhat.com/en/services/training/do156-red-hat-openshift-virtualization-administration-i-operating-virtual-machines",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do156-red-hat-openshift-virtualization-administration-i-operating-virtual-machines"
   },
   {
     "id": "ex280",
@@ -334,7 +350,11 @@
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-openshift-virtualization-ex316",
     "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-openshift-virtualization-ex316",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO256",
+    "training_course_name": "Red Hat OpenShift Virtualization Administration II: Configuring Production Virtual Machines",
+    "training_url_en": "https://www.redhat.com/en/services/training/do256-red-hat-openshift-virtualization-administration-ii-configuring-production-virtual-machines",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do256-red-hat-openshift-virtualization-administration-ii-configuring-production-virtual-machines"
   },
   {
     "id": "ex370",
@@ -364,7 +384,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex430-red-hat-certified-specialist-openshift-advanced-cluster-security-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex430-red-hat-certified-specialist-openshift-advanced-cluster-security-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO430",
+    "training_course_name": "Securing Kubernetes Clusters with Red Hat Advanced Cluster Security",
+    "training_url_en": "https://www.redhat.com/en/services/training/do430-securing-kubernetes-clusters-red-hat-advanced-cluster-security",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do430-securing-kubernetes-clusters-red-hat-advanced-cluster-security"
   },
   {
     "id": "ex432",
@@ -377,7 +401,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex432-red-hat-certified-specialist-openshift-advanced-cluster-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex432-red-hat-certified-specialist-openshift-advanced-cluster-management-exam",
     "duration": "",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO432",
+    "training_course_name": "Multicluster Management with Red Hat Advanced Cluster Management for Kubernetes",
+    "training_url_en": "https://www.redhat.com/en/services/training/do432-multicluster-management-red-hat-advanced-cluster-management-kubernetes",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do432-multicluster-management-red-hat-advanced-cluster-management-kubernetes"
   },
   {
     "id": "ex229",
@@ -416,7 +444,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex267-red-hat-certified-specialist-openshift-ai",
     "url_ja": "https://www.redhat.com/ja/services/training/ex267-red-hat-certified-specialist-openshift-ai",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "AI267",
+    "training_course_name": "Developing and Deploying AI/ML Applications on Red Hat OpenShift AI",
+    "training_url_en": "https://www.redhat.com/en/services/training/developing-and-deploying-aiml-applications-red-hat-openshift-ai-ai267",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/developing-and-deploying-aiml-applications-red-hat-openshift-ai-ai267"
   },
   {
     "id": "ex188",
@@ -429,7 +461,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex188-red-hat-certified-specialist-containers-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex188-red-hat-certified-specialist-containers-exam",
     "duration": "2.5h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO188",
+    "training_course_name": "Red Hat OpenShift Development I: Introduction to Containers with Podman",
+    "training_url_en": "https://www.redhat.com/en/services/training/do188-red-hat-open-shift-development-introduction-containers-with-podman",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do188-red-hat-open-shift-development-introduction-containers-with-podman"
   },
   {
     "id": "ex288",
@@ -459,7 +495,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex183-red-hat-certified-enterprise-application-developer-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex183-red-hat-certified-enterprise-application-developer-exam",
     "duration": "2.5h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "AD183",
+    "training_course_name": "Red Hat Application Development I: Programming in Java EE",
+    "training_url_en": "https://www.redhat.com/en/services/training/ad183-red-hat-application-development-i-programming-java-ee",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/ad183-red-hat-application-development-i-programming-java-ee"
   },
   {
     "id": "ex221",
@@ -472,7 +512,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex221-red-hat-certified-specialist-cloud-native-integration-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex221-red-hat-certified-specialist-cloud-native-integration-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "AD221",
+    "training_course_name": "Cloud-native Integration with Red Hat Fuse and Apache Camel",
+    "training_url_en": "https://www.redhat.com/en/services/training/ad221-cloud-native-integration-with-red-hat-fuse",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/ad221-cloud-native-integration-with-red-hat-fuse"
   },
   {
     "id": "ex240",
@@ -485,7 +529,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex240-red-hat-certified-specialist-api-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex240-red-hat-certified-specialist-api-management-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO240",
+    "training_course_name": "Cloud-native API Administration with Red Hat 3scale API Management",
+    "training_url_en": "https://www.redhat.com/en/services/training/do240-cloud-native-api-admin-red-hat-3scale-api-management",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do240-cloud-native-api-admin-red-hat-3scale-api-management"
   },
   {
     "id": "ex248",
@@ -498,7 +546,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex248-red-hat-certified-jboss-administration-rhcja-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex248-red-hat-certified-jboss-administration-rhcja-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "AD248",
+    "training_course_name": "Red Hat JBoss Application Administration I",
+    "training_url_en": "https://www.redhat.com/en/services/training/ad248-red-hat-jboss-application-administration-i",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/ad248-red-hat-jboss-application-administration-i"
   },
   {
     "id": "ex328",
@@ -511,7 +563,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex328-red-hat-certified-specialist-in-building-resilient-microservices-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex328-red-hat-certified-specialist-in-building-resilient-microservices-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO328",
+    "training_course_name": "Building Resilient Microservices with Istio and Red Hat OpenShift Service Mesh",
+    "training_url_en": "https://www.redhat.com/en/services/training/do328-building-resilient-microservices-with-istio-and-red-hat-openshift-service-mesh",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do328-building-resilient-microservices-with-istio-and-red-hat-openshift-service-mesh"
   },
   {
     "id": "ex378",
@@ -524,7 +580,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex378-red-hat-certified-cloud-native-developer-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex378-red-hat-certified-cloud-native-developer-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO378",
+    "training_course_name": "Red Hat Cloud-native Microservices Development with Quarkus",
+    "training_url_en": "https://www.redhat.com/en/services/training/red-hat-cloud-native-microservices-development-quarkus-do378",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-cloud-native-microservices-development-quarkus-do378"
   },
   {
     "id": "ex482",
@@ -537,6 +597,10 @@
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-event-driven-application-development-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-event-driven-application-development-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "AD482",
+    "training_course_name": "Developing Event-Driven Applications with Apache Kafka and Red Hat AMQ Streams",
+    "training_url_en": "https://www.redhat.com/en/services/training/ad482-developing-event-driven-applications-apache-kafka-and-red-hat-amq-streams",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/ad482-developing-event-driven-applications-apache-kafka-and-red-hat-amq-streams"
   }
 ]
