@@ -9,6 +9,10 @@
   url_ja: https://www.redhat.com/ja/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam
   duration: 3h
   status: Active
+  training_course: RH199
+  training_course_name: Red Hat Certified System Administrator Rapid Track course
+  training_url_en: https://www.redhat.com/en/services/training/rh199-rhcsa-rapid-track-course
+  training_url_ja: https://www.redhat.com/ja/services/training/rh199-rhcsa-rapid-track-course
 - id: ex342
   title: Red Hat Certified Specialist in Enterprise Linux Diagnostics and Troubleshooting
   exam: EX342
@@ -119,6 +123,10 @@
   url_ja: https://www.redhat.com/ja/services/training/ex294-red-hat-certified-engineer-rhce-exam-red-hat-enterprise-linux-9
   duration: 4h
   status: Active
+  training_course: AU294
+  training_course_name: Red Hat Enterprise Linux Automation with Ansible
+  training_url_en: https://www.redhat.com/en/services/training/au294-red-hat-linux-automation-with-ansible
+  training_url_ja: https://www.redhat.com/ja/services/training/au294-red-hat-linux-automation-with-ansible
 - id: ex336
   title: Red Hat Certified Specialist in Automating OpenShift Virtual Machine Migration Exam
   exam: EX336
@@ -207,6 +215,10 @@
   url_ja: https://www.redhat.com/ja/services/training/red-hat-certified-openshift-administrator-exam
   duration: 3h
   status: Active
+  training_course: DO280
+  training_course_name: 'Red Hat OpenShift Administration II: Configuring a Production Cluster'
+  training_url_en: https://www.redhat.com/en/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster
+  training_url_ja: https://www.redhat.com/ja/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster
 - id: ex380
   title: Red Hat Certified Specialist in OpenShift Automation and Integration
   exam: EX380
@@ -317,6 +329,10 @@
   url_ja: https://www.redhat.com/ja/services/training/ex288-red-hat-certified-openshift-application-developer-exam
   duration: 3h
   status: Active
+  training_course: DO288
+  training_course_name: 'Red Hat OpenShift Developer II: Building and Deploying Cloud-native Applications'
+  training_url_en: https://www.redhat.com/en/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications
+  training_url_ja: https://www.redhat.com/ja/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications
 - id: ex183
   title: Red Hat Certified Enterprise Application Developer
   exam: EX183

@@ -12,6 +12,7 @@
     "duration": "3h",
     "status": "Active",
     "training_course": "RH199",
+    "training_course_name": "Red Hat Certified System Administrator Rapid Track course",
     "training_url_en": "https://www.redhat.com/en/services/training/rh199-rhcsa-rapid-track-course",
     "training_url_ja": "https://www.redhat.com/ja/services/training/rh199-rhcsa-rapid-track-course"
   },
@@ -26,7 +27,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex342-red-hat-certified-specialist-linux-diagnostics-and-troubleshooting",
     "url_ja": "https://www.redhat.com/ja/services/training/ex342-red-hat-%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%91%E3%83%BC%E3%83%88%E8%A9%A6%E9%A8%93-red-hat-enterprise-linux-diagnostics-and-troubleshooting",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "RH342",
+    "training_course_name": "Red Hat Enterprise Linux Diagnostics and Troubleshooting",
+    "training_url_en": "https://www.redhat.com/en/services/training/rh342-red-hat-enterprise-linux-diagnostics-and-troubleshooting",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh342-red-hat-enterprise-linux-diagnostics-and-troubleshooting"
   },
   {
     "id": "ex210",
@@ -65,7 +70,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "RH358",
+    "training_course_name": "Red Hat Services Management and Automation",
+    "training_url_en": "https://www.redhat.com/en/services/training/rh358-red-hat-services-management-automation",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh358-red-hat-services-management-automation"
   },
   {
     "id": "ex362",
@@ -78,7 +87,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex362-red-hat-certified-specialist-identity-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex362-red-hat-certified-specialist-identity-management-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "RH362",
+    "training_course_name": "Red Hat Security: Identity Management and Authentication",
+    "training_url_en": "https://www.redhat.com/en/services/training/rh362-red-hat-security-identity-management-and-authentication",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh362-red-hat-security-identity-management-and-authentication"
   },
   {
     "id": "ex403",
@@ -91,7 +104,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex403-red-hat-certificate-expertise-deployment-systems-management-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "RH403",
+    "training_course_name": "Red Hat Satellite 6 Administration",
+    "training_url_en": "https://www.redhat.com/en/services/training/rh403-red-hat-satellite-6-administration",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh403-red-hat-satellite-6-administration"
   },
   {
     "id": "ex415",
@@ -104,7 +121,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex415-red-hat-certified-specialist-security-linux-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex415-red-hat-certified-specialist-security-linux-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "RH415",
+    "training_course_name": "Red Hat Security: Linux in Physical, Virtual, and Cloud",
+    "training_url_en": "https://www.redhat.com/en/services/training/rh415-red-hat-security-linux-physical-virtual-and-cloud",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh415-red-hat-security-linux-physical-virtual-and-cloud"
   },
   {
     "id": "ex436",
@@ -117,7 +138,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex436-red-hat-certificate-expertise-clustering-and-storage-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex436-red-hat-certificate-expertise-clustering-and-storage-management-exam",
     "duration": "3h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "RH436",
+    "training_course_name": "Red Hat High Availability Clustering",
+    "training_url_en": "https://www.redhat.com/en/services/training/rh436-red-hat-high-availability-clustering",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh436-red-hat-high-availability-clustering"
   },
   {
     "id": "ex442",
@@ -130,7 +155,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex442-red-hat-certificate-expertise-performance-tuning-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex442-red-hat-certificate-expertise-performance-tuning-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "RH442",
+    "training_course_name": "Red Hat Enterprise Linux Performance Tuning",
+    "training_url_en": "https://www.redhat.com/en/services/training/rh442-red-hat-enterprise-linux-performance-tuning",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh442-red-hat-enterprise-linux-performance-tuning"
   },
   {
     "id": "rhce",
@@ -145,6 +174,7 @@
     "duration": "4h",
     "status": "Active",
     "training_course": "AU294",
+    "training_course_name": "Red Hat Enterprise Linux Automation with Ansible",
     "training_url_en": "https://www.redhat.com/en/services/training/au294-red-hat-linux-automation-with-ansible",
     "training_url_ja": "https://www.redhat.com/ja/services/training/au294-red-hat-linux-automation-with-ansible"
   },
@@ -252,6 +282,7 @@
     "duration": "3h",
     "status": "Active",
     "training_course": "DO280",
+    "training_course_name": "Red Hat OpenShift Administration II: Configuring a Production Cluster",
     "training_url_en": "https://www.redhat.com/en/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster",
     "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster"
   },
@@ -385,6 +416,7 @@
     "duration": "3h",
     "status": "Active",
     "training_course": "DO288",
+    "training_course_name": "Red Hat OpenShift Developer II: Building and Deploying Cloud-native Applications",
     "training_url_en": "https://www.redhat.com/en/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications",
     "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications"
   },

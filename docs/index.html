@@ -159,10 +159,15 @@
           </div>` : "";
 
         const trainingButtons = cert.training_course ? `
-          <div class="d-flex align-items-center gap-1 flex-wrap">
-            <span class="small text-muted">Training (${cert.training_course}):</span>
-            ${cert.training_url_en ? `<a href="${cert.training_url_en}" class="btn btn-sm btn-success" target="_blank">EN</a>` : ""}
-            ${cert.training_url_ja ? `<a href="${cert.training_url_ja}" class="btn btn-sm btn-outline-secondary" target="_blank">JA</a>` : ""}
+          <div class="d-flex flex-column gap-1">
+            <div class="small text-muted">
+              Training: <strong>${cert.training_course}</strong>
+              ${cert.training_course_name ? `— ${cert.training_course_name}` : ""}
+            </div>
+            <div class="d-flex gap-1 flex-wrap">
+              ${cert.training_url_en ? `<a href="${cert.training_url_en}" class="btn btn-sm btn-success" target="_blank">EN</a>` : ""}
+              ${cert.training_url_ja ? `<a href="${cert.training_url_ja}" class="btn btn-sm btn-outline-secondary" target="_blank">JA</a>` : ""}
+            </div>
           </div>` : "";
 
         card.innerHTML = `
