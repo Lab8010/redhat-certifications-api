@@ -202,7 +202,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex374-red-hat-certified-specialist-developing-automation-ansible-automation-platform-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex374-red-hat-certified-specialist-developing-automation-ansible-automation-platform-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "AU374",
+    "training_course_name": "Developing Advanced Automation with Red Hat Ansible Automation Platform",
+    "training_url_en": "https://www.redhat.com/en/services/training/au374-developing-advanced-automation-red-hat-ansible-automation-platform",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/au374-developing-advanced-automation-red-hat-ansible-automation-platform"
   },
   {
     "id": "ex417",
@@ -215,7 +219,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex417-red-hat-certified-specialist-microsoft-windows-automation-ansible-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex417-red-hat-certified-specialist-microsoft-windows-automation-ansible-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO417",
+    "training_course_name": "Microsoft Windows Automation with Red Hat Ansible Automation Platform",
+    "training_url_en": "https://www.redhat.com/en/services/training/do417-microsoft-windows-automation-red-hat-ansible-automation-platform",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do417-microsoft-windows-automation-red-hat-ansible-automation-platform"
   },
   {
     "id": "ex457",
@@ -228,6 +236,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex457-red-hat-certified-specialist-in-ansible-network-automation-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex457-red-hat-certified-specialist-in-ansible-network-automation-exam",
     "duration": "4h",
+    "status": "Active",
+    "training_course": "DO457",
+    "training_course_name": "Network Automation with Red Hat Ansible Automation Platform",
+    "training_url_en": "https://www.redhat.com/en/services/training/do457-ansible-network-automation",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do457-ansible-network-automation"
     "status": "Active"
   },
   {
