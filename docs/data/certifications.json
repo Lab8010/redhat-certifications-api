@@ -189,7 +189,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex336-red-hat-certified-specialist-automating-openshift-virtual-machine-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex336-red-hat-certified-specialist-automating-openshift-virtual-machine-management-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO336",
+    "training_course_name": "Automate and Manage Red Hat OpenShift Virtualization with Ansible",
+    "training_url_en": "https://www.redhat.com/en/services/training/do336-automate-manage-red-hat-openshift-virtualization-with-ansible",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do336-automate-manage-red-hat-openshift-virtualization-with-ansible"
   },
   {
     "id": "ex374",
@@ -241,7 +245,6 @@
     "training_course_name": "Network Automation with Red Hat Ansible Automation Platform",
     "training_url_en": "https://www.redhat.com/en/services/training/do457-ansible-network-automation",
     "training_url_ja": "https://www.redhat.com/ja/services/training/do457-ansible-network-automation"
-    "status": "Active"
   },
   {
     "id": "ex467",
@@ -254,7 +257,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex467-red-hat-certified-specialist-managing-automation-ansible-automation-platform-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex467-red-hat-certified-specialist-managing-automation-ansible-automation-platform-exam",
     "duration": "4h",
-    "status": "Active"
+    "status": "Active",
+    "training_course": "DO467",
+    "training_course_name": "Managing Enterprise Automation with Red Hat Ansible Automation Platform",
+    "training_url_en": "https://www.redhat.com/en/services/training/do467-managing-enterprise-automation-red-hat-ansible-automation-platform",
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do467-managing-enterprise-automation-red-hat-ansible-automation-platform"
   },
   {
     "id": "ex180",
