@@ -14,7 +14,12 @@
     "training_course": "RH199",
     "training_course_name": "Red Hat Certified System Administrator Rapid Track course",
     "training_url_en": "https://www.redhat.com/en/services/training/rh199-rhcsa-rapid-track-course",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/rh199-rhcsa-rapid-track-course"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh199-rhcsa-rapid-track-course",
+    "tags": [
+      "管理",
+      "運用",
+      "基礎知識"
+    ]
   },
   {
     "id": "ex342",
@@ -31,7 +36,11 @@
     "training_course": "RH342",
     "training_course_name": "Red Hat Enterprise Linux Diagnostics and Troubleshooting",
     "training_url_en": "https://www.redhat.com/en/services/training/rh342-red-hat-enterprise-linux-diagnostics-and-troubleshooting",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/rh342-red-hat-enterprise-linux-diagnostics-and-troubleshooting"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh342-red-hat-enterprise-linux-diagnostics-and-troubleshooting",
+    "tags": [
+      "運用",
+      "トラブルシュート"
+    ]
   },
   {
     "id": "ex210",
@@ -48,7 +57,11 @@
     "training_course": "CL210",
     "training_course_name": "Red Hat OpenStack Administration II: Day 2 Operations for Cloud Operators",
     "training_url_en": "https://www.redhat.com/en/services/training/cl210-red-hat-openstack-administration-ii",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/cl210-red-hat-openstack-administration-ii"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/cl210-red-hat-openstack-administration-ii",
+    "tags": [
+      "管理",
+      "クラウド"
+    ]
   },
   {
     "id": "ex260",
@@ -65,7 +78,11 @@
     "training_course": "CL260",
     "training_course_name": "Cloud Storage with Red Hat Ceph Storage",
     "training_url_en": "https://www.redhat.com/en/services/training/cloud-storage-red-hat-ceph-storage-cl260",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/cloud-storage-red-hat-ceph-storage-cl260"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/cloud-storage-red-hat-ceph-storage-cl260",
+    "tags": [
+      "管理",
+      "ストレージ"
+    ]
   },
   {
     "id": "ex358",
@@ -82,7 +99,11 @@
     "training_course": "RH358",
     "training_course_name": "Red Hat Services Management and Automation",
     "training_url_en": "https://www.redhat.com/en/services/training/rh358-red-hat-services-management-automation",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/rh358-red-hat-services-management-automation"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh358-red-hat-services-management-automation",
+    "tags": [
+      "管理",
+      "自動化"
+    ]
   },
   {
     "id": "ex362",
@@ -99,7 +120,11 @@
     "training_course": "RH362",
     "training_course_name": "Red Hat Security: Identity Management and Authentication",
     "training_url_en": "https://www.redhat.com/en/services/training/rh362-red-hat-security-identity-management-and-authentication",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/rh362-red-hat-security-identity-management-and-authentication"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh362-red-hat-security-identity-management-and-authentication",
+    "tags": [
+      "管理",
+      "セキュリティ"
+    ]
   },
   {
     "id": "ex403",
@@ -116,7 +141,11 @@
     "training_course": "RH403",
     "training_course_name": "Red Hat Satellite 6 Administration",
     "training_url_en": "https://www.redhat.com/en/services/training/rh403-red-hat-satellite-6-administration",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/rh403-red-hat-satellite-6-administration"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh403-red-hat-satellite-6-administration",
+    "tags": [
+      "管理",
+      "自動化"
+    ]
   },
   {
     "id": "ex415",
@@ -133,7 +162,11 @@
     "training_course": "RH415",
     "training_course_name": "Red Hat Security: Linux in Physical, Virtual, and Cloud",
     "training_url_en": "https://www.redhat.com/en/services/training/rh415-red-hat-security-linux-physical-virtual-and-cloud",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/rh415-red-hat-security-linux-physical-virtual-and-cloud"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh415-red-hat-security-linux-physical-virtual-and-cloud",
+    "tags": [
+      "管理",
+      "セキュリティ"
+    ]
   },
   {
     "id": "ex436",
@@ -150,7 +183,12 @@
     "training_course": "RH436",
     "training_course_name": "Red Hat High Availability Clustering",
     "training_url_en": "https://www.redhat.com/en/services/training/rh436-red-hat-high-availability-clustering",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/rh436-red-hat-high-availability-clustering"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh436-red-hat-high-availability-clustering",
+    "tags": [
+      "管理",
+      "運用",
+      "高可用性"
+    ]
   },
   {
     "id": "ex442",
@@ -167,7 +205,11 @@
     "training_course": "RH442",
     "training_course_name": "Red Hat Enterprise Linux Performance Tuning",
     "training_url_en": "https://www.redhat.com/en/services/training/rh442-red-hat-enterprise-linux-performance-tuning",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/rh442-red-hat-enterprise-linux-performance-tuning"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/rh442-red-hat-enterprise-linux-performance-tuning",
+    "tags": [
+      "運用",
+      "パフォーマンス"
+    ]
   },
   {
     "id": "rhce",
@@ -184,7 +226,11 @@
     "training_course": "AU294",
     "training_course_name": "Red Hat Enterprise Linux Automation with Ansible",
     "training_url_en": "https://www.redhat.com/en/services/training/au294-red-hat-linux-automation-with-ansible",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/au294-red-hat-linux-automation-with-ansible"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/au294-red-hat-linux-automation-with-ansible",
+    "tags": [
+      "自動化",
+      "管理"
+    ]
   },
   {
     "id": "ex336",
@@ -201,7 +247,11 @@
     "training_course": "DO336",
     "training_course_name": "Automate and Manage Red Hat OpenShift Virtualization with Ansible",
     "training_url_en": "https://www.redhat.com/en/services/training/do336-automate-manage-red-hat-openshift-virtualization-with-ansible",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do336-automate-manage-red-hat-openshift-virtualization-with-ansible"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do336-automate-manage-red-hat-openshift-virtualization-with-ansible",
+    "tags": [
+      "自動化",
+      "仮想化"
+    ]
   },
   {
     "id": "ex374",
@@ -218,7 +268,11 @@
     "training_course": "AU374",
     "training_course_name": "Developing Advanced Automation with Red Hat Ansible Automation Platform",
     "training_url_en": "https://www.redhat.com/en/services/training/au374-developing-advanced-automation-red-hat-ansible-automation-platform",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/au374-developing-advanced-automation-red-hat-ansible-automation-platform"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/au374-developing-advanced-automation-red-hat-ansible-automation-platform",
+    "tags": [
+      "自動化",
+      "アプリ開発"
+    ]
   },
   {
     "id": "ex417",
@@ -235,7 +289,11 @@
     "training_course": "DO417",
     "training_course_name": "Microsoft Windows Automation with Red Hat Ansible Automation Platform",
     "training_url_en": "https://www.redhat.com/en/services/training/do417-microsoft-windows-automation-red-hat-ansible-automation-platform",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do417-microsoft-windows-automation-red-hat-ansible-automation-platform"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do417-microsoft-windows-automation-red-hat-ansible-automation-platform",
+    "tags": [
+      "自動化",
+      "管理"
+    ]
   },
   {
     "id": "ex457",
@@ -252,7 +310,11 @@
     "training_course": "DO457",
     "training_course_name": "Network Automation with Red Hat Ansible Automation Platform",
     "training_url_en": "https://www.redhat.com/en/services/training/do457-ansible-network-automation",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do457-ansible-network-automation"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do457-ansible-network-automation",
+    "tags": [
+      "自動化",
+      "ネットワーク"
+    ]
   },
   {
     "id": "ex467",
@@ -269,7 +331,11 @@
     "training_course": "DO467",
     "training_course_name": "Managing Enterprise Automation with Red Hat Ansible Automation Platform",
     "training_url_en": "https://www.redhat.com/en/services/training/do467-managing-enterprise-automation-red-hat-ansible-automation-platform",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do467-managing-enterprise-automation-red-hat-ansible-automation-platform"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do467-managing-enterprise-automation-red-hat-ansible-automation-platform",
+    "tags": [
+      "自動化",
+      "管理"
+    ]
   },
   {
     "id": "ex180",
@@ -286,7 +352,11 @@
     "training_course": "DO180",
     "training_course_name": "Red Hat OpenShift Administration I: Operating a Production Cluster",
     "training_url_en": "https://www.redhat.com/en/services/training/red-hat-openshift-administration-i-operating-a-production-cluster",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-i-operating-a-production-cluster"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-i-operating-a-production-cluster",
+    "tags": [
+      "基礎知識",
+      "管理"
+    ]
   },
   {
     "id": "ex156",
@@ -303,7 +373,11 @@
     "training_course": "DO156",
     "training_course_name": "Red Hat OpenShift Virtualization Administration I: Operating Virtual Machines",
     "training_url_en": "https://www.redhat.com/en/services/training/do156-red-hat-openshift-virtualization-administration-i-operating-virtual-machines",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do156-red-hat-openshift-virtualization-administration-i-operating-virtual-machines"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do156-red-hat-openshift-virtualization-administration-i-operating-virtual-machines",
+    "tags": [
+      "基礎知識",
+      "仮想化"
+    ]
   },
   {
     "id": "ex280",
@@ -320,7 +394,11 @@
     "training_course": "DO280",
     "training_course_name": "Red Hat OpenShift Administration II: Configuring a Production Cluster",
     "training_url_en": "https://www.redhat.com/en/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster",
+    "tags": [
+      "管理",
+      "運用"
+    ]
   },
   {
     "id": "ex380",
@@ -337,7 +415,11 @@
     "training_course": "DO380",
     "training_course_name": "Red Hat OpenShift Administration III: Scaling Deployments in the Enterprise",
     "training_url_en": "https://www.redhat.com/en/services/training/do380-red-hat-openshift-administration-iii-scaling-deployments-in-the-enterprise",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do380-red-hat-openshift-administration-iii-scaling-deployments-in-the-enterprise"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do380-red-hat-openshift-administration-iii-scaling-deployments-in-the-enterprise",
+    "tags": [
+      "自動化",
+      "管理"
+    ]
   },
   {
     "id": "ex316",
@@ -354,7 +436,11 @@
     "training_course": "DO256",
     "training_course_name": "Red Hat OpenShift Virtualization Administration II: Configuring Production Virtual Machines",
     "training_url_en": "https://www.redhat.com/en/services/training/do256-red-hat-openshift-virtualization-administration-ii-configuring-production-virtual-machines",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do256-red-hat-openshift-virtualization-administration-ii-configuring-production-virtual-machines"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do256-red-hat-openshift-virtualization-administration-ii-configuring-production-virtual-machines",
+    "tags": [
+      "管理",
+      "仮想化"
+    ]
   },
   {
     "id": "ex370",
@@ -371,7 +457,11 @@
     "training_course": "DO370",
     "training_course_name": "Enterprise Kubernetes Storage with Red Hat OpenShift Data Foundation",
     "training_url_en": "https://www.redhat.com/en/services/training/do370-enterprise-kubernetes-storage-with-red-hat-openshift-data-foundation",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do370-enterprise-kubernetes-storage-with-red-hat-openshift-data-foundation"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do370-enterprise-kubernetes-storage-with-red-hat-openshift-data-foundation",
+    "tags": [
+      "管理",
+      "ストレージ"
+    ]
   },
   {
     "id": "ex430",
@@ -388,7 +478,11 @@
     "training_course": "DO430",
     "training_course_name": "Securing Kubernetes Clusters with Red Hat Advanced Cluster Security",
     "training_url_en": "https://www.redhat.com/en/services/training/do430-securing-kubernetes-clusters-red-hat-advanced-cluster-security",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do430-securing-kubernetes-clusters-red-hat-advanced-cluster-security"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do430-securing-kubernetes-clusters-red-hat-advanced-cluster-security",
+    "tags": [
+      "管理",
+      "セキュリティ"
+    ]
   },
   {
     "id": "ex432",
@@ -405,7 +499,11 @@
     "training_course": "DO432",
     "training_course_name": "Multicluster Management with Red Hat Advanced Cluster Management for Kubernetes",
     "training_url_en": "https://www.redhat.com/en/services/training/do432-multicluster-management-red-hat-advanced-cluster-management-kubernetes",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do432-multicluster-management-red-hat-advanced-cluster-management-kubernetes"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do432-multicluster-management-red-hat-advanced-cluster-management-kubernetes",
+    "tags": [
+      "管理",
+      "運用"
+    ]
   },
   {
     "id": "ex229",
@@ -418,7 +516,11 @@
     "url_en": "https://www.redhat.com/en/services/training/red-hat-certified-specialist-rosa",
     "url_ja": "https://www.redhat.com/ja/services/training/red-hat-certified-specialist-rosa",
     "duration": "4h",
-    "status": "Retired"
+    "status": "Retired",
+    "tags": [
+      "管理",
+      "クラウド"
+    ]
   },
   {
     "id": "ex480",
@@ -431,7 +533,11 @@
     "url_en": "https://www.redhat.com/en/services/training/ex480-red-hat-certified-specialist-multicluster-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex480-red-hat-certified-specialist-multicluster-management-exam",
     "duration": "4h",
-    "status": "Retired"
+    "status": "Retired",
+    "tags": [
+      "管理",
+      "運用"
+    ]
   },
   {
     "id": "ex267",
@@ -448,7 +554,11 @@
     "training_course": "AI267",
     "training_course_name": "Developing and Deploying AI/ML Applications on Red Hat OpenShift AI",
     "training_url_en": "https://www.redhat.com/en/services/training/developing-and-deploying-aiml-applications-red-hat-openshift-ai-ai267",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/developing-and-deploying-aiml-applications-red-hat-openshift-ai-ai267"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/developing-and-deploying-aiml-applications-red-hat-openshift-ai-ai267",
+    "tags": [
+      "管理",
+      "AI/ML"
+    ]
   },
   {
     "id": "ex188",
@@ -465,7 +575,11 @@
     "training_course": "DO188",
     "training_course_name": "Red Hat OpenShift Development I: Introduction to Containers with Podman",
     "training_url_en": "https://www.redhat.com/en/services/training/do188-red-hat-open-shift-development-introduction-containers-with-podman",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do188-red-hat-open-shift-development-introduction-containers-with-podman"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do188-red-hat-open-shift-development-introduction-containers-with-podman",
+    "tags": [
+      "基礎知識",
+      "コンテナ"
+    ]
   },
   {
     "id": "ex288",
@@ -482,7 +596,11 @@
     "training_course": "DO288",
     "training_course_name": "Red Hat OpenShift Developer II: Building and Deploying Cloud-native Applications",
     "training_url_en": "https://www.redhat.com/en/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications",
+    "tags": [
+      "アプリ開発",
+      "コンテナ"
+    ]
   },
   {
     "id": "ex183",
@@ -499,7 +617,11 @@
     "training_course": "AD183",
     "training_course_name": "Red Hat Application Development I: Programming in Java EE",
     "training_url_en": "https://www.redhat.com/en/services/training/ad183-red-hat-application-development-i-programming-java-ee",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/ad183-red-hat-application-development-i-programming-java-ee"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/ad183-red-hat-application-development-i-programming-java-ee",
+    "tags": [
+      "アプリ開発",
+      "基礎知識"
+    ]
   },
   {
     "id": "ex221",
@@ -516,7 +638,11 @@
     "training_course": "AD221",
     "training_course_name": "Cloud-native Integration with Red Hat Fuse and Apache Camel",
     "training_url_en": "https://www.redhat.com/en/services/training/ad221-cloud-native-integration-with-red-hat-fuse",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/ad221-cloud-native-integration-with-red-hat-fuse"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/ad221-cloud-native-integration-with-red-hat-fuse",
+    "tags": [
+      "アプリ開発",
+      "インテグレーション"
+    ]
   },
   {
     "id": "ex240",
@@ -533,7 +659,11 @@
     "training_course": "DO240",
     "training_course_name": "Cloud-native API Administration with Red Hat 3scale API Management",
     "training_url_en": "https://www.redhat.com/en/services/training/do240-cloud-native-api-admin-red-hat-3scale-api-management",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do240-cloud-native-api-admin-red-hat-3scale-api-management"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do240-cloud-native-api-admin-red-hat-3scale-api-management",
+    "tags": [
+      "管理",
+      "アプリ開発"
+    ]
   },
   {
     "id": "ex248",
@@ -550,7 +680,11 @@
     "training_course": "AD248",
     "training_course_name": "Red Hat JBoss Application Administration I",
     "training_url_en": "https://www.redhat.com/en/services/training/ad248-red-hat-jboss-application-administration-i",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/ad248-red-hat-jboss-application-administration-i"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/ad248-red-hat-jboss-application-administration-i",
+    "tags": [
+      "管理",
+      "運用"
+    ]
   },
   {
     "id": "ex328",
@@ -567,7 +701,11 @@
     "training_course": "DO328",
     "training_course_name": "Building Resilient Microservices with Istio and Red Hat OpenShift Service Mesh",
     "training_url_en": "https://www.redhat.com/en/services/training/do328-building-resilient-microservices-with-istio-and-red-hat-openshift-service-mesh",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/do328-building-resilient-microservices-with-istio-and-red-hat-openshift-service-mesh"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/do328-building-resilient-microservices-with-istio-and-red-hat-openshift-service-mesh",
+    "tags": [
+      "アプリ開発",
+      "マイクロサービス"
+    ]
   },
   {
     "id": "ex378",
@@ -584,7 +722,11 @@
     "training_course": "DO378",
     "training_course_name": "Red Hat Cloud-native Microservices Development with Quarkus",
     "training_url_en": "https://www.redhat.com/en/services/training/red-hat-cloud-native-microservices-development-quarkus-do378",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-cloud-native-microservices-development-quarkus-do378"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-cloud-native-microservices-development-quarkus-do378",
+    "tags": [
+      "アプリ開発",
+      "マイクロサービス"
+    ]
   },
   {
     "id": "ex482",
@@ -601,6 +743,10 @@
     "training_course": "AD482",
     "training_course_name": "Developing Event-Driven Applications with Apache Kafka and Red Hat AMQ Streams",
     "training_url_en": "https://www.redhat.com/en/services/training/ad482-developing-event-driven-applications-apache-kafka-and-red-hat-amq-streams",
-    "training_url_ja": "https://www.redhat.com/ja/services/training/ad482-developing-event-driven-applications-apache-kafka-and-red-hat-amq-streams"
+    "training_url_ja": "https://www.redhat.com/ja/services/training/ad482-developing-event-driven-applications-apache-kafka-and-red-hat-amq-streams",
+    "tags": [
+      "アプリ開発",
+      "インテグレーション"
+    ]
   }
 ]

@@ -8,9 +8,12 @@
   <style>
     .retired { display: none; }
     .cert-card { margin-bottom: 1rem; }
+    .cert-card .card { border-width: 2px !important; }
+    .cert-card .card.border-danger { border-width: 2px !important; }
     .exam-badge { font-family: monospace; letter-spacing: 0.5px; }
     .filter-section { background: #fff; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
     .filter-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: #6c757d; letter-spacing: 0.5px; display: block; margin-bottom: 0.4rem; }
+    .tag-hash { color: #6c757d; font-size: 0.78rem; }
 
     /* Red Hat global header */
     .rh-header {
@@ -193,6 +196,8 @@
               </div>
               <!-- Description -->
               ${cert.description ? `<p class="card-text text-muted small mb-2">${cert.description}</p>` : ""}
+              <!-- Tags -->
+              ${cert.tags && cert.tags.length ? `<div class="mb-2">${cert.tags.map(t => `<span class="tag-hash me-1">#${t}</span>`).join("")}</div>` : ""}
               <!-- Buttons pushed to bottom -->
               <div class="mt-auto pt-2 d-flex flex-column gap-2">
                 ${examButtons}
