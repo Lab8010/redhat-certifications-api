@@ -537,11 +537,12 @@
     }
 
     Promise.all([
-      fetch("./data/certifications.json?v=20260907-credly").then(r => r.json()),
-      fetch("./data/tracks.json").then(r => r.json())
+      fetch("./data/certifications.json?v=20260907-credly-titles-2").then(r => r.json()),
+      fetch("./data/tracks.json").then(r => r.json()),
+      fetch("./data/credly.json?v=20260907-credly-3").then(r => r.json())
     ])
-      .then(([data, trackData]) => {
-        allCertifications = data;
+      .then(([data, trackData, credlyData]) => {
+        allCertifications = data.map(cert => ({ ...cert, ...(credlyData[cert.exam] || {}) }));
         tracks = trackData.tracks.map(track => ({
           ...track,
           levels: trackData.levels

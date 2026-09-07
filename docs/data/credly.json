@@ -1,0 +1,146 @@
+{
+  "EX200": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-system-administrator-rhcsa",
+    "credly_badge_image_url": "https://images.credly.com/images/572de0ba-2c59-4816-a59d-b0e1687e45ee/image.png"
+  },
+  "EX342": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-engineer-in-enterprise-linux",
+    "credly_badge_image_url": "https://images.credly.com/images/7d4ee7c1-e4ef-434c-897b-7e2161243428/blob"
+  },
+  "EX210": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-cloud-infrastructur",
+    "credly_badge_image_url": "https://images.credly.com/images/51c369dc-fe98-4642-8eb5-b994cc1231e0/image.png"
+  },
+  "EX260": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-ceph-cloud-storage",
+    "credly_badge_image_url": "https://images.credly.com/images/ec13d016-603a-42ca-8721-bf8d215ab2bf/image.png"
+  },
+  "EX358": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-services-management",
+    "credly_badge_image_url": "https://images.credly.com/images/e5933aba-96fc-4bcd-9691-c3c410817169/image.png"
+  },
+  "EX362": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-identity-management.1",
+    "credly_badge_image_url": "https://images.credly.com/images/c79ddd59-b2b4-40bd-b3bd-e64a77bdde7e/image.png"
+  },
+  "EX403": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-deployment-and-syst",
+    "credly_badge_image_url": "https://images.credly.com/images/b72dbd4d-654b-499e-96cf-23c2e479ed5a/image.png"
+  },
+  "EX415": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-security-linux",
+    "credly_badge_image_url": "https://images.credly.com/images/120daa40-07be-4bb5-b673-85f6ac97d775/image.png"
+  },
+  "EX436": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-high-availability-c",
+    "credly_badge_image_url": "https://images.credly.com/images/456b3200-d6f1-4849-a01f-0da375beea48/image.png"
+  },
+  "EX442": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-linux-performance-t",
+    "credly_badge_image_url": "https://images.credly.com/images/c13281d0-70dd-425c-b454-8183e22c459d/image.png"
+  },
+  "EX294": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-engineer-in-ansible",
+    "credly_badge_image_url": "https://images.credly.com/images/bea533f4-c585-4240-9b7f-3d20c4fdb489/blob"
+  },
+  "EX336": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-automating-openshif",
+    "credly_badge_image_url": "https://images.credly.com/images/7fcaead5-72ad-4fa1-b839-6326e6fe0702/blob"
+  },
+  "EX374": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-automation-with-ans",
+    "credly_badge_image_url": "https://images.credly.com/images/21df8c28-cdd9-4427-89c0-3b107fa34f2f/image.png"
+  },
+  "EX417": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-microsoft-windows-a",
+    "credly_badge_image_url": "https://images.credly.com/images/60184429-5d43-42a2-bfb7-13a1ac81c1e0/image.png"
+  },
+  "EX457": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-ansible-network-aut",
+    "credly_badge_image_url": "https://images.credly.com/images/4c31b83c-3570-4fed-9bb3-8518a6eb81ca/image.png"
+  },
+  "EX467": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-managing-automation",
+    "credly_badge_image_url": "https://images.credly.com/images/2d8f3af9-dd48-41b3-8bf7-8f50be139986/image.png"
+  },
+  "EX180": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-technologist-in-openshift",
+    "credly_badge_image_url": "https://images.credly.com/images/9704ca10-7150-4fbb-a01b-da23339d4fe3/blob"
+  },
+  "EX156": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-technologist-in-openshift-virtual",
+    "credly_badge_image_url": "https://images.credly.com/images/e4db4a30-be69-41fd-8816-4513f2ec346e/blob"
+  },
+  "EX280": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-system-administrator-in-openshift",
+    "credly_badge_image_url": "https://images.credly.com/images/e7a34dc0-feb1-44a1-b8e7-3f825faf1c8e/blob"
+  },
+  "EX380": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-engineer-in-openshift",
+    "credly_badge_image_url": "https://images.credly.com/images/e4ca21d6-1099-4812-880f-efb0f84d0346/blob"
+  },
+  "EX316": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-openshift-virtualiz",
+    "credly_badge_image_url": "https://images.credly.com/images/dd5720b3-34a5-4a6f-8b3f-384a9ff457c9/image.png"
+  },
+  "EX370": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-openshift-data-foun",
+    "credly_badge_image_url": "https://images.credly.com/images/f9f0a71d-49cc-4af0-abd6-445d34c5711a/image.png"
+  },
+  "EX430": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-openshift-advanced-",
+    "credly_badge_image_url": "https://images.credly.com/images/790f2e74-eadc-4a01-87ee-a0e50a8e1cdc/blob"
+  },
+  "EX432": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-openshift-advanced-.1",
+    "credly_badge_image_url": "https://images.credly.com/images/fbc71e94-5cb1-4322-833d-26c3c96fa023/blob"
+  },
+  "EX229": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-rosa",
+    "credly_badge_image_url": "https://images.credly.com/images/739a5020-6f50-42c6-963a-844ed5759809/image.png"
+  },
+  "EX480": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-multicluster-manage",
+    "credly_badge_image_url": "https://images.credly.com/images/a0d2d677-f647-4397-81e8-25983c084ba4/image.png"
+  },
+  "EX267": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-developer-in-ai",
+    "credly_badge_image_url": "https://images.credly.com/images/0a4e7132-911d-4c47-af11-259b9629dbde/blob"
+  },
+  "EX188": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-container-managemen",
+    "credly_badge_image_url": "https://images.credly.com/images/a647abc6-8b2a-4998-a032-78dd8b0565a2/image.png"
+  },
+  "EX288": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-engineer-in-cloud-native-applicat",
+    "credly_badge_image_url": "https://images.credly.com/images/9f1454c1-4aa0-4af2-be04-820090088117/blob"
+  },
+  "EX183": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-enterprise-applicat.1",
+    "credly_badge_image_url": "https://images.credly.com/images/ee06997f-e8ea-446d-b278-6a0647b90a77/blob"
+  },
+  "EX221": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-cloud-native-integr",
+    "credly_badge_image_url": "https://images.credly.com/images/f57fc598-01c7-4788-95cf-b9c24bcf2fc3/image.png"
+  },
+  "EX240": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-api-management",
+    "credly_badge_image_url": "https://images.credly.com/images/6eb5499c-cf76-4837-ac72-6a254139af1a/image.png"
+  },
+  "EX248": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-enterprise-applicat",
+    "credly_badge_image_url": "https://images.credly.com/images/8a758b1b-7565-4971-b4a4-779ecc6f782b/image.png"
+  },
+  "EX328": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-building-resilient-",
+    "credly_badge_image_url": "https://images.credly.com/images/0f573c61-16d5-413e-a556-337b2d985acc/image.png"
+  },
+  "EX378": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-cloud-native-develo",
+    "credly_badge_image_url": "https://images.credly.com/images/392aac63-439d-46c3-a104-70e3d63f8c5b/blob"
+  },
+  "EX482": {
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-event-driven-develo",
+    "credly_badge_image_url": "https://images.credly.com/images/095df525-e851-47e5-923f-b46cfcebc8e6/image.png"
+  }
+}

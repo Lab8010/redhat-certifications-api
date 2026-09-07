@@ -1,5 +1,5 @@
 - id: rhcsa
-  title: Red Hat Certified System Administrator
+  title: Red Hat Certified System Administrator (RHCSA)
   exam: EX200
   level: Level 200
   product: RHEL
@@ -14,7 +14,7 @@
   training_url_en: https://www.redhat.com/en/services/training/rh199-rhcsa-rapid-track-course
   training_url_ja: https://www.redhat.com/ja/services/training/rh199-rhcsa-rapid-track-course
 - id: ex342
-  title: Red Hat Certified Specialist in Enterprise Linux Diagnostics and Troubleshooting
+  title: Red Hat Certified Engineer in Enterprise Linux
   exam: EX342
   level: Level 300
   product: ''
@@ -102,7 +102,7 @@
   duration: 3h
   status: Active
 - id: ex442
-  title: Red Hat Certified Specialist in Performance Tuning
+  title: Red Hat Certified Specialist in Linux Performance Tuning
   exam: EX442
   level: Level 400
   product: ''
@@ -113,7 +113,7 @@
   duration: 4h
   status: Active
 - id: rhce
-  title: Red Hat Certified Engineer
+  title: Red Hat Certified Engineer in Ansible
   exam: EX294
   level: Level 200
   product: RHEL / Ansible
@@ -128,7 +128,7 @@
   training_url_en: https://www.redhat.com/en/services/training/au294-red-hat-linux-automation-with-ansible
   training_url_ja: https://www.redhat.com/ja/services/training/au294-red-hat-linux-automation-with-ansible
 - id: ex336
-  title: Red Hat Certified Specialist in Automating OpenShift Virtual Machine Migration Exam
+  title: Red Hat Certified Specialist in Automating OpenShift Virtual Machine Management
   exam: EX336
   level: Level 300
   product: ''
@@ -139,7 +139,7 @@
   duration: 4h
   status: Active
 - id: ex374
-  title: Red Hat Certified Specialist in Developing Automation with Ansible Automation Platform
+  title: Red Hat Certified Specialist in Automation with Ansible Automation Platform
   exam: EX374
   level: Level 300
   product: ''
@@ -150,7 +150,7 @@
   duration: 4h
   status: Active
 - id: ex417
-  title: Red Hat Certified Specialist in Microsoft Windows Automation with Ansible Exam
+  title: Red Hat Certified Specialist in Microsoft Windows Automation with Ansible
   exam: EX417
   level: Level 400
   product: ''
@@ -172,7 +172,7 @@
   duration: 4h
   status: Active
 - id: ex467
-  title: Red Hat Certified Specialist in Managing Automation with Ansible Automation Platform Exam
+  title: Red Hat Certified Specialist in Managing Automation with Ansible Automation Platform
   exam: EX467
   level: Level 400
   product: ''
@@ -193,8 +193,6 @@
   url_ja: https://www.redhat.com/ja/services/training/ex180-red-hat-certified-technologist-in-openshift-exam
   duration: 2h
   status: Active
-  credly_url: https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-containers-and-kube
-  credly_badge_image_url: https://images.credly.com/images/1dd8824f-d6b6-4967-906a-7bd3c0063fae/image.png
 - id: ex156
   title: Red Hat Certified Technologist in OpenShift Virtualization
   exam: EX156
@@ -207,7 +205,7 @@
   duration: 2h
   status: Active
 - id: ex280
-  title: Red Hat Certified Specialist in OpenShift Administration
+  title: Red Hat Certified System Administrator in OpenShift
   exam: EX280
   level: Level 200
   product: OpenShift
@@ -222,7 +220,7 @@
   training_url_en: https://www.redhat.com/en/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster
   training_url_ja: https://www.redhat.com/ja/services/training/red-hat-openshift-administration-ii-configuring-a-production-cluster
 - id: ex380
-  title: Red Hat Certified Specialist in OpenShift Automation and Integration
+  title: Red Hat Certified Engineer in OpenShift
   exam: EX380
   level: Level 300
   product: ''
@@ -270,7 +268,7 @@
   duration: 3h
   status: Active
 - id: ex430
-  title: Red Hat Certified Specialist in OpenShift Advanced Cluster Security Exam
+  title: Red Hat Certified Specialist in OpenShift Advanced Cluster Security
   exam: EX430
   level: Level 400
   product: ''
@@ -281,7 +279,7 @@
   duration: 4h
   status: Active
 - id: ex432
-  title: Red Hat Certified Specialist in MultiCluster Management with Advanced Cluster Management
+  title: Red Hat Certified Specialist in OpenShift Advanced Cluster Management
   exam: EX432
   level: Level 400
   product: ''
@@ -314,7 +312,7 @@
   duration: 4h
   status: Retired
 - id: ex267
-  title: Red Hat Certified Specialist in OpenShift AI
+  title: Red Hat Certified Developer in AI
   exam: EX267
   level: Level 200
   product: OpenShift AI
@@ -325,7 +323,7 @@
   duration: 3h
   status: Active
 - id: ex188
-  title: Red Hat Certified Specialist in Containers
+  title: Red Hat Certified Specialist in Container Management
   exam: EX188
   level: Level 100
   product: Containers
@@ -336,7 +334,7 @@
   duration: 2.5h
   status: Active
 - id: ex288
-  title: Red Hat Certified Specialist in OpenShift Application Development
+  title: Red Hat Certified Engineer in Cloud-native Applications
   exam: EX288
   level: Level 200
   product: OpenShift / App Dev
@@ -351,7 +349,7 @@
   training_url_en: https://www.redhat.com/en/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications
   training_url_ja: https://www.redhat.com/ja/services/training/red-hat-openshift-developer-ii-building-and-deploying-cloud-native-applications
 - id: ex183
-  title: Red Hat Certified Enterprise Application Developer
+  title: Red Hat Certified Specialist in Enterprise Application Development
   exam: EX183
   level: Level 100
   product: ''
@@ -406,7 +404,7 @@
   duration: 3h
   status: Active
 - id: ex378
-  title: Red Hat Certified Cloud-native Developer
+  title: Red Hat Certified Specialist in Cloud-native Development
   exam: EX378
   level: Level 300
   product: ''
@@ -417,7 +415,7 @@
   duration: 3h
   status: Active
 - id: ex482
-  title: Red Hat Certified Specialist in Event-Driven Development with Kafka
+  title: Red Hat Certified Specialist in Event-Driven Development
   exam: EX482
   level: Level 400
   product: ''
