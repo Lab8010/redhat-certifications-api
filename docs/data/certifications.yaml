@@ -45,7 +45,7 @@
   url_en: https://www.redhat.com/en/services/training/ex260-red-hat-certified-specialist-in-ceph-cloud-storage-exam
   url_ja: https://www.redhat.com/ja/services/training/ex260-red-hat-certified-specialist-in-ceph-cloud-storage-exam
   duration: 3h
-  status: Active
+  status: Retired
 - id: ex358
   title: Red Hat Certified Specialist in Services Management and Automation
   exam: EX358
@@ -230,6 +230,21 @@
   url_ja: https://www.redhat.com/ja/services/training/ex380-certified-specialist-openshift-automation-exam
   duration: 4h
   status: Active
+- id: ex282
+  title: Red Hat Certified Specialist in OpenShift Networking
+  exam: EX282
+  level: Level 400
+  product: OpenShift
+  category: OpenShift
+  description: Validates skills in configuring and managing OpenShift Container Platform networking.
+  url_en: https://www.redhat.com/en/services/training/red-hat-certified-specialist-openshift-networking
+  url_ja: https://www.redhat.com/ja/services/training/red-hat-certified-specialist-openshift-networking
+  duration: 4h
+  status: Active
+  training_course: DO282
+  training_course_name: 'Red Hat OpenShift Administration III: Scaling Deployments in the Enterprise'
+  training_url_en: https://www.redhat.com/en/services/training/do282-red-hat-openshift-administration-iii
+  training_url_ja: https://www.redhat.com/ja/services/training/do282-red-hat-openshift-administration-iii
 - id: ex316
   title: Red Hat Certified Specialist in OpenShift Virtualization
   exam: EX316
@@ -354,7 +369,7 @@
   url_en: https://www.redhat.com/en/services/training/ex221-red-hat-certified-specialist-cloud-native-integration-exam
   url_ja: https://www.redhat.com/ja/services/training/ex221-red-hat-certified-specialist-cloud-native-integration-exam
   duration: 4h
-  status: Active
+  status: Retired
 - id: ex240
   title: Red Hat Certified Specialist in API Management
   exam: EX240
@@ -365,7 +380,7 @@
   url_en: https://www.redhat.com/en/services/training/ex240-red-hat-certified-specialist-api-management-exam
   url_ja: https://www.redhat.com/ja/services/training/ex240-red-hat-certified-specialist-api-management-exam
   duration: 3h
-  status: Active
+  status: Retired
 - id: ex248
   title: Red Hat Certified Specialist in Enterprise Application Server Administration
   exam: EX248
@@ -409,4 +424,4 @@
   url_en: https://www.redhat.com/en/services/training/red-hat-certified-specialist-event-driven-application-development-exam
   url_ja: https://www.redhat.com/ja/services/training/red-hat-certified-specialist-event-driven-application-development-exam
   duration: 3h
-  status: Active
+  status: Retired

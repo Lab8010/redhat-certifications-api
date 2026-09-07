@@ -1,0 +1,66 @@
+{
+  "updated": "2026-09-07",
+  "source": "https://www.redhat.com/en/services/certifications",
+  "levels": [
+    { "id": "technologist", "label": "Technologist", "level": 1 },
+    { "id": "administrator", "label": "Systems Administrator/Developer", "level": 2 },
+    { "id": "engineer", "label": "Engineer", "level": 3 },
+    { "id": "specialist", "label": "Specialist", "level": 4 },
+    { "id": "architect", "label": "Architect", "level": 5 }
+  ],
+  "tracks": [
+    {
+      "id": "openshift",
+      "name": "OpenShift",
+      "color": "primary",
+      "certifications": [
+        { "level": "technologist", "title": "Red Hat Certified Technologist in OpenShift", "exams": ["EX180", "EX156"] },
+        { "level": "administrator", "title": "Red Hat Certified System Administrator in OpenShift", "exams": ["EX280"] },
+        { "level": "engineer", "title": "Red Hat Certified Engineer in OpenShift", "exams": ["EX280", "EX380"] },
+        { "level": "specialist", "title": "OpenShift specialist certifications", "exams": ["EX282", "EX316", "EX336", "EX370", "EX430", "EX432"] },
+        { "level": "architect", "title": "Red Hat Certified Architect in OpenShift", "exams": ["EX280", "EX380", "EX282", "EX316", "EX336", "EX370", "EX430", "EX432"] }
+      ]
+    },
+    {
+      "id": "enterprise-linux",
+      "name": "Enterprise Linux",
+      "color": "danger",
+      "certifications": [
+        { "level": "administrator", "title": "Red Hat Certified System Administrator", "exams": ["EX200"] },
+        { "level": "engineer", "title": "Red Hat Certified Engineer in Enterprise Linux", "exams": ["EX200", "EX342"] },
+        { "level": "specialist", "title": "Enterprise Linux specialist certifications", "exams": ["EX210", "EX260", "EX358", "EX362", "EX403", "EX415", "EX436", "EX442"] },
+        { "level": "architect", "title": "Red Hat Certified Architect in Enterprise Linux", "exams": ["EX200", "EX342", "EX210", "EX260", "EX358", "EX362", "EX403", "EX415", "EX436", "EX442"] }
+      ]
+    },
+    {
+      "id": "ansible",
+      "name": "Ansible",
+      "color": "warning",
+      "certifications": [
+        { "level": "administrator", "title": "Red Hat Certified System Administrator", "exams": ["EX200"] },
+        { "level": "engineer", "title": "Red Hat Certified Engineer in Ansible", "exams": ["EX200", "EX294"] },
+        { "level": "specialist", "title": "Ansible specialist certifications", "exams": ["EX374", "EX417", "EX457", "EX467"] },
+        { "level": "architect", "title": "Red Hat Certified Architect in Ansible", "exams": ["EX200", "EX294", "EX374", "EX417", "EX457", "EX467"] }
+      ]
+    },
+    {
+      "id": "cloud-native",
+      "name": "Cloud-native applications",
+      "color": "success",
+      "certifications": [
+        { "level": "technologist", "title": "Red Hat Certified Developer in Cloud-native applications", "exams": ["EX188"] },
+        { "level": "engineer", "title": "Red Hat Certified Engineer in Cloud-native applications", "exams": ["EX188", "EX288"] },
+        { "level": "specialist", "title": "Cloud-native applications specialist certifications", "exams": ["EX183", "EX221", "EX240", "EX248", "EX328", "EX378", "EX482"] },
+        { "level": "architect", "title": "Red Hat Certified Architect in Cloud-native applications", "exams": ["EX188", "EX288", "EX183", "EX221", "EX240", "EX248", "EX328", "EX378", "EX482"] }
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "color": "info",
+      "certifications": [
+        { "level": "technologist", "title": "Red Hat Certified Developer in AI", "exams": ["EX267"] }
+      ]
+    }
+  ]
+}

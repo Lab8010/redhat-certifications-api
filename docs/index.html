@@ -14,6 +14,9 @@
     .filter-section { background: #fff; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
     .filter-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: #6c757d; letter-spacing: 0.5px; display: block; margin-bottom: 0.4rem; }
     .tag-hash { color: #6c757d; font-size: 0.78rem; }
+    .track-panel { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+    .track-level { border-left: 3px solid #adb5bd; padding-left: 0.75rem; }
+    .track-level + .track-level { margin-top: 0.65rem; }
 
     /* Red Hat global header */
     .rh-header {
@@ -53,7 +56,7 @@
         Questions? Visit <a href="https://access.redhat.com/community/learn" target="_blank">Red Hat Training &amp; Certification space</a>
         &nbsp;|&nbsp; Maintained by <a href="https://github.com/Lab8010" target="_blank">Lab8010</a>
         &nbsp;|&nbsp; <a href="https://x.com/lab8010" target="_blank">@lab8010 on X</a>
-        &nbsp;|&nbsp; Last updated: <span id="lastUpdated">2026-04-16 JST</span>
+        &nbsp;|&nbsp; Last updated: <span id="lastUpdated">2026-09-07 JST</span>
       </div>
     </div>
   </header>
@@ -72,6 +75,7 @@
           <button class="btn btn-sm category-btn btn-outline-warning" data-value="Ansible"      data-color="warning">Ansible</button>
           <button class="btn btn-sm category-btn btn-outline-primary" data-value="OpenShift"    data-color="primary">OpenShift</button>
           <button class="btn btn-sm category-btn btn-outline-success" data-value="Cloud-Native" data-color="success">Cloud-Native</button>
+          <button class="btn btn-sm category-btn btn-outline-info" data-value="AI" data-color="info">AI</button>
         </div>
       </div>
 
@@ -96,6 +100,12 @@
           </select>
         </div>
         <div class="col-auto">
+          <span class="filter-label">Certification track</span>
+          <select class="form-select form-select-sm" id="filterTrack" style="min-width:220px">
+            <option value="">All Tracks</option>
+          </select>
+        </div>
+        <div class="col-auto">
           <span class="filter-label">Sort by Level</span>
           <select class="form-select form-select-sm" id="sortOrder">
             <option value="asc">100 → 400</option>
@@ -115,6 +125,7 @@
     </div>
 
     <!-- Cards -->
+    <div id="trackDetails" class="track-panel d-none"></div>
     <div id="certifications" class="row"></div>
   </div>
 
@@ -128,8 +139,35 @@
       "RHEL":         "danger",
       "Ansible":      "warning",
       "OpenShift":    "primary",
-      "Cloud-Native": "success"
+      "Cloud-Native": "success",
+      "AI":           "info"
     };
+    let tracks = [];
+    let selectedTrack = "";
+
+    function getTrackMatches(exam) {
+      return tracks.flatMap(track => track.certifications
+        .filter(certification => certification.exams.includes(exam))
+        .map(certification => ({ track, certification })));
+    }
+
+    function renderTrackDetails() {
+      const panel = document.getElementById("trackDetails");
+      const track = tracks.find(item => item.id === selectedTrack);
+      if (!track) {
+        panel.classList.add("d-none");
+        panel.innerHTML = "";
+        return;
+      }
+      panel.classList.remove("d-none");
+      panel.innerHTML = `<div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+        <div><strong>${track.name}</strong><div class="small text-muted">${track.certifications.length ? "Official certification pathway" : ""}</div></div>
+        <a class="small" href="https://www.redhat.com/en/services/certifications" target="_blank">Red Hat official requirements</a>
+      </div>${track.certifications.map(certification => `<div class="track-level small">
+        <strong>${track.levels?.find(level => level.id === certification.level)?.label || certification.level}</strong>: ${certification.title}
+        <span class="text-muted">(${certification.exams.join(", ")})</span>
+      </div>`).join("")}`;
+    }
 
     function getLevelNumber(level) {
       const match = (level || "").match(/Level (\d+)/);
@@ -150,6 +188,7 @@
       certs.forEach(cert => {
         const isRetired     = cert.status === "Retired";
         const categoryColor = categoryColors[cert.category] || "secondary";
+        const trackMatches = getTrackMatches(cert.exam);
 
         const card = document.createElement("div");
         card.className = "col-12 col-md-6 cert-card" + (isRetired ? " retired" : "");
@@ -164,6 +203,7 @@
                   ${cert.level ? `<span class="badge bg-light text-dark border">${cert.level}</span>` : ""}
                   <span class="badge bg-${categoryColor}">${cert.category}</span>
                   ${cert.product ? `<span class="badge bg-light text-dark border">📦 ${cert.product}</span>` : ""}
+                  ${trackMatches.map(match => `<span class="badge bg-${match.track.color}">${match.track.name}: ${match.certification.level}</span>`).join("")}
                 </div>
                 <span class="badge ${isRetired ? "bg-danger" : "bg-success"} flex-shrink-0 ms-1">
                   ${isRetired ? "Retired" : "Active"}
@@ -210,13 +250,15 @@
 
     function applyFiltersAndSort() {
       const productFilter = document.getElementById("filterProduct").value;
+      const trackFilter   = document.getElementById("filterTrack").value;
       const sortOrder     = document.getElementById("sortOrder").value;
 
       filteredCertifications = allCertifications.filter(cert => {
         const categoryMatch = !selectedCategory || cert.category === selectedCategory;
         const levelMatch    = !selectedLevel    || cert.level    === selectedLevel;
         const productMatch  = !productFilter    || (cert.product || "") === productFilter;
-        return categoryMatch && levelMatch && productMatch;
+        const trackMatch    = !trackFilter     || getTrackMatches(cert.exam).some(match => match.track.id === trackFilter);
+        return categoryMatch && levelMatch && productMatch && trackMatch;
       });
 
       filteredCertifications.sort((a, b) => {
@@ -226,6 +268,7 @@
       });
 
       renderCertifications(filteredCertifications);
+      renderTrackDetails();
     }
 
     function applyRetiredFilter() {
@@ -268,11 +311,28 @@
       });
     }
 
-    fetch("./data/certifications.json")
-      .then(r => r.json())
-      .then(data => {
+    function populateTrackFilter() {
+      const select = document.getElementById("filterTrack");
+      tracks.forEach(track => {
+        const option = document.createElement("option");
+        option.value = track.id;
+        option.textContent = track.name;
+        select.appendChild(option);
+      });
+    }
+
+    Promise.all([
+      fetch("./data/certifications.json").then(r => r.json()),
+      fetch("./data/tracks.json").then(r => r.json())
+    ])
+      .then(([data, trackData]) => {
         allCertifications = data;
+        tracks = trackData.tracks.map(track => ({
+          ...track,
+          levels: trackData.levels
+        }));
         populateProductFilter();
+        populateTrackFilter();
         applyFiltersAndSort();
 
         document.querySelectorAll(".category-btn").forEach(btn =>
@@ -281,6 +341,10 @@
           btn.addEventListener("click", () => setLevelFilter(btn.dataset.value)));
         document.getElementById("showRetired").addEventListener("change", applyRetiredFilter);
         document.getElementById("filterProduct").addEventListener("change", applyFiltersAndSort);
+        document.getElementById("filterTrack").addEventListener("change", event => {
+          selectedTrack = event.target.value;
+          applyFiltersAndSort();
+        });
         document.getElementById("sortOrder").addEventListener("change", applyFiltersAndSort);
       })
       .catch(err => {

@@ -1,10 +1,9 @@
 {
   "en": {
     "title": "Red Hat Certifications",
-    "filter_rhca": "Filter RHCA Eligible",
+    "filter_track": "Filter certification track",
     "all": "All",
-    "rhce": "RHCE candidate",
-    "developer": "RHCEMD/RHCCD candidate",
+    "track_requirements": "Track requirements",
     "exam": "Exam",
     "level": "Level",
     "product": "Product",
@@ -13,10 +12,9 @@
   },
   "ja": {
     "title": "Red Hat認定資格一覧",
-    "filter_rhca": "RHCA対象資格を絞り込む",
+    "filter_track": "認定トラックで絞り込む",
     "all": "すべて表示",
-    "rhce": "RHCE保持者向け",
-    "developer": "RHCEMD/RHCCD保持者向け",
+    "track_requirements": "トラック取得要件",
     "exam": "試験番号",
     "level": "レベル",
     "product": "対象製品",

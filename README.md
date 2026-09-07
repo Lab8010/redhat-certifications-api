@@ -17,9 +17,12 @@ Ideal for developers, instructors, and anyone who wants to programmatically acce
 | JSON   | `data/certifications.json` |
 | YAML   | `data/certifications.yaml` |
 | CSV    | `data/certifications.csv` |
+| Tracks | `data/tracks.json` |
 
 You can access these directly via GitHub Raw or use them in your own apps.  
 これらのファイルはGitHubのRawリンクを使って直接アクセスすることも、自作アプリケーションに組み込むことも可能です。
+
+`tracks.json` には、Red Hat公式の製品トラック（OpenShift、Enterprise Linux、Ansible、Cloud-native applications、AI）と、TechnologistからArchitectまでの取得対象試験を収録しています。資格一覧はRed Hat公式ページを基準に更新しています。
 
 ---
 
