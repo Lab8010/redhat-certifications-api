@@ -384,6 +384,8 @@
     "training_course_name": "Red Hat OpenShift Administration I: Operating a Production Cluster",
     "training_url_en": "https://www.redhat.com/en/services/training/red-hat-openshift-administration-i-operating-a-production-cluster",
     "training_url_ja": "https://www.redhat.com/ja/services/training/red-hat-openshift-administration-i-operating-a-production-cluster",
+    "credly_url": "https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-containers-and-kube",
+    "credly_badge_image_url": "https://images.credly.com/images/1dd8824f-d6b6-4967-906a-7bd3c0063fae/image.png",
     "tags": [
       "管理",
       "Lv100/初級"

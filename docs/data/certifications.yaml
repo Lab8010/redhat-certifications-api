@@ -193,6 +193,8 @@
   url_ja: https://www.redhat.com/ja/services/training/ex180-red-hat-certified-technologist-in-openshift-exam
   duration: 2h
   status: Active
+  credly_url: https://www.credly.com/org/red-hat-inc/badge/red-hat-certified-specialist-in-containers-and-kube
+  credly_badge_image_url: https://images.credly.com/images/1dd8824f-d6b6-4967-906a-7bd3c0063fae/image.png
 - id: ex156
   title: Red Hat Certified Technologist in OpenShift Virtualization
   exam: EX156

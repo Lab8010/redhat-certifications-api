@@ -29,7 +29,7 @@
     .social-tag-prerequisite { color: #b02a37; }
     .social-tag-status { color: #198754; }
     .social-tag-status.retired { color: #b02a37; }
-    .card-top-panel { background: #151515; color: #fff; border-left: 5px solid #ee0000; margin: -1rem -1rem 1rem; padding: 1rem; min-height: 230px; }
+    .card-top-panel { position: relative; background: #151515; color: #fff; border-left: 5px solid #ee0000; margin: -1rem -1rem 1rem; padding: 1rem 170px 1rem 1rem; min-height: 230px; }
     .card-top-panel .text-muted { color: #d2d2d2 !important; }
     .card-top-panel .card-title { color: #fff; }
     .card-top-panel .details-btn { color: #fff; border-color: #fff; }
@@ -41,6 +41,11 @@
     .card-top-panel .social-tag-status.retired,
     .card-top-panel .social-tag-category,
     .card-top-panel .social-tag-prerequisite { color: #ff8a8a; }
+    .credly-badge-link { display: inline-flex; align-items: center; gap: 0.45rem; color: #151515; text-decoration: none; }
+    .credly-badge-image { width: 72px; height: 72px; object-fit: contain; }
+    .credly-badge-link:hover { text-decoration: underline; }
+    .card-top-panel .credly-badge-link { position: absolute; top: 1rem; right: 1rem; flex-direction: column; color: #fff; text-align: center; gap: 0.1rem; }
+    .card-top-panel .credly-badge-image { width: 141px; height: 141px; }
     .resource-link { font-size: 0.72rem; text-decoration: none; white-space: nowrap; }
     .resource-link:hover { text-decoration: underline; }
     .track-panel { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
@@ -345,6 +350,7 @@
           <div class="card h-100 level-${getLevelNumber(cert.level)} ${isRetired ? "border-danger border-opacity-25" : ""}">
             <div class="card-body d-flex flex-column">
               <div class="card-top-panel">
+              ${cert.credly_url && cert.credly_badge_image_url ? `<a class="credly-badge-link" href="${cert.credly_url}" target="_blank"><img class="credly-badge-image" src="${cert.credly_badge_image_url}" alt="${cert.exam} Credly digital badge"><span class="small">Credly ↗</span></a>` : ""}
               <!-- Title -->
               <h6 class="card-title mb-1">${cert.title}</h6>
               <!-- Description -->
@@ -531,7 +537,7 @@
     }
 
     Promise.all([
-      fetch("./data/certifications.json").then(r => r.json()),
+      fetch("./data/certifications.json?v=20260907-credly").then(r => r.json()),
       fetch("./data/tracks.json").then(r => r.json())
     ])
       .then(([data, trackData]) => {
