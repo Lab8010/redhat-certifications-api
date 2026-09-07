@@ -1,4 +1,4 @@
-# Red Hat Certifications API
+# Red Hat Certification List
 
 This repository provides a machine-readable list of Red Hat certification information, published in multiple formats (JSON, YAML, CSV).  
 Ideal for developers, instructors, and anyone who wants to programmatically access Red Hat's certification catalog.
@@ -30,7 +30,7 @@ You can access these directly via GitHub Raw or use them in your own apps.
 
 A simple browser interface is available at:
 
-https://lab8010.github.io/redhat-certifications-api/
+https://lab8010.github.io/redhat-certifications-list/
 
 
 ブラウザで閲覧できる簡易インターフェースも上記URLで提供されています（GitHub Pagesを有効化してください）。
@@ -67,7 +67,7 @@ Then open `http://localhost:8000/index.html` in your browser.
 - Create Slack bots or chat integrations
 - Enable auto-fetch in training systems
 - GitHub Actionsで定期的に更新して、常に最新の資格一覧を共有
-- 資格カタログのAPIとして他のツールと連携
+- 資格カタログのデータソースとして他のツールと連携
 
 ---
 
