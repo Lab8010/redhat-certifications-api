@@ -446,7 +446,9 @@
       const panel = document.getElementById("roadmapView");
       const roadmapTracks = selectedTrack
         ? tracks.filter(item => item.id === selectedTrack)
-        : tracks.filter(item => ["enterprise-linux", "openshift", "ansible", "cloud-native"].includes(item.id));
+        : ["enterprise-linux", "openshift", "ansible", "cloud-native"]
+          .map(trackId => tracks.find(item => item.id === trackId))
+          .filter(Boolean);
       if (!roadmapTracks.length) return;
       panel.classList.remove("d-none");
       panel.innerHTML = `<div class="d-flex justify-content-between align-items-start gap-3 mb-3">
