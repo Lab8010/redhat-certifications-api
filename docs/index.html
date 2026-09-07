@@ -29,6 +29,8 @@
     .social-tag-prerequisite { color: #b02a37; }
     .social-tag-status { color: #198754; }
     .social-tag-status.retired { color: #b02a37; }
+    .resource-link { font-size: 0.72rem; text-decoration: none; white-space: nowrap; }
+    .resource-link:hover { text-decoration: underline; }
     .track-panel { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
     .track-level { border-left: 3px solid #adb5bd; padding-left: 0.75rem; }
     .track-level + .track-level { margin-top: 0.65rem; }
@@ -355,8 +357,8 @@
                   <div class="small fw-semibold text-muted mb-1">📋 試験</div>
                   ${cert.duration ? `<div class="small text-muted">⏱ ${cert.duration}</div>` : ""}
                   <div class="d-flex gap-1 flex-wrap mt-auto">
-                    ${cert.url_en ? `<a href="${cert.url_en}" class="btn btn-sm btn-primary" target="_blank">EN</a>` : ""}
-                    ${cert.url_ja ? `<a href="${cert.url_ja}" class="btn btn-sm btn-outline-secondary" target="_blank">JA</a>` : ""}
+                    ${cert.url_en ? `<a href="${cert.url_en}" class="btn btn-sm btn-primary resource-link" target="_blank">試験ページ: English ↗</a>` : ""}
+                    ${cert.url_ja ? `<a href="${cert.url_ja}" class="btn btn-sm btn-outline-secondary resource-link" target="_blank">日本語 ↗</a>` : ""}
                   </div>
                 </div>
                 <!-- Right: Training -->
@@ -366,8 +368,8 @@
                     <div class="small text-muted"><strong>${cert.training_course}</strong></div>
                     ${cert.training_course_name ? `<div class="small text-muted" style="font-size:0.72rem;line-height:1.3">${cert.training_course_name}</div>` : ""}
                     <div class="d-flex gap-1 flex-wrap mt-auto">
-                      ${cert.training_url_en ? `<a href="${cert.training_url_en}" class="btn btn-sm btn-success" target="_blank">EN</a>` : ""}
-                      ${cert.training_url_ja ? `<a href="${cert.training_url_ja}" class="btn btn-sm btn-outline-secondary" target="_blank">JA</a>` : ""}
+                      ${cert.training_url_en ? `<a href="${cert.training_url_en}" class="btn btn-sm btn-success resource-link" target="_blank">コース詳細: English ↗</a>` : ""}
+                        ${cert.training_url_ja ? `<a href="${cert.training_url_ja}" class="btn btn-sm btn-outline-secondary resource-link" target="_blank">日本語 ↗</a>` : ""}
                     </div>
                   ` : `<div class="small text-muted fst-italic">—</div>`}
                 </div>
