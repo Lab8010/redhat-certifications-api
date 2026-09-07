@@ -29,6 +29,18 @@
     .social-tag-prerequisite { color: #b02a37; }
     .social-tag-status { color: #198754; }
     .social-tag-status.retired { color: #b02a37; }
+    .card-top-panel { background: #151515; color: #fff; border-left: 5px solid #ee0000; margin: -1rem -1rem 1rem; padding: 1rem; min-height: 230px; }
+    .card-top-panel .text-muted { color: #d2d2d2 !important; }
+    .card-top-panel .card-title { color: #fff; }
+    .card-top-panel .details-btn { color: #fff; border-color: #fff; }
+    .card-top-panel .details-btn:hover { color: #151515; background: #fff; }
+    .card-top-panel .social-tag-exam { color: #fff; }
+    .card-top-panel .social-tag-product,
+    .card-top-panel .social-tag-step { color: #d2d2d2; }
+    .card-top-panel .social-tag-status { color: #75b798; }
+    .card-top-panel .social-tag-status.retired,
+    .card-top-panel .social-tag-category,
+    .card-top-panel .social-tag-prerequisite { color: #ff8a8a; }
     .resource-link { font-size: 0.72rem; text-decoration: none; white-space: nowrap; }
     .resource-link:hover { text-decoration: underline; }
     .track-panel { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
@@ -332,6 +344,7 @@
         card.innerHTML = `
           <div class="card h-100 level-${getLevelNumber(cert.level)} ${isRetired ? "border-danger border-opacity-25" : ""}">
             <div class="card-body d-flex flex-column">
+              <div class="card-top-panel">
               <!-- Status -->
               <div class="d-flex justify-content-between align-items-start mb-2">
                 <span class="small text-muted">${isRetired ? "Retired" : "Active"}</span>
@@ -349,6 +362,7 @@
                 ${step ? `<span class="social-tag social-tag-step">#Step${step}</span>` : ""}
                 ${prerequisites.length ? `<span class="social-tag social-tag-prerequisite">#前提_${prerequisites.join("_")}</span>` : ""}
                 <span class="social-tag social-tag-status ${isRetired ? "retired" : ""}">#${isRetired ? "Retired" : "Active"}</span>
+              </div>
               </div>
               <!-- Two-column: Exam | Training -->
               <div class="row g-0 mt-auto pt-2 border-top">
@@ -410,7 +424,7 @@
     function applyRetiredFilter() {
       const showRetired = document.getElementById("showRetired").checked;
       document.querySelectorAll(".retired").forEach(card => {
-        card.style.display = showRetired ? "" : "none";
+        card.style.display = showRetired ? "block" : "none";
       });
       updateResultCount();
     }
