@@ -14,9 +14,38 @@
     .filter-section { background: #fff; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
     .filter-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: #6c757d; letter-spacing: 0.5px; display: block; margin-bottom: 0.4rem; }
     .tag-hash { color: #6c757d; font-size: 0.78rem; }
+    .description-short { min-height: 2.6em; }
+    .social-tags { display: flex; flex-wrap: wrap; gap: 0.2rem 0.65rem; align-items: center; }
+    .social-tag { display: inline-block; font-size: 0.76rem; font-weight: 600; line-height: 1.4; white-space: nowrap; }
+    .social-tag-exam { color: #151515; }
+    .social-tag-level-100 { color: #198754; }
+    .social-tag-level-200 { color: #0d6efd; }
+    .social-tag-level-300 { color: #6f42c1; }
+    .social-tag-level-400 { color: #fd7e14; }
+    .social-tag-category { color: #b02a37; }
+    .social-tag-product { color: #495057; }
+    .social-tag-track { color: #0d6efd; }
+    .social-tag-step { color: #6c757d; }
+    .social-tag-prerequisite { color: #b02a37; }
+    .social-tag-status { color: #198754; }
+    .social-tag-status.retired { color: #b02a37; }
     .track-panel { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
     .track-level { border-left: 3px solid #adb5bd; padding-left: 0.75rem; }
     .track-level + .track-level { margin-top: 0.65rem; }
+    .starter-panel { background: #151515; color: #fff; border-left: 5px solid #ee0000; border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+    .starter-panel .text-muted { color: #d2d2d2 !important; }
+    .purpose-btn { border-radius: 999px; }
+    .level-100 { border-left: 4px solid #198754; }
+    .level-200 { border-left: 4px solid #0d6efd; }
+    .level-300 { border-left: 4px solid #6f42c1; }
+    .level-400 { border-left: 4px solid #fd7e14; }
+    .level-badge { font-weight: 600; }
+    .roadmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.75rem; }
+    .roadmap-step { background: #fff; border: 1px solid #dee2e6; border-top: 4px solid #151515; border-radius: 6px; padding: 0.9rem; min-height: 130px; }
+    .roadmap-step + .roadmap-step { position: relative; }
+    .roadmap-step + .roadmap-step::before { content: "→"; position: absolute; left: -0.7rem; top: 2.4rem; color: #6c757d; font-weight: 700; }
+    .focus-card { outline: 3px solid #ee0000; outline-offset: 3px; }
+    @media (max-width: 575px) { .roadmap-step + .roadmap-step::before { content: "↓"; left: 50%; top: -1.15rem; } }
 
     /* Red Hat global header */
     .rh-header {
@@ -63,8 +92,32 @@
 
   <div class="container py-4">
 
+    <!-- Beginner entry point -->
+    <section class="starter-panel" aria-labelledby="starterTitle">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div>
+          <div class="small text-uppercase fw-semibold">はじめての方へ</div>
+          <h1 id="starterTitle" class="h4 mb-2">まずはここから！Red Hat資格の基礎</h1>
+          <p class="text-muted mb-0">Linuxの基本操作を実務で使えるレベルにする、RHCSA（EX200）から始めましょう。</p>
+        </div>
+        <button id="starterButton" class="btn btn-light flex-shrink-0">RHCSA（EX200）を見る</button>
+      </div>
+    </section>
+
     <!-- Filter section -->
     <div class="filter-section">
+
+      <!-- Quick purpose filters -->
+      <div class="mb-3">
+        <span class="filter-label">やりたいことから探す</span>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-sm btn-outline-dark purpose-btn" data-purpose="linux">🐧 Linux基礎・運用</button>
+          <button class="btn btn-sm btn-outline-dark purpose-btn" data-purpose="containers">🚢 コンテナ / Kubernetes</button>
+          <button class="btn btn-sm btn-outline-dark purpose-btn" data-purpose="automation">⚙️ 自動化（Ansible）</button>
+          <button class="btn btn-sm btn-outline-dark purpose-btn" data-purpose="cloud-native">☁️ クラウドネイティブ</button>
+          <button class="btn btn-sm btn-outline-secondary purpose-btn" data-purpose="">すべて</button>
+        </div>
+      </div>
 
       <!-- Category -->
       <div class="mb-3">
@@ -84,10 +137,10 @@
         <span class="filter-label">Level</span>
         <div class="d-flex flex-wrap gap-2">
           <button class="btn btn-sm level-btn rounded-pill btn-secondary"      data-value="">All</button>
-          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 100">100</button>
-          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 200">200</button>
-          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 300">300</button>
-          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 400">400</button>
+          <button class="btn btn-sm level-btn rounded-pill btn-outline-success" data-value="Level 100">100 · 初級</button>
+          <button class="btn btn-sm level-btn rounded-pill btn-outline-primary" data-value="Level 200">200 · 中級</button>
+          <button class="btn btn-sm level-btn rounded-pill btn-outline-secondary" data-value="Level 300">300 · 上級</button>
+          <button class="btn btn-sm level-btn rounded-pill btn-outline-warning" data-value="Level 400">400 · 専門</button>
         </div>
       </div>
 
@@ -118,6 +171,12 @@
             <label class="form-check-label small" for="showRetired">Show Retired</label>
           </div>
         </div>
+        <div class="col-auto d-flex align-items-end pb-1">
+          <div class="btn-group btn-group-sm" role="group" aria-label="表示切替">
+            <button class="btn btn-dark view-btn active" data-view="grid">一覧</button>
+            <button class="btn btn-outline-dark view-btn" data-view="roadmap">ロードマップ</button>
+          </div>
+        </div>
         <div class="col-auto ms-auto d-flex align-items-end pb-1">
           <span class="text-muted small" id="resultCount"></span>
         </div>
@@ -126,7 +185,17 @@
 
     <!-- Cards -->
     <div id="trackDetails" class="track-panel d-none"></div>
+    <div id="roadmapView" class="track-panel d-none"></div>
     <div id="certifications" class="row"></div>
+  </div>
+
+  <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h2 class="modal-title h5" id="certModalTitle"></h2><button type="button" class="btn-close" id="modalClose" aria-label="閉じる"></button></div>
+        <div class="modal-body" id="certModalBody"></div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -134,6 +203,8 @@
     let filteredCertifications = [];
     let selectedCategory = "";
     let selectedLevel = "";
+    let selectedPurpose = "";
+    let viewMode = "grid";
 
     const categoryColors = {
       "RHEL":         "danger",
@@ -149,6 +220,64 @@
       return tracks.flatMap(track => track.certifications
         .filter(certification => certification.exams.includes(exam))
         .map(certification => ({ track, certification })));
+    }
+
+    function getLevelInfo(level) {
+      const definitions = {
+        "Level 100": { label: "初級", english: "Foundational", color: "success" },
+        "Level 200": { label: "中級", english: "Associate", color: "primary" },
+        "Level 300": { label: "上級", english: "Professional", color: "secondary" },
+        "Level 400": { label: "専門", english: "Specialist", color: "warning" }
+      };
+      return definitions[level] || { label: "レベル未設定", english: "", color: "secondary" };
+    }
+
+    function getPrerequisites(exam) {
+      const candidates = [];
+      getTrackMatches(exam).forEach(({ track, certification }) => {
+        const index = track.certifications.indexOf(certification);
+        const prerequisites = new Set();
+        track.certifications.slice(0, index).forEach(previous => {
+          previous.exams.filter(previousExam => previousExam !== exam).forEach(previousExam => prerequisites.add(previousExam));
+        });
+        candidates.push(Array.from(prerequisites));
+      });
+      return candidates.sort((a, b) => a.length - b.length)[0] || [];
+    }
+
+    function matchesPurpose(cert) {
+      if (!selectedPurpose) return true;
+      const text = `${cert.title} ${cert.product || ""} ${cert.category || ""} ${(cert.tags || []).join(" ")}`.toLowerCase();
+      const purposeTerms = {
+        linux: ["rhel", "linux", "system", "satellite", "管理", "運用"],
+        containers: ["container", "openshift", "kubernetes", "コンテナ", "仮想化"],
+        automation: ["ansible", "automation", "自動化"],
+        "cloud-native": ["cloud-native", "cloud native", "quarkus", "microservice", "container", "クラウドネイティブ"]
+      };
+      return (purposeTerms[selectedPurpose] || []).some(term => text.includes(term));
+    }
+
+    function getShortDescription(cert) {
+      const description = cert.description_ja || cert.description || "";
+      if (!description) return "";
+      const japaneseSentence = description.match(/^.*?。/);
+      if (japaneseSentence) return japaneseSentence[0];
+      const englishSentence = description.match(/^.*?[.!?](?:\s|$)/);
+      return (englishSentence ? englishSentence[0] : description).trim();
+    }
+
+    function getDisplayTopics(cert, trackMatches) {
+      const topics = [];
+      const addTopic = (value, className) => {
+        if (!value) return;
+        const normalized = value.toLowerCase().replace(/[\s/_-]+/g, "");
+        if (topics.some(topic => topic.normalized === normalized || topic.normalized.includes(normalized) || normalized.includes(topic.normalized))) return;
+        topics.push({ value, className, normalized });
+      };
+      addTopic(cert.category, "social-tag-category");
+      addTopic(cert.product, "social-tag-product");
+      trackMatches.forEach(match => addTopic(match.track.name, "social-tag-track"));
+      return topics;
     }
 
     function renderTrackDetails() {
@@ -189,32 +318,36 @@
         const isRetired     = cert.status === "Retired";
         const categoryColor = categoryColors[cert.category] || "secondary";
         const trackMatches = getTrackMatches(cert.exam);
+        const levelInfo = getLevelInfo(cert.level);
+        const prerequisites = getPrerequisites(cert.exam);
+        const primaryTrack = trackMatches[0];
+        const step = primaryTrack ? primaryTrack.track.certifications.indexOf(primaryTrack.certification) + 1 : null;
+        const displayTopics = getDisplayTopics(cert, trackMatches);
 
         const card = document.createElement("div");
         card.className = "col-12 col-md-6 cert-card" + (isRetired ? " retired" : "");
 
         card.innerHTML = `
-          <div class="card h-100 ${isRetired ? "border-danger border-opacity-25" : ""}">
+          <div class="card h-100 level-${getLevelNumber(cert.level)} ${isRetired ? "border-danger border-opacity-25" : ""}">
             <div class="card-body d-flex flex-column">
-              <!-- Badge row -->
+              <!-- Status -->
               <div class="d-flex justify-content-between align-items-start mb-2">
-                <div class="d-flex flex-wrap gap-1">
-                  <span class="badge bg-dark exam-badge">${cert.exam}</span>
-                  ${cert.level ? `<span class="badge bg-light text-dark border">${cert.level}</span>` : ""}
-                  <span class="badge bg-${categoryColor}">${cert.category}</span>
-                  ${cert.product ? `<span class="badge bg-light text-dark border">📦 ${cert.product}</span>` : ""}
-                  ${trackMatches.map(match => `<span class="badge bg-${match.track.color}">${match.track.name}: ${match.certification.level}</span>`).join("")}
-                </div>
-                <span class="badge ${isRetired ? "bg-danger" : "bg-success"} flex-shrink-0 ms-1">
-                  ${isRetired ? "Retired" : "Active"}
-                </span>
+                <span class="small text-muted">${isRetired ? "Retired" : "Active"}</span>
               </div>
               <!-- Title -->
               <h6 class="card-title mb-1">${cert.title}</h6>
               <!-- Description -->
-              ${(cert.description_ja || cert.description) ? `<p class="card-text text-muted small mb-1">${cert.description_ja || cert.description}</p>` : ""}
-              <!-- Tags -->
-              ${cert.tags && cert.tags.length ? `<div class="mb-2">${cert.tags.map(t => `<span class="tag-hash me-1">#${t}</span>`).join("")}</div>` : ""}
+              ${getShortDescription(cert) ? `<p class="card-text text-muted small mb-1 description-short" title="${cert.description_ja || cert.description}">${getShortDescription(cert)}</p>` : ""}
+              <button class="btn btn-sm btn-outline-dark align-self-start mb-2 details-btn" data-exam="${cert.exam}">詳細と前提を見る</button>
+              <!-- Hashtags -->
+              <div class="social-tags mb-2">
+                <span class="social-tag social-tag-exam">#${cert.exam}</span>
+                ${cert.level ? `<span class="social-tag social-tag-level-${getLevelNumber(cert.level)}">#${cert.level.replace("Level ", "")} · ${levelInfo.label}</span>` : ""}
+                ${displayTopics.map(topic => `<span class="social-tag ${topic.className}">#${topic.value.replace(/[\s/]+/g, "_")}</span>`).join("")}
+                ${step ? `<span class="social-tag social-tag-step">#Step${step}</span>` : ""}
+                ${prerequisites.length ? `<span class="social-tag social-tag-prerequisite">#前提_${prerequisites.join("_")}</span>` : ""}
+                <span class="social-tag social-tag-status ${isRetired ? "retired" : ""}">#${isRetired ? "Retired" : "Active"}</span>
+              </div>
               <!-- Two-column: Exam | Training -->
               <div class="row g-0 mt-auto pt-2 border-top">
                 <!-- Left: Exam -->
@@ -242,6 +375,7 @@
             </div>
           </div>`;
         container.appendChild(card);
+        card.querySelector(".details-btn").addEventListener("click", () => openCertification(cert));
       });
 
       applyRetiredFilter();
@@ -258,7 +392,7 @@
         const levelMatch    = !selectedLevel    || cert.level    === selectedLevel;
         const productMatch  = !productFilter    || (cert.product || "") === productFilter;
         const trackMatch    = !trackFilter     || getTrackMatches(cert.exam).some(match => match.track.id === trackFilter);
-        return categoryMatch && levelMatch && productMatch && trackMatch;
+        return categoryMatch && levelMatch && productMatch && trackMatch && matchesPurpose(cert);
       });
 
       filteredCertifications.sort((a, b) => {
@@ -296,6 +430,67 @@
         btn.className  = `btn btn-sm level-btn rounded-pill ${isActive ? "btn-secondary" : "btn-outline-secondary"}`;
       });
       applyFiltersAndSort();
+    }
+
+    function setPurposeFilter(value) {
+      selectedPurpose = value;
+      document.querySelectorAll(".purpose-btn").forEach(btn => {
+        const isActive = btn.dataset.purpose === value;
+        btn.classList.toggle("btn-dark", isActive);
+        btn.classList.toggle("btn-outline-dark", !isActive && btn.dataset.purpose !== "");
+      });
+      applyFiltersAndSort();
+    }
+
+    function renderRoadmap() {
+      const panel = document.getElementById("roadmapView");
+      const roadmapTracks = selectedTrack
+        ? tracks.filter(item => item.id === selectedTrack)
+        : tracks.filter(item => ["enterprise-linux", "openshift", "ansible", "cloud-native"].includes(item.id));
+      if (!roadmapTracks.length) return;
+      panel.classList.remove("d-none");
+      panel.innerHTML = `<div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+        <div><h2 class="h5 mb-1">認定資格ロードマップ</h2><p class="small text-muted mb-0">基礎資格からEngineer、専門資格、Architectへ進む流れです。専門資格は必要な分野を選択します。</p></div>
+        <a class="small" href="https://www.redhat.com/en/services/certifications" target="_blank">公式要件</a>
+      </div>${roadmapTracks.map(track => `<section class="mb-4">
+        <h3 class="h6 mb-2">${track.name}</h3>
+        <div class="roadmap">${track.certifications.map((step, index) => `<div class="roadmap-step">
+          <div class="small text-muted">Step ${index + 1} · ${track.levels?.find(level => level.id === step.level)?.label || step.level}</div><strong>${step.title}</strong>
+          <div class="small mt-2">試験: ${step.exams.join(", ")}</div>
+          ${step.level === "specialist" ? `<span class="badge bg-light text-dark border mt-2">必要な専門分野を選択</span>` : index ? `<span class="badge bg-light text-dark border mt-2">前のStepが目安</span>` : `<span class="badge bg-success mt-2">おすすめの入口</span>`}
+        </div>`).join("")}</div>
+      </section>`).join("")}`;
+    }
+
+    function setView(value) {
+      viewMode = value;
+      document.querySelectorAll(".view-btn").forEach(btn => {
+        const active = btn.dataset.view === value;
+        btn.classList.toggle("active", active);
+        btn.classList.toggle("btn-dark", active);
+        btn.classList.toggle("btn-outline-dark", !active);
+      });
+      document.getElementById("certifications").classList.toggle("d-none", value === "roadmap");
+      document.getElementById("roadmapView").classList.toggle("d-none", value !== "roadmap");
+      if (value === "roadmap") renderRoadmap();
+    }
+
+    function openCertification(cert) {
+      const level = getLevelInfo(cert.level);
+      const prerequisites = getPrerequisites(cert.exam);
+      document.getElementById("certModalTitle").textContent = `${cert.title}（${cert.exam}）`;
+      document.getElementById("certModalBody").innerHTML = `<p>${cert.description_ja || cert.description || "Red Hat認定資格の試験情報です。"}</p>
+        <p class="mb-2"><span class="badge text-bg-${level.color}">${cert.level || ""} · ${level.label}</span></p>
+        ${prerequisites.length ? `<p class="small mb-0"><strong>前提の目安:</strong> ${prerequisites.join(", ")}</p>` : `<p class="small text-muted mb-0">この一覧では、必須の前提資格は設定されていません。</p>`}`;
+      document.getElementById("certModal").classList.add("show");
+      document.getElementById("certModal").style.display = "block";
+      document.body.classList.add("modal-open");
+    }
+
+    function closeCertification() {
+      document.getElementById("certModal").classList.remove("show");
+      document.getElementById("certModal").style.display = "none";
+      document.body.classList.remove("modal-open");
     }
 
     function populateProductFilter() {
@@ -339,11 +534,28 @@
           btn.addEventListener("click", () => setCategoryFilter(btn.dataset.value)));
         document.querySelectorAll(".level-btn").forEach(btn =>
           btn.addEventListener("click", () => setLevelFilter(btn.dataset.value)));
+        document.querySelectorAll(".purpose-btn").forEach(btn =>
+          btn.addEventListener("click", () => setPurposeFilter(btn.dataset.purpose)));
+        document.querySelectorAll(".view-btn").forEach(btn =>
+          btn.addEventListener("click", () => setView(btn.dataset.view)));
+        document.getElementById("starterButton").addEventListener("click", () => {
+          const card = document.querySelector('.cert-card [data-exam="EX200"]')?.closest(".cert-card");
+          if (card) {
+            card.scrollIntoView({ behavior: "smooth", block: "center" });
+            card.classList.add("focus-card");
+            setTimeout(() => card.classList.remove("focus-card"), 2200);
+          }
+        });
+        document.getElementById("modalClose").addEventListener("click", closeCertification);
+        document.getElementById("certModal").addEventListener("click", event => {
+          if (event.target.id === "certModal") closeCertification();
+        });
         document.getElementById("showRetired").addEventListener("change", applyRetiredFilter);
         document.getElementById("filterProduct").addEventListener("change", applyFiltersAndSort);
         document.getElementById("filterTrack").addEventListener("change", event => {
           selectedTrack = event.target.value;
           applyFiltersAndSort();
+          if (viewMode === "roadmap") renderRoadmap();
         });
         document.getElementById("sortOrder").addEventListener("change", applyFiltersAndSort);
       })
