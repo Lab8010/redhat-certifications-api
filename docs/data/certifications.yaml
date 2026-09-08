@@ -287,7 +287,7 @@
   description: ''
   url_en: https://www.redhat.com/en/services/training/ex432-red-hat-certified-specialist-openshift-advanced-cluster-management-exam
   url_ja: https://www.redhat.com/ja/services/training/ex432-red-hat-certified-specialist-openshift-advanced-cluster-management-exam
-  duration: ''
+  duration: 4h
   status: Active
 - id: ex229
   title: Red Hat Certified Specialist in ROSA

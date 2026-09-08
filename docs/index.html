@@ -371,7 +371,7 @@
                 <!-- Left: Exam -->
                 <div class="col-6 pe-2 border-end d-flex flex-column gap-1">
                   <div class="small fw-semibold text-muted mb-1">📋 試験</div>
-                  ${cert.duration ? `<div class="small text-muted">⏱ ${cert.duration}</div>` : ""}
+                  ${cert.duration ? `<div class="small text-muted">⏱ 試験時間: ${cert.duration}</div>` : ""}
                   <div class="d-flex gap-1 flex-wrap mt-auto">
                     ${cert.url_en ? `<a href="${cert.url_en}" class="btn btn-sm btn-primary resource-link" target="_blank">試験ページ: English ↗</a>` : ""}
                     ${cert.url_ja ? `<a href="${cert.url_ja}" class="btn btn-sm btn-outline-secondary resource-link" target="_blank">日本語 ↗</a>` : ""}
@@ -537,7 +537,7 @@
     }
 
     Promise.all([
-      fetch("./data/certifications.json?v=20260907-credly-titles-2").then(r => r.json()),
+      fetch("./data/certifications.json?v=20260908-duration-1").then(r => r.json()),
       fetch("./data/tracks.json").then(r => r.json()),
       fetch("./data/credly.json?v=20260907-credly-3").then(r => r.json())
     ])

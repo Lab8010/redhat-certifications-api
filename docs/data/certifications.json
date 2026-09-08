@@ -560,7 +560,7 @@
     "description": "",
     "url_en": "https://www.redhat.com/en/services/training/ex432-red-hat-certified-specialist-openshift-advanced-cluster-management-exam",
     "url_ja": "https://www.redhat.com/ja/services/training/ex432-red-hat-certified-specialist-openshift-advanced-cluster-management-exam",
-    "duration": "",
+    "duration": "4h",
     "status": "Active",
     "training_course": "DO432",
     "training_course_name": "Multicluster Management with Red Hat Advanced Cluster Management for Kubernetes",
